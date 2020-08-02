@@ -1,0 +1,109 @@
+<config>
+
+<append xpath="/lootcontainers/lootcontainer[@id='40']" >
+	<item name="Victory Medal" count="3,5" prob="0.1"/>
+	<item name="Elite Item Parts" count="1,3" prob="0.1"/>
+</append>
+<append xpath="/lootcontainers/lootcontainer[@id='61']" >
+	<item name="Elite Item Parts" count="1,3" prob="0.1"/>
+</append>
+<append xpath="/lootcontainers/lootcontainer[@id='95']" >
+	<item name="Elite Item Parts" count="1,3" prob="0.1"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupSafeLoot']" >
+	<item name="Victory Medal" count="1,2" prob="0.1"/>
+	<item name="Elite Item Parts" count="1" prob="0.05"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='shamwaySafe']" >
+	<item name="Victory Medal" count="1,2" prob="0.1"/>
+	<item name="Elite Item Parts" count="1" prob="0.05"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='brewerySafe']" >
+	<item name="Victory Medal" count="1,2" prob="0.1"/>
+	<item name="Elite Item Parts" count="1" prob="0.05"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsBagLoot']" >
+	<item name="Victory Medal" count="1,2" prob="0.1"/>
+	<item name="Elite Item Parts" count="1" prob="0.05"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupHeroChestLoot']" >
+	<item name="Victory Medal" count="1,2" prob="0.1"/>
+	<item name="Elite Item Parts" count="1" prob="0.05"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupBuriedWeaponChest']" >
+	<item name="Victory Medal" count="1,2" prob="0.1"/>
+	<item name="Elite Item Parts" count="1" prob="0.05"/>
+</append>
+
+
+<append xpath="/lootcontainers">
+
+	<lootqualitytemplates>
+		<lootqualitytemplate name="qualQ456Template">
+			<qualitytemplate level="1,999999" default_quality="4">
+				<loot quality="4" prob=".6"/>
+				<loot quality="5" prob="1"/>
+				<loot quality="6" prob=".4"/>
+			</qualitytemplate>
+		</lootqualitytemplate>
+	</lootqualitytemplates>
+
+	
+	<lootcontainer id="145" count="1" size="6,10" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualQ456Template">
+
+	<item name="Perennial Mod" prob="0.02"/>
+	<item name="Melee Critical Damage Mod" prob="0.3"/>
+	<item name="Gun Critical Damage Mod" prob="0.3"/>
+	<item name="Bow Critical Damage Mod" prob="0.3"/>
+	<!-- <item name="Improved Pump Shotgun 1" prob="0.5"/>
+	<item name="Improved Pump Shotgun 2" prob="0.3"/>
+	<item name="Improved Pump Shotgun 3" prob="0.1"/>
+	<item name="Improved Compound Crossbow 1" prob="0.5"/>
+	<item name="Improved Compound Crossbow 2" prob="0.3"/>
+	<item name="Improved Compound Crossbow 3" prob="0.1"/>
+	<item name="Improved Compound Bow 1" prob="0.5"/>
+	<item name="Improved Compound Bow 2" prob="0.3"/>
+	<item name="Improved Compound Bow 3" prob="0.1"/> -->
+	<item name="Diamond Helmet" count="1" prob="0.1"/>
+	<item name="Diamond Chest" count="1" prob="0.1"/>
+	<item name="Diamond Gloves" count="1" prob="0.1"/>
+	<item name="Diamond Legs" count="1" prob="0.1"/>
+	<item name="Diamond Boots" count="1" prob="0.1"/>
+	<item name="Diamond Chainsaw" count="1" prob="0.1"/>
+	<item name="Diamond Auger" count="1" prob="0.1"/>
+	<item name="Diamond Pickaxe" count="1" prob="0.1"/>
+	<item name="Diamond Fireaxe" count="1" prob="0.1"/>
+	<item name="Diamond Wrench" count="1" prob="0.1"/>
+	<item name="Diamond Sledgehammer" count="1" prob="0.1"/>
+	<item name="Carbon Fiber Helmet" count="1" prob="0.1"/>
+	<item name="Carbon Fiber Vest" count="1" prob="0.1"/>
+	<item name="Carbon Fiber Gloves" count="1" prob="0.1"/>
+	<item name="Carbon Fiber Legs" count="1" prob="0.1"/>
+	<item name="Carbon Fiber Boots" count="1" prob="0.1"/>
+	<item name="Obsidian Stone" count="1" prob="0.1"/>
+	<item name="Obsidian Helmet" count="1" prob="0.05"/>
+	<item name="Obsidian Chest" count="1" prob="0.05"/>
+	<item name="Obsidian Gloves" count="1" prob="0.05"/>
+	<item name="Obsidian Legs" count="1" prob="0.05"/>
+	<item name="Obsidian Boots" count="1" prob="0.05"/>
+	<item name="Titanium Helmet" count="1" prob="0.05"/>
+	<item name="Titanium Vest" count="1" prob="0.05"/>
+	<item name="Titanium Gloves" count="1" prob="0.05"/>
+	<item name="Titanium Legs" count="1" prob="0.05"/>
+	<item name="Titanium Boots" count="1" prob="0.05"/>
+	<item name="Obsidian Chainsaw" count="1" prob="0.05"/>
+	<item name="Obsidian Auger" count="1" prob="0.05"/>
+	<item name="Obsidian Pickaxe" count="1" prob="0.05"/>
+	<item name="Obsidian Fireaxe" count="1" prob="0.05"/>
+	<item name="Obsidian Wrench" count="1" prob="0.05"/>
+	<item name="Obsidian Sledgehammer" count="1" prob="0.05"/>
+	<item name="Obsidian Stone" count="10" prob="0.05"/>
+	<item name="resourceRawDiamond" count="50" prob="0.05"/>
+	<item name="resourceGoldNugget" count="150" prob="0.05"/>
+	<item name="resourceSilverNugget" count="550" prob="0.05"/>
+</lootcontainer>
+	
+</append>
+
+</config>
+

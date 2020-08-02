@@ -1,0 +1,46 @@
+<configs>
+	
+	<append xpath="/recipes">
+
+<recipe name="Junk Turret 9mm" count="1" craft_area="workbench" craft_time = "60" tags="learnable,perkTurrets">
+	<ingredient name="gunHandgunT3SMG5" count="1"/>
+	<ingredient name="gunBotRoboticsParts" count="2"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+
+<recipe name="Junk Turret 762mm" count="1" craft_area="workbench" craft_time = "100" tags="learnable,perkTurrets">
+	<ingredient name="gunMGT1AK47" count="1"/>
+	<ingredient name="gunBotRoboticsParts" count="4"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+
+<recipe name="Junk Turret 556mm" count="1" craft_area="workbench" craft_time = "100" tags="learnable,perkTurrets">
+	<ingredient name="Remington M4A1" count="1"/>
+	<ingredient name="gunBotRoboticsParts" count="4"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+
+<recipe name="Auger Turret" count="1" craft_area="workbench" craft_time = "100" tags="learnable,perkTurrets">
+	<ingredient name="meleeToolPickT3Auger" count="1"/>
+	<ingredient name="gunBotRoboticsParts" count="4"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+
+<recipe name="Chainsaw Turret" count="1" craft_area="workbench" craft_time = "100" tags="learnable,perkTurrets">
+	<ingredient name="meleeToolAxeT3Chainsaw" count="1"/>
+	<ingredient name="gunBotRoboticsParts" count="4"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+	
+</append>
+</configs>

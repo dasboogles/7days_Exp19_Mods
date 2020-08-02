@@ -1,0 +1,217 @@
+<config>
+<!-- Loot Groups with contents of bags -->
+<insertBefore xpath="/lootcontainers/lootgroup[@name='groupQuestChallenge']">
+<lootgroup name="RemingtonM4A1+ammo" count="all">
+	<item name="Remington M4A1"/>
+	<item name="ammo762mmBulletBall" count="6,25"/>
+</lootgroup>
+</insertBefore>
+
+
+<append xpath="lootcontainers/lootgroup[@name='schematicsWeaponsRare']">
+	<item name="Remington M4A1 Schematic"/>
+</append> 
+
+
+
+<append xpath="lootcontainers/lootgroup[@name='groupWeapons_Machinegunner']">
+	<item group="RemingtonM4A1+ammo" loot_prob_template="T2" prob="0.8"/>
+</append> 
+
+<append xpath="lootcontainers/lootgroup[@name='groupWeapons_MachinegunnerTPlus']">
+	<item group="RemingtonM4A1+ammo" loot_prob_template="T2" prob="0.8"/>
+</append> 
+<insertAfter xpath="/lootcontainers/lootgroup[@name='prefabQuestLoot']/item[@name='ammo762mmBulletBall']" >
+	<item name="5.56mm Ammo" count="16,39" prob="1.0"/>
+</insertAfter>
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletBall']" >
+	<item name="5.56mm Ammo" count="16,39" prob="1.0"/>
+</insertAfter>
+<!-- <insertAfter xpath="/lootcontainers/lootgroup[@name='groupQuestRanged']/item[@name='gun44Magnum']" >
+	<item name="M416 Assault Rifle" loot_prob_template="GradeBLoot"/>
+	<item name="M249 Squad Rifle" loot_prob_template="GradeBLoot"/>
+</insertAfter> -->
+
+<!-- <insertAfter xpath="/lootcontainers/lootgroup[@name='groupAmmoRegular']/item[@name='ammo762mmBulletBall']" >
+	<item name="5.56mm Ammo" count="6,25"/>
+</insertAfter> -->
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupAmmoAdvanced']/item[@name='ammo762mmBulletHP']" >
+	<item name="HP 5.56mm Ammo" count="6,25"/>
+	<item name="AP 5.56mm Ammo" count="6,25"/>
+</insertAfter>
+
+<!-- <insertAfter xpath="/lootcontainers/lootgroup[@name='schematicsWeaponsCommon']/item[@name='meleeKnucklesIronSchematic']" >
+	<item name="Grid Launcher Schematic" />
+	<item name="Mini UZI Schematic" />
+	<item name="M416 Assault Rifle Schematic" />
+	<item name="M249 Squad Rifle Schematic" />
+	<item name="AWM Sniper Rifle Schematic" />
+	<item name="Improved Shotgun Schematic" />
+	<item name="Improved Bow Schematic" />
+</insertAfter> -->
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='empty']">
+<lootgroup name="groupWeaponsT4_Machinegunner" count="all">
+    <item name="M416 Assault Rifle"/>
+    <item name="5.56mm Ammo" count="6,25"/>
+</lootgroup>
+<lootgroup name="AWM Sniper Rifle" count="all">
+    <item name="AWM Sniper Rifle"/>
+    <item name="ammo44MagnumBulletBall" count="5,15"/>
+</lootgroup>
+<lootgroup name="groupWeaponsT4_Netgun" count="2">
+    <item name="Grid Launcher"/>
+    <item name="Net Ammo" count="6,25" prob="1"/>
+	<item name="Healing Net Ammo" count="1,15" prob=".5"/>
+	<item name="Barbed Net Ammo" count="1,15" prob=".7"/>
+	<item name="Protected Net Ammo" count="1,15" prob=".7"/>
+</lootgroup>
+<lootgroup name="groupWeaponsT2_MiniUZI" count="all">
+    <item name="Mini UZI"/>
+    <item name="ammo9mmBulletBall" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsT5_Machinegunner" count="all">
+    <item name="M249 Squad Rifle"/>
+    <item name="5.56mm Ammo" count="6,25"/>
+</lootgroup>
+<lootgroup name="Slinggun" count="all">
+    <item name="Auto SlingGun"/>
+    <item name="ammoArrowIron" count="6,25"/>
+</lootgroup>
+
+
+
+<lootgroup name="groupArmorT2_Elite">
+	<item name="Elite Titanium Helmet"/>
+	<item name="Elite Obsidian Helmet"/>
+	<item name="Elite Titanium Vest"/>
+	<item name="Elite Obsidian Chest"/>
+	<item name="Elite Titanium Gloves"/>
+	<item name="Elite Obsidian Gloves"/>
+	<item name="Elite Titanium Legs"/>
+	<item name="Elite Obsidian Legs"/>
+	<item name="Elite Titanium Boots"/>
+	<item name="Elite Obsidian Boots"/>
+</lootgroup>
+<lootgroup name="groupArmor_Elite">
+	<item group="groupArmorT2_Elite" loot_prob_template="T2"/>
+</lootgroup>
+<lootgroup name="groupArmorEliteScaled">
+	<item group="groupArmor_Elite"/>
+</lootgroup>
+<lootgroup name="groupWeaponsTE_Bizon" count="all">
+    <item name="PP19 Bizon"/>
+    <item name="ammo9mmBulletBall" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsTE_Springfield" count="all">
+    <item name="Springfield Saint SMG"/>
+    <item name="5.56mm Ammo" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsTE_Groza" count="all">
+    <item name="OTs-14 Groza SMG"/>
+    <item name="ammo762mmBulletBall" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsTE_EShotgun" count="all">
+    <item name="Elite Pump Shotgun"/>
+    <item name="ammoShotgunShell" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsTE_Vulcan" count="all">
+    <item name="Vulcan Machine Gun"/>
+    <item name="ammo762mmBulletBall" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsTE_EAWM" count="all">
+    <item name="Elite AWM Sniper"/>
+    <item name="ammo44MagnumBulletBall" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsTE_Scythe" count="all">
+    <item name="Scythe"/>
+</lootgroup>
+<lootgroup name="groupWeaponsTE_QuadShotgun" count="all">
+    <item name="Quad Barrels Shotgun"/>
+    <item name="ammoShotgunShell" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsTE_Photon" count="all">
+    <item name="Photon Projector"/>
+    <item name="Photon Ammo" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsTE_ECrossbow" count="all">
+    <item name="Elite Compound Crossbow"/>
+    <item name="ammoCrossbowBoltSteelAP" count="15,35" />
+</lootgroup>
+<lootgroup name="groupWeaponsTE_Elite" count="1">
+	<item group="groupWeaponsTE_Bizon" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_Springfield" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_Groza" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_EShotgun" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_Vulcan" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_EAWM" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_Scythe" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_QuadShotgun" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_Photon" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_ECrossbow" loot_prob_template="T2"/>
+</lootgroup>
+</insertAfter>
+
+<!-- <insertAfter xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Archery']/item[@group='groupWeaponsT2_Archery02']" >
+	<item group="Slinggun" />
+</insertAfter> -->
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupWeapons_Machinegunner']/item[@group='groupWeaponsT3_Machinegunner']" >
+	<item group="groupWeaponsT4_Machinegunner" loot_prob_template="T2"/>
+	<item group="groupWeaponsT4_Netgun" loot_prob_template="T2"/>
+	<item group="groupWeaponsT2_MiniUZI" loot_prob_template="T2"/>
+	<!-- <item group="groupWeaponsTE_Bizon" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_Springfield" loot_prob_template="T2"/>
+	<item group="groupWeaponsTE_Groza" loot_prob_template="T2"/> -->
+	<item group="groupWeaponsT5_Machinegunner" loot_prob_template="T3"/>
+</insertAfter>
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupWeapons_MachinegunnerTPlus']/item[@group='groupWeaponsT3_Machinegunner']" >
+	<item group="groupWeaponsT4_Machinegunner" loot_prob_template="T2"/>
+	<item group="groupWeaponsT5_Machinegunner" loot_prob_template="T3"/>
+	<item group="groupWeaponsT5_Machinegunner" loot_prob_template="T3"/>
+	<item group="AWM Sniper Rifle" loot_prob_template="T3"/>
+</insertAfter>
+<!-- <insertAfter xpath="/lootcontainers/lootcontainer[@id='34']/item[@group='groupWeaponsScaled']" >
+	<item group="groupWeaponsTE_Elite" prob="0.8"/>
+</insertAfter> -->
+
+<!-- <remove xpath="/lootcontainers/lootcontainer[@id='34']"/> -->
+
+<append xpath="/lootcontainers">
+
+<!-- <lootcontainer id="34" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+	<item group="groupWeaponsScaled"/>
+	<item group="groupWeaponsTE_Elite"/>
+	<item group="groupArmorScaled"/>
+	<item group="groupAmmoRegular"/>
+</lootcontainer> -->
+
+<lootcontainer id="154" count="1" size="1,1" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+	<item name="Elite Compound Crossbow Box"/>
+	<item name="Photon Projector Box"/>
+	<item name="Quad Barrels Shotgun Box"/>
+	<item name="Scythe Box"/>
+	<item name="Elite AWM Sniper Box"/>
+	<item name="Vulcan Machine Gun Box"/>
+	<item name="Elite Pump Shotgun Box"/>
+	<item name="OTs-14 Groza SMG Box"/>
+	<item name="Springfield Saint SMG Box"/>
+	<item name="PP19 Bizon Box"/>
+</lootcontainer>
+
+<lootcontainer id="155" count="1" size="1,1" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+	<item name="Elite Titanium Helmet Box"/>
+	<item name="Elite Titanium Vest Box"/>
+	<item name="Elite Titanium Gloves Box"/>
+	<item name="Elite Titanium Legs Box"/>
+	<item name="Elite Titanium Boots Box"/>
+	<item name="Elite Obsidian Helmet Box"/>
+	<item name="Elite Obsidian Chest Box"/>
+	<item name="Elite Obsidian Gloves Box"/>
+	<item name="Elite Obsidian Legs Box"/>
+	<item name="Elite Obsidian Boots Box"/>
+</lootcontainer>
+
+</append>
+
+</config>

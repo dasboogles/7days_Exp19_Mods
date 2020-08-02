@@ -1,0 +1,251 @@
+<configs>
+	<append xpath="/recipes" >
+		<recipe name="Apple Juice" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="Apple Fruit" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Apple Juice Smoothie" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="Apple Fruit" count="2"/>
+			<ingredient name="foodCropBlueberries" count="2"/>
+			<ingredient name="Sugar" count="1"/>
+			<ingredient name="resourceSnowBall" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Apple Cake" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="Apple Fruit" count="2"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="Sugar" count="1"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Eve Pudding" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="Apple Fruit" count="2"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="Sugar" count="1"/>
+			<ingredient name="Rice" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Rice (seed)" count="1">
+			<ingredient name="Rice" count="5"/>
+		</recipe>
+		<recipe name="Bowl of rice" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="Rice" count="3"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Bone Brew" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="resourceBone" count="5"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Bottle of brandy" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="Rice" count="30"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Yangzhou fried rice" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="Bowl of rice" count="2"/>
+			<ingredient name="foodCornMeal" count="1"/>
+			<ingredient name="foodEgg" count="3"/>
+			<ingredient name="Sugar" count="6"/>
+			<ingredient name="foodGrilledMeat" count="1"/>
+		</recipe>
+		<recipe name="Pho" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="Rice" count="6"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+			<ingredient name="foodEgg" count="2"/>
+			<ingredient name="Sugar" count="5"/>
+			<ingredient name="foodGrilledMeat" count="1"/>
+		</recipe>
+		<recipe name="Tom Yum Goong" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="Rice" count="6"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+			<ingredient name="foodEgg" count="2"/>
+			<ingredient name="Sugar" count="5"/>
+			<ingredient name="foodGrilledMeat" count="1"/>
+		</recipe>
+		<recipe name="drugPainkillers" count="1" craft_area="chemistryStation">
+			<ingredient name="medicalAloeCream" count="4"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+			<ingredient name="foodCornMeal" count="1"/>
+		</recipe>
+		<recipe name="Painkiller Jar" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="drugPainkillers" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Full Restoration Drinks" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="medicalAloeCream" count="8"/>
+			<ingredient name="drugVitamins" count="2"/>
+			<ingredient name="medicalBloodBag" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="NearDeathRemover Jar" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="drugPainkillers" count="3"/>
+			<ingredient name="drugAntibiotics" count="1"/>
+			<ingredient name="drugVitamins" count="1"/>
+			<ingredient name="medicalBloodBag" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Run Forrest Run" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="medicalAloeCream" count="4"/>
+			<ingredient name="drugVitamins" count="1"/>
+			<ingredient name="foodHoney" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Solid Head Drinks" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="Sugar" count="3"/>
+			<ingredient name="foodHoney" count="2"/>
+			<ingredient name="drugVitamins" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Lynxeyed Drinks" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="Painkiller Jar" count="1"/>
+			<ingredient name="Run Forrest Run" count="1"/>
+			<ingredient name="Sugar" count="2"/>
+			<ingredient name="drinkJarBeer" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Wreck it Ralph" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="Painkiller Jar" count="1"/>
+			<ingredient name="Run Forrest Run" count="1"/>
+			<ingredient name="Sugar" count="4"/>
+			<ingredient name="drinkJarBeer" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="Zhonya's Hourglass" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="Painkiller Jar" count="1"/>
+			<ingredient name="Run Forrest Run" count="1"/>
+			<ingredient name="Solid Head Drinks" count="1"/>
+		</recipe>
+		<recipe name="Sugar" count="1" craft_area="campfire"  craft_time="2" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="foodCropYuccaFruit" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="foodHoney" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="Sugar" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="What's Left" count="1" craft_time="160">
+			<ingredient name="foodCanCatfood" count="1"/>
+			<ingredient name="foodCanDogfood" count="1"/>
+			<ingredient name="foodCanSham" count="1"/>
+			<ingredient name="drinkJarRiverWater" count="1"/>
+		</recipe>
+
+		<recipe name="Honey Glazed Sham" count="1" craft_area="cookingstove" craft_tool="toolCookingGrill" craft_time="30" tags="learnable">
+			<ingredient name="foodCanSham" count="1"/>
+			<ingredient name="foodHoney" count="1"/>
+		</recipe>
+			
+		<recipe name="Chicken Noodle Soup" count="1" craft_area="cookingstove" craft_tool="toolCookingGrill" craft_time="80" tags="learnable">
+			<ingredient name="foodCanSoup" count="1"/>
+			<ingredient name="foodCanChicken" count="1"/>
+			<ingredient name="foodCanPasta" count="1"/>
+		</recipe>
+		
+		<recipe name="Dog Beef Stew" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="foodCanDogfood" count="1"/>
+			<ingredient name="foodCropPotato" count="5"/>
+			<ingredient name="foodCanPeas" count="1"/>
+			<ingredient name="Sugar" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		
+		<recipe name="Pizza" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="foodEgg" count="10"/>
+			<ingredient name="foodCornMeal" count="50"/>
+			<ingredient name="foodGrilledMeat" count="5"/>
+			<ingredient name="foodHoney" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="2"/>
+		</recipe>
+		
+		<recipe name="Piece of Pizza" count="10">
+			<ingredient name="Pizza" count="1"/>
+		</recipe>
+		
+		<recipe name="Meats and Oats Cat Food" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" craft_time="67" tags="learnable">
+			<ingredient name="foodCanCatfood" count="1"/>
+			<ingredient name="foodCornMeal" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+		</recipe>
+
+		<recipe name="Fruit Pie" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" craft_time="80" tags="learnable">
+			<ingredient name="foodCropBlueberries" count="5"/>
+			<ingredient name="foodCropYuccaFruit" count="5"/>
+			<ingredient name="foodCanPears" count="1"/>
+			<ingredient name="Pie Crust" count="1"/>
+		</recipe>
+		
+		<recipe name="Pie Crust" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="foodCornMeal" count="1"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+			<ingredient name="Sugar" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+
+		<recipe name="Jello Fruit Salad" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" craft_time="60" tags="learnable">
+			<ingredient name="foodCropBlueberries" count="5"/>
+			<ingredient name="foodCropYuccaFruit" count="5"/>
+			<ingredient name="foodCanPears" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+
+		<recipe name="Speghetti with Meat Sauce" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" craft_time="96" tags="learnable">
+			<ingredient name="foodCanPasta" count="1"/>
+			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="foodCropMushrooms" count="5"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+		</recipe>
+
+		<recipe name="Speghetti" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" craft_time="96" tags="learnable">
+			<ingredient name="foodCanPasta" count="1"/>
+			<ingredient name="foodCropMushrooms" count="10"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+		</recipe>
+
+		<recipe name="Tuna Salad Sandwich" count="1" craft_area="cookingstove" craft_tool="toolCookingGrill" craft_time="56" tags="learnable">
+			<ingredient name="foodCornBread" count="2"/>
+			<ingredient name="foodCanTuna" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="Sugar" count="1"/>
+		</recipe>		
+
+		<recipe name="Miso Ramen" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" craft_time="83" tags="learnable">
+			<ingredient name="foodCanMiso" count="1"/>
+			<ingredient name="foodCanPasta" count="1"/>
+			<ingredient name="foodCropCorn" count="3"/>
+			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="foodEgg" count="4"/>		
+		</recipe>
+
+		<recipe name="Lamb Kheema" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" craft_time="315" tags="learnable">
+			<ingredient name="foodCanLamb" count="1"/>
+			<ingredient name="foodCanPeas" count="1"/>
+			<ingredient name="foodCropPotato" count="5"/>
+			<ingredient name="foodCornMeal" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		
+		<recipe name="Beef and Barley Soup" count="1" craft_area="cookingstove" craft_tool="toolCookingPot" craft_time="315" tags="learnable">
+			<ingredient name="foodCanBeef" count="1"/>
+			<ingredient name="foodCanStock" count="1"/>
+			<ingredient name="foodCornMeal" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+		</recipe>		
+
+		<recipe name="Goldenrod Moonshine" count="1" craft_area="drinkingmixer" tags="learnable">
+			<ingredient name="foodCornMeal" count="5"/>
+			<ingredient name="drinkJarGrainAlcohol" count="1"/>
+			<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+			<ingredient name="resourceAcid" count="1"/>
+		</recipe>
+		
+		<recipe name="drinkJarGrandpasForgettingElixir" count="1" craft_area="drinkingmixer">
+			<ingredient name="resourceRawDiamond" count="50"/>
+		</recipe>
+		
+		</append>
+</configs>

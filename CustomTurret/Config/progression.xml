@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/progression/perks/perk[@name='perkTurrets']">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="Junk Turret 9mm"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="Auger Turret,Chainsaw Turret"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="Junk Turret 556mm"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="Junk Turret 762mm"/>
+		</effect_group>
+	</append>
+		
+</configs>

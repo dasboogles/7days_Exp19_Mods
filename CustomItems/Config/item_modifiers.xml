@@ -1,0 +1,614 @@
+<configs><append xpath="/item_modifiers">
+
+<item_modifier name="Large Magazine Extender" installable_tags="magazine,turret" modifier_tags="magazine" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="modGunDrumMagazineExtenderDesc"/>
+		<property name="CustomIcon" value="modGunMagazineExtender"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="MagazineSize" operation="perc_add" value="1.5"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".5"/>
+			<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value=".5"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value=".6"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="Weapon Brace" installable_tags="gun,turret,bow" modifier_tags="durability" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="WeaponBraceDesc"/>
+		<property name="UnlockedBy" value="Weapon Brace Schematic"/>
+		<property name="CustomIcon" value="modMeleeStructuralBrace"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="DegradationMax" operation="perc_add" value=".3"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="Perennial Mod" installable_tags="armor,gun,tool,bow,weapon,melee" modifier_tags="durability" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="PerennialModDesc"/>
+		<property name="UnlockedBy" value="Weapon Brace Schematic"/>
+		<property name="CustomIcon" value="resourceForgedSteel"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="DegradationMax" operation="base_add" value="9999"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="Health Plus" installable_tags="armorChest" modifier_tags="maxhealth" type="attachment">
+		<property name="UnlockedBy" value="Health Plus Schematic"/>
+		<property name="DescriptionKey" value="HealthPlusDesc"/>
+		<property name="CustomIcon" value="medicalBloodBag"/>
+		<property name="CustomIconTint" value="FF0000"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<!-- <passive_effect name="HealthMaxModifierOT" operation="base_add" value="30"/> -->
+			<passive_effect name="HealthMax" operation="base_add" value="30"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="Stamina Plus" installable_tags="armorFeet" modifier_tags="maxstamina" type="attachment">
+		<property name="UnlockedBy" value="Stamina Plus Schematic"/>
+		<property name="DescriptionKey" value="StaminaPlusDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="armorLeatherBoots"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="StaminaMax" operation="base_add" value="30"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="Block Damage Plus" installable_tags="armorHands" modifier_tags="BlockDamage" type="attachment">
+		<property name="UnlockedBy" value="Block Damage Plus Schematic"/>
+		<property name="DescriptionKey" value="BlockDamagePlusDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="meleeToolRepairT0StoneAxe"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="BlockDamage" operation="base_add" value="30" tags="tool"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="Fast Craft Plus" installable_tags="armorHands" modifier_tags="CraftingTime" type="attachment">
+		<property name="UnlockedBy" value="Fast Craft Plus Schematic"/>
+		<property name="DescriptionKey" value="FastCraftPlusDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="meleeToolRepairT1ClawHammer"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="CraftingTime" operation="perc_add" value="-.3"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="Exp Gain Plus" installable_tags="armorHead" modifier_tags="PlayerExpGain" type="attachment">
+		<property name="UnlockedBy" value="Exp Gain Plus Schematic"/>
+		<property name="DescriptionKey" value="ExpGainPlusDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="candle"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="Running Fast" installable_tags="armorFeet" modifier_tags="maxspeed" type="attachment">
+		<property name="UnlockedBy" value="Running Fast Schematic"/>
+		<property name="DescriptionKey" value="RunningFastDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="apparelRunningShoesRegular"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="RunSpeed" operation="base_add" value="0.2"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="Regeneration Mod" installable_tags="armorLegs" modifier_tags="HealthChangeOT" type="attachment">
+		<property name="UnlockedBy" value="Regeneration Mod Schematic"/>
+		<property name="DescriptionKey" value="RegenerationModDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="medicalFirstAidBandage"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
+			<requirement name="NotHasBuff" buff="buffStatusThirsty02"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" value=".049"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="StatComparePercCurrentToModMax" stat="Health" operation="GTE" value="0.97"/>
+				<!-- <passive_effect name="HealthMaxModifierOT" operation="base_set" value=".025"/> -->
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="Burning Desire Mod" installable_tags="ranged" modifier_tags="crippling" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="BurningDesireModDesc"/>
+		<property name="CustomIcon" value="campfire"/>
+		<property name="CustomIconTint" value="FF0000"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<!--Each shot has a chance to burning-->
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="80"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffBurningZombie"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,800" operation="LTE" value="80"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffBurningZombie"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="High Voltage Mod" installable_tags="ranged" modifier_tags="crippling" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="HighVoltageModDesc"/>
+		<property name="CustomIcon" value="meleeWpnBatonT2StunBaton"/>
+		<property name="CustomIconTint" value="0000FF"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<!--Each shot has a chance to burning-->
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="5"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,800" operation="LTE" value="5"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="Zero Degree Mod" installable_tags="ranged" modifier_tags="crippling" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="ZeroDegreeModDesc"/>
+		<property name="CustomIcon" value="oreIronBoulder"/>
+		<property name="CustomIconTint" value="0000FF"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<!--Each shot has a chance to burning-->
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffElementFreezingMod"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,800" operation="LTE" value="50"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffElementFreezingMod"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="Gun Critical Damage Mod" installable_tags="gun" modifier_tags="critical" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="CriticalDamageModDesc"/>
+		<property name="CustomIcon" value="decoPumpkinJackOLantern"/>
+		<property name="CustomIconTint" value="0000FF"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group name="Crit1">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="GunCriticalDmg1">
+				<requirement name="NotHasBuff" buff="GunCriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="2"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="Crit2">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="GunCriticalDmg2">
+				<requirement name="HasBuff" buff="GunCriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="2"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="Crit3">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="GunCriticalDmg3">
+				<requirement name="NotHasBuff" buff="GunCriticalDmg1"/>
+				<requirement name="HasBuff" buff="GunCriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="2"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="Crit4">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="GunCriticalDmg4">
+				<requirement name="NotHasBuff" buff="GunCriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg2"/>
+				<requirement name="HasBuff" buff="GunCriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="2"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="Crit4reset">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="GunCriticalDmg4r">
+				<requirement name="NotHasBuff" buff="GunCriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="GunCriticalDmg3"/>
+				<requirement name="HasBuff" buff="GunCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="3"/>
+			</triggered_effect>
+		</effect_group>
+		
+	</item_modifier>
+
+<item_modifier name="Bow Critical Damage Mod" installable_tags="perkArchery" modifier_tags="critical" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="CriticalDamageModDesc"/>
+		<property name="CustomIcon" value="decoPumpkinJackOLantern"/>
+		<property name="CustomIconTint" value="FF0000"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group name="Crit1">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="CriticalDmg1">
+				<requirement name="NotHasBuff" buff="CriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="Crit2">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="CriticalDmg2">
+				<requirement name="HasBuff" buff="CriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="Crit3">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="CriticalDmg3">
+				<requirement name="NotHasBuff" buff="CriticalDmg1"/>
+				<requirement name="HasBuff" buff="CriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="Crit4">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="CriticalDmg4">
+				<requirement name="NotHasBuff" buff="CriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg2"/>
+				<requirement name="HasBuff" buff="CriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="Crit4reset">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="CriticalDmg4r">
+				<requirement name="NotHasBuff" buff="CriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="CriticalDmg3"/>
+				<requirement name="HasBuff" buff="CriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			</triggered_effect>
+		</effect_group>
+		
+	</item_modifier>
+	
+	<item_modifier name="Melee Critical Damage Mod" installable_tags="meleeWeapon" modifier_tags="critical" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="CriticalDamageModDesc"/>
+		<property name="CustomIcon" value="decoPumpkinJackOLantern"/>
+		<property name="CustomIconTint" value="00FF00"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		
+		<effect_group name="MeleeCrit1">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="MeleeCriticalDmg1">
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="MeleeCrit2">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="MeleeCriticalDmg2">
+				<requirement name="HasBuff" buff="MeleeCriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="MeleeCrit3">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="MeleeCriticalDmg3">
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg1"/>
+				<requirement name="HasBuff" buff="MeleeCriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="MeleeCrit4">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="MeleeCriticalDmg4">
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg2"/>
+				<requirement name="HasBuff" buff="MeleeCriticalDmg3"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="5"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group name="MeleeCrit4reset">
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="MeleeCriticalDmg4r">
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg1"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg2"/>
+				<requirement name="NotHasBuff" buff="MeleeCriticalDmg3"/>
+				<requirement name="HasBuff" buff="MeleeCriticalDmg4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+			</triggered_effect>
+		</effect_group>
+		
+	</item_modifier>
+	
+	
+<!-- VIP MODS -->
+
+<item_modifier name="DNT Muzzle Brake" installable_tags="gun,turret" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTMuzzleBrakeDesc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="CustomIcon" value="modGunMuzzleBrake"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="DamageFalloffRange" operation="perc_add" value=".2"/>
+			<passive_effect name="MaxRange" operation="perc_add" value=".2"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".25"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.25"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" value=".3"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.2"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".2"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.1"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".1"/>
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.6"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.6"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".05"/>
+			<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2"/>
+			<passive_effect name="WeaponHandling" operation="base_set" value="1.2"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="DNT Fuel Tank" installable_tags="motorTool" modifier_tags="fuel" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTFuelTankDesc"/>
+		<property name="CustomIcon" value="modFuelTankLarge"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="MagazineSize" operation="perc_add" value="10"/>
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+
+<item_modifier name="DNT Armor Plating" installable_tags="armorChest" modifier_tags="resistance" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTArmorPlatingDesc"/>
+		<property name="DisplayType" value="modArmor"/>
+		<property name="CustomIcon" value="modArmorPlatingReinforced"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="modArmorPlatingBasicDesc"/>
+		<effect_group tiered="false">
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="DNT Storage Pocket" installable_tags="armorLegs" modifier_tags="carryweight" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTStoragePocketDesc"/>
+		<property name="DisplayType" value="modCarryCapacity"/>
+		<property name="CustomIcon" value="modArmorTripleStoragePocket"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mleather"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="CarryCapacity" operation="base_add" value="69"/>
+			<display_value name="dCarryCapacity" value="69"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="DNT Health Plus" installable_tags="armorChest" modifier_tags="maxhealth" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTHealthPlusDesc"/>
+		<property name="CustomIcon" value="medicalBloodBag"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<!-- <passive_effect name="HealthMaxModifierOT" operation="base_add" value="60"/> -->
+			<passive_effect name="HealthMax" operation="base_add" value="60"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="DNT Stamina Plus" installable_tags="armorFeet" modifier_tags="maxstamina" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTStaminaPlusDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="armorLeatherBoots"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="StaminaMax" operation="base_add" value="60"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="DNT Running Fast" installable_tags="armorFeet" modifier_tags="maxspeed" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTRunningFastDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="apparelRunningShoesRegular"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="RunSpeed" operation="base_add" value="0.5"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="DNT Block Damage Plus" installable_tags="armorHands" modifier_tags="BlockDamage" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTBlockDamagePlusDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="meleeToolRepairT0StoneAxe"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="BlockDamage" operation="base_add" value="60" tags="tool"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="DNT Mesh Man" installable_tags="armorLegs" modifier_tags="temperature" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTMeshManDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="modArmorInsulatedLiner"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="HyperthermalResist" operation="base_add" value="45"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="45"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="DNT Fast Craft Plus" installable_tags="armorHands" modifier_tags="CraftingTime" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTFastCraftPlusDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="meleeToolRepairT1ClawHammer"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="CraftingTime" operation="perc_add" value="-.6"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="DNT Magazine Extender" installable_tags="magazine,turret" modifier_tags="magazine" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DescriptionKey" value="DNTMagazineExtenderDesc"/>
+		<property name="CustomIcon" value="modGunMagazineExtender"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="MagazineSize" operation="perc_add" value="3"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".5"/>
+			<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value=".5"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value=".6"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="DNT Exp Gain Plus" installable_tags="armorHead" modifier_tags="PlayerExpGain" type="attachment">
+		<property name="UnlockedBy" value="DNT Mods Pack Schematic"/>
+		<property name="DescriptionKey" value="DNTExpGainPlusDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="candle"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".3"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="Lamborghini Impact" installable_tags="vehicle" modifier_tags="speed" type="attachment">
+		<!-- <property name="UnlockedBy" value="modVehicleSpeedSchematic"/> -->
+		<property name="CustomIcon" value="smallEngine"/>
+		<property name="CustomIconTint" value="00FFFF"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleVelocityMaxPer" operation="perc_set" value="2.5"/>
+			<passive_effect name="VehicleVelocityMaxTurboPer" operation="perc_set" value="2.3"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="Vehicle Fuel Saver" installable_tags="vehicle" modifier_tags="fuel" type="attachment">
+		<!-- <property name="UnlockedBy" value="modVehicleFuelSaverSchematic"/> -->
+		<property name="CustomIcon" value="ammoGasCan"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleFuelUsePer" operation="perc_set" value="0.5"/>
+		</effect_group>
+	</item_modifier>
+	
+<item_modifier name="Vehicle Fuel Tank" installable_tags="vehicle" modifier_tags="fueltank" type="attachment">
+		<!-- <property name="UnlockedBy" value="modVehicleFuelSaverSchematic"/> -->
+		<property name="CustomIcon" value="ammoGasCan"/>
+		<property name="CustomIconTint" value="c8f542"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleTankSize" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</item_modifier>
+
+<item_modifier name="Santa Hat" installable_tags="head" modifier_tags="rare" blocked_tags="clothing" type="attachment">
+		<property name="CustomIcon" value="armorSantaHat"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="EconomicValue" value="440"/>
+		<property name="DisplayType" value="clothing"/>
+		<item_property_overrides name="*">
+			<property name="UMA.Mesh" value="gear_santa_hat"/>
+			<property name="UMA.Overlay0" value="gear_santa_hat"/>
+			<property name="Mask0" value="Head" param1="outer"/>
+			<property name="ShowAltHair" value="true"/>
+			<property name="Layer" value="2"/>
+		</item_property_overrides>
+
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="10.5,14.3"/>
+		</effect_group>
+	</item_modifier>
+
+</append></configs>
+

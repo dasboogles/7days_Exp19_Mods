@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="CustomWeapon" />
+		<Description value="Custom Weapon" />
+		<Author value="nnamcomputer" />
+		<Version value="2.0" />
+	</ModInfo>
+</xml>

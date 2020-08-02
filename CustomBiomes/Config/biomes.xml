@@ -1,0 +1,52 @@
+<configs>
+<insertAfter xpath="/worldgeneration/biomes/biome[@name='pine_forest']/subbiome/decorations/decoration[@name='deco_iron_vein']" >
+	<decoration type="block" blockname="plantedAloe3Harvest" prob=".03" rotatemax="3"/>
+	<decoration type="block" blockname="plantedYucca3Harvest" prob=".03" rotatemax="3"/>
+	<decoration type="block" blockname="Rice plant" prob=".03" rotatemax="3"/>
+</insertAfter>
+<append xpath="/worldgeneration/biomes/biome[@name='snow']">
+		<subbiome prob="0.342">
+			<layers>
+				<layer depth="1" blockname="terrSnow"/> <layer depth="3" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreGolddust" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			</subbiome>
+</append>
+<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']">
+		<subbiome prob="0.342">
+			<layers>
+				<layer depth="1" blockname="terrForestGround"/> <layer depth="3" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreGolddust" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			</subbiome>
+</append>
+<append xpath="/worldgeneration/biomes/biome[@name='desert']">
+		<subbiome prob="0.342">
+			<layers>
+				<layer depth="4" blockname="terrDesertGround"/>
+				<layer depth="1" blockname="terrSandStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
+				<layer depth="*" blockname="terrSandStone"> <resource blockname="terrOreGolddust" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="1" blockname="terrSandStone"/><layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			</subbiome>
+</append>
+<append xpath="/worldgeneration/biomes/biome[@name='wasteland']">
+		<subbiome prob="0.342"> <!-- Ore Sub Biome: leadOre -->
+			<layers>
+				<layer depth="2" blockname="terrDestroyedStone"/> <layer depth="2" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreGolddust" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			</subbiome>
+</append>
+<append xpath="/worldgeneration/biomes/biome[@name='burnt_forest']">
+		<subbiome prob="0.342"> <!-- Ore Sub Biome: leadOre -->
+			<layers>
+				<layer depth="1" blockname="terrBurntForestGround"/> <layer depth="3" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreGolddust" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			</subbiome>
+</append>
+</configs>

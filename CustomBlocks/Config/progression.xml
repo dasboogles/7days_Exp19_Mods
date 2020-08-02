@@ -1,0 +1,132 @@
+<configs>
+	
+	<set xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier']/@value">1,2,3,4,5</set>
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='1,5']/@tags">,resourceAcid,woodLogSpike1</append>
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='2,5']/@tags">,rWoodLogSpike2,Jump Pad</append>
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='3,5']/@tags">,rWoodMetalLogSpike3,scrapIronLogSpike4,Wound healing machine (Small)</append>
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='4,5']/@tags">,rScrapIronLogSpike5,Wound healing machine (Large)</append>
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='5']/@tags">,steelLogSpike6,Sniper Turret,Super Sensor,solarbank,solarCell</append>
+	
+<append xpath="/progression/perks">
+	<perk name="Alchemy technique" parent="skillIntellectCraftsmanship" name_key="Alchemy technique" desc_key="Giả kim thuật sư. Learn alchemy skills. Manufacture of silver, gold, diamonds, obsidian, and more ..." icon="ui_game_symbol_treasure">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01" /></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" desc_key="reqIntellectLevel04" /></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06" /></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08" /></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10" /></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="Alchemy technique" />
+
+				<!-- Engineer use x% less material on all recipes in the forge... by adding it to non engineers T3 10% .9, T4 15% .85, T5 20% .8 -->
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="Alchemy furnace"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="resourceSilverNugget,toolAndDieSet"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="2,5" value="-0.2" tags="Alchemy technique,resourceSilverNugget"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceGoldNugget,Gem Crafting Mold"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="3,5" value="-0.2" tags="Alchemy technique,resourceGoldNugget"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="resourceRawDiamond,Thermometer"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="Obsidian Stone"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="5,5" value="-0.2" tags="Alchemy technique,Obsidian Stone"/>
+
+			<effect_description level="1" desc_key="perkAdvancedEngineeringRank1Desc" long_desc_key="Learn how to make alchemy furnace." />
+			<effect_description level="2" desc_key="perkYeahScienceRank3Desc" long_desc_key="You can craft SilverNugget and Tool And Die Set. Craft alchemy items with 20% faster." />
+			<effect_description level="3" desc_key="perkHeavyArmorRank2Desc" long_desc_key="You are skilled alchemist. Can craft Gold Nugget and Gem Crafting Mold. Craft alchemy items with 20% faster." />
+			<effect_description level="4" desc_key="perkYeahScienceRank4Desc" long_desc_key="Alchemy is amazing. Diamond for tools, diamond for armors. Can craft Diamond and Thermometer" />
+			<effect_description level="5" desc_key="perkYeahScienceRank5Desc" long_desc_key="Obsidian creates a luxurious life. Can craft Obsidian Stone and 20% faster" />
+		</effect_group>
+	</perk>
+	
+	<perk name="Unshakable" parent="skillStrengthGeneral" name_key="Unshakable" desc_key="perkPainToleranceDesc" icon="ui_game_symbol_light_armor">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="BuffResistance" operation="base_add" level="1,5" value="0.15,0.80" tags="breakedarmor,exhausted"/>
+
+			<effect_description level="1" desc_key="perkPainToleranceRank1Desc" long_desc_key="15% less chance to get Breaked Armor and Exhausted"/>
+			<effect_description level="2" desc_key="perkPainToleranceRank2Desc" long_desc_key="30% less chance to get Breaked Armor and Exhausted"/>
+			<effect_description level="3" desc_key="perkPainToleranceRank3Desc" long_desc_key="45% less chance to get Breaked Armor and Exhausted"/>
+			<effect_description level="4" desc_key="perkPainToleranceRank4Desc" long_desc_key="60% less chance to get Breaked Armor and Exhausted"/>
+			<effect_description level="5" desc_key="perkPainToleranceRank5Desc" long_desc_key="80% less chance to get Breaked Armor and Exhausted"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="Mastering Resources" parent="skillStrengthConstruction" name_key="Mastering Resources" desc_key="Learning this perk makes you possible to use coins to transform into resources" icon="ui_game_symbol_barter">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01" /></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="2" desc_key="reqStrengthLevel02" /></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03" /></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05" /></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="6" desc_key="reqStrengthLevel07" /></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="Mastering Resources" />
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="resourceScrapIron"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.2" tags="Mastering Resources"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="resourceScrapLead"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="2,5" value="-0.05" tags="Mastering Resources"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceCoal,resourcePotassiumNitratePowder"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="4,5" value="-0.1" tags="Mastering Resources"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="resourceScrapPolymers"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="resourceScrapBrass"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="5,5" value="-0.15" tags="Mastering Resources"/>
+
+			<effect_description level="1" desc_key="resourceScrapIron" long_desc_key="Learn how to use 1000 coins to transform into 1000 scrap iron." />
+			<effect_description level="2" desc_key="resourceScrapLead" long_desc_key="Learn how to use 1000 coins to transform into 1000 scrap lead. Coins transform faster 5%." />
+			<effect_description level="3" desc_key="resourcePotassiumNitratePowder" long_desc_key="Learn how to use 1000 coins to transform into 1000 nitrate powder and 1000 coal." />
+			<effect_description level="4" desc_key="resourceScrapPolymers" long_desc_key="Learn how to use 1000 coins to transform into 500 scrap polymer. Coins transform faster 15%." />
+			<effect_description level="5" desc_key="resourceScrapBrass" long_desc_key="Learn how to use 1000 coins to transform into 500 scrap brass. Coins transform faster 30%." />
+		</effect_group>
+	</perk>
+	
+	<perk name="Mechanical Operations" parent="skillIntellectCraftsmanship" name_key="Mechanical Operations" desc_key="Learning this perk makes you know how to craft mechanical stuff." icon="ui_game_symbol_misc_crafting">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attqIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attqIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attqIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attqIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attqIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+		
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="Mechanical Operations" />
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="resourceSpring"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.2" tags="Mechanical Operations"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="resourceMechanicalParts"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="2,5" value="-0.15" tags="Mechanical Operations"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceElectricParts"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="4,5" value="-0.15" tags="Mechanical Operations"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="smallEngine"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="5" value="-0.2" tags="Mechanical Operations"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="Ore Miner Machine"/>
+
+			<effect_description level="1" desc_key="resourceSpring" long_desc_key="Learn how to craft Spring." />
+			<effect_description level="2" desc_key="resourceMechanicalParts" long_desc_key="Learn how to craft Mechanical Parts. Crafting Mechanical Operations faster 15%." />
+			<effect_description level="3" desc_key="resourceElectricParts" long_desc_key="Learn how to craft Electronic Parts." />
+			<effect_description level="4" desc_key="smallEngine" long_desc_key="Learn how to craft Small Engine. Crafting Mechanical Operations faster 30%." />
+			<effect_description level="5" desc_key="gunAssemblyTip_title" long_desc_key="Learn how to craft Ore Miner. Crafting Mechanical Operations faster 50%." />
+		</effect_group>
+	</perk>
+	
+	<perk name="Identify Danger" parent="skillAgilityStealth" name_key="Identify Danger" desc_key="You sense the danger around you. 30% chance to increase run speed for 10 seconds when you take damage." icon="ui_game_symbol_agility">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="1" desc_key="reqAgilityLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="2" desc_key="reqAgilityLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="4" desc_key="reqAgilityLevel04"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="5" desc_key="reqAgilityLevel05"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="7" desc_key="reqAgilityLevel07"/></level_requirements>
+
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="buffIdentifyDangerUpdate"/>
+			<effect_description level="1" desc_key="perkRuleOneCardioNameRank1Desc" long_desc_key="30% chance to increase 25% run speed for 10 seconds when you take damage."/>
+			<effect_description level="2" desc_key="perkRuleOneCardioNameRank2Desc" long_desc_key="30% chance to increase 50% run speed for 10 seconds when you take damage."/>
+			<effect_description level="3" desc_key="perkRuleOneCardioNameRank3Desc" long_desc_key="30% chance to increase 75% run speed for 10 seconds when you take damage."/>
+			<effect_description level="4" desc_key="perkRuleOneCardioNameRank4Desc" long_desc_key="30% chance to increase 100% run speed for 10 seconds when you take damage."/>
+			<effect_description level="5" desc_key="perkRuleOneCardioNameRank5Desc" long_desc_key="30% chance to increase 125% run speed for 10 seconds when you take damage."/>
+		</effect_group>
+	</perk>
+	
+</append>
+	
+</configs>
+

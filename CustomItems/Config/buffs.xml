@@ -1,0 +1,401 @@
+<configs>
+	<append xpath="/buffs" >
+	
+	<buff name="buffIsOnFreeze" name_key="buffIsOnFreezingName" description_key="buffElementFreezingDesc" tooltip_key="buffElementFreezingTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
+		<damage_type value="cold"/>
+		<stack_type value="replace"/>
+		<duration value="6"/><update_rate value="1"/>
+		<display_value value=".buffIsOnFreezeDisplay"/><display_value_format value="time"/>
+		<!-- bookkeeping for all burning buffs -->
+
+		<effect_group name="run particles, cleanup">
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffIsOnFreezeDisplay" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_blockdestroy_glass" local_offset="0,-.2,0" parent_transform="Hips"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_blockdestroy_glass" local_offset="0,-.2,0" parent_transform="Hips"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_blockdestroy_glass"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_blockdestroy_glass"/>
+
+		</effect_group>
+	</buff>
+	
+	<buff name="buffElementFreezingMod" name_key="buffElementFreezingName" description_key="buffElementFreezingDesc" tooltip_key="buffElementFreezingTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
+		<damage_type value="cold"/>
+		<stack_type value="replace"/>
+		<duration value="6.5"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<!-- <passive_effect name="StaminaLossMaxMult" operation="perc_add" value="6"/> -->
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffIsOnFreeze"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="2" effect_name="Cold"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Cold"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.2,0.9" duration="0,6.2"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.2,0.9" duration="0,6.2"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.2,0.9" duration="0,6.2"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.2,0.9" duration="0,6.2"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="GunCriticalDmg1" name_key="Gun Critical Damage" description_key="Add 10% Gun Damage in 60s. 2% chance to get 20% Gun Damage in 30s." icon="ui_game_symbol_sneak_attack" icon_color="171,250,14" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="ignore"/>
+		<duration value="60"/>
+		<update_rate value="1"/>
+		<display_value value="@$GunCriticalDmg1Display"/><display_value_key value="+10% {0}S"/>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$GunCriticalDmg1Display" operation="set" value="60"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$GunCriticalDmg1Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$GunCriticalDmg1Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="GunCriticalDmg1"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee,bow,tool,crossbow"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="GunCriticalDmg1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$GunCriticalDmg1Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="GunCriticalDmg2" name_key="Gun Critical Damage 2" description_key="Add 20% Gun Damage in 60s. 2% chance to get 30% Gun Damage in 30s." icon="ui_game_symbol_sneak_attack" icon_color="250,236,14" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="ignore"/>
+		<duration value="60"/>
+		<update_rate value="1"/>
+		<display_value value="@$GunCriticalDmg2Display"/><display_value_key value="+20% {0}S"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="GunCriticalDmg1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$GunCriticalDmg2Display" operation="set" value="60"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$GunCriticalDmg2Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$GunCriticalDmg2Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="GunCriticalDmg2"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee,bow,tool,crossbow"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="GunCriticalDmg2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$GunCriticalDmg2Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="GunCriticalDmg3" name_key="Gun Critical Damage 3" description_key="Add 30% Gun Damage in 60s. 2% chance to get 40% Gun Damage in 30s." icon="ui_game_symbol_sneak_attack" icon_color="14,250,82" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="ignore"/>
+		<duration value="60"/>
+		<update_rate value="1"/>
+		<display_value value="@$GunCriticalDmg3Display"/><display_value_key value="+30% {0}S"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="GunCriticalDmg2"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$GunCriticalDmg3Display" operation="set" value="60"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$GunCriticalDmg3Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$GunCriticalDmg3Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="GunCriticalDmg3"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee,bow,tool,crossbow"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="GunCriticalDmg3"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$GunCriticalDmg3Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="GunCriticalDmg4" name_key="Gun Critical Damage 4" description_key="Add 40% Gun Damage in 60s. 3% chance to get 40% Gun Damage in 30s." icon="ui_game_symbol_sneak_attack" icon_color="243,14,250" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="replace"/>
+		<duration value="60"/>
+		<update_rate value="1"/>
+		<display_value value="@$GunCriticalDmg4Display"/><display_value_key value="+40% {0}S"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="GunCriticalDmg3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="GunCriticalDmg4t"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$GunCriticalDmg4Display" operation="set" value="60"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$GunCriticalDmg4Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$GunCriticalDmg4Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="GunCriticalDmg4"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee,bow,tool,crossbow"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="GunCriticalDmg4"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$GunCriticalDmg4Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="GunCriticalDmg4r" hidden="true">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="GunCriticalDmg4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="GunCriticalDmg4t"/>
+		</effect_group>
+	
+	</buff>
+	
+	<buff name="GunCriticalDmg4t" hidden="true">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="GunCriticalDmg4r"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="GunCriticalDmg4"/>
+		</effect_group>
+	
+	</buff>
+	
+	
+	<buff name="CriticalDmg1" name_key="Bow Critical Damage" description_key="Add 50% Bow Damage in 120s. 20% chance to get 100% bow damage in 30s." icon="ui_game_symbol_sneak_attack" icon_color="171,250,14" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="ignore"/>
+		<duration value="120"/>
+		<update_rate value="1"/>
+		<display_value value="@$CriticalDmg1Display"/><display_value_key value="+50% {0}S"/>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$CriticalDmg1Display" operation="set" value="120"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$CriticalDmg1Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$CriticalDmg1Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="CriticalDmg1"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee,gun,tool"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="CriticalDmg1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$CriticalDmg1Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="CriticalDmg2" name_key="Bow Critical Damage 2" description_key="Add 100% Bow Damage in 120s. 20% chance to get 150% bow damage in 30s." icon="ui_game_symbol_sneak_attack" icon_color="250,236,14" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="ignore"/>
+		<duration value="120"/>
+		<update_rate value="1"/>
+		<display_value value="@$CriticalDmg2Display"/><display_value_key value="+100% {0}S"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="CriticalDmg1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$CriticalDmg2Display" operation="set" value="120"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$CriticalDmg2Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$CriticalDmg2Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="CriticalDmg2"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee,gun,tool"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="CriticalDmg2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$CriticalDmg2Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="CriticalDmg3" name_key="Bow Critical Damage 3" description_key="Add 150% Bow Damage in 120s. 20% chance to get 200% bow damage in 30s." icon="ui_game_symbol_sneak_attack" icon_color="14,250,82" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="ignore"/>
+		<duration value="120"/>
+		<update_rate value="1"/>
+		<display_value value="@$CriticalDmg3Display"/><display_value_key value="+150% {0}S"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="CriticalDmg2"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$CriticalDmg3Display" operation="set" value="120"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$CriticalDmg3Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$CriticalDmg3Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="CriticalDmg3"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee,gun,tool"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="CriticalDmg3"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$CriticalDmg3Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="CriticalDmg4" name_key="Bow Critical Damage 4" description_key="Add 200% Bow Damage in 120s. 30% chance to get 200% bow damage in 30s." icon="ui_game_symbol_sneak_attack" icon_color="243,14,250" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="replace"/>
+		<duration value="120"/>
+		<update_rate value="1"/>
+		<display_value value="@$CriticalDmg4Display"/><display_value_key value="+200% {0}S"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="CriticalDmg3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="CriticalDmg4t"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$CriticalDmg4Display" operation="set" value="120"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$CriticalDmg4Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$CriticalDmg4Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="CriticalDmg4"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee,gun,tool"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="CriticalDmg4"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$CriticalDmg4Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="CriticalDmg4r" hidden="true">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="CriticalDmg4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="CriticalDmg4t"/>
+		</effect_group>
+	
+	</buff>
+	
+	<buff name="CriticalDmg4t" hidden="true">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="CriticalDmg4r"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="CriticalDmg4"/>
+		</effect_group>
+	
+	</buff>
+	
+	
+	<buff name="MeleeCriticalDmg1" name_key="Melee Critical Damage" description_key="Add 100% Melee Damage in 120s. 10% chance to get 200% Melee damage in 30s." icon="ui_game_symbol_sledge" icon_color="171,250,14" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="ignore"/>
+		<duration value="120"/>
+		<update_rate value="1"/>
+		<display_value value="@$MeleeCriticalDmg1Display"/><display_value_key value="+100% {0}S"/>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$MeleeCriticalDmg1Display" operation="set" value="120"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$MeleeCriticalDmg1Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$MeleeCriticalDmg1Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="MeleeCriticalDmg1"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="bow,gun,tool"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="MeleeCriticalDmg1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$MeleeCriticalDmg1Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="MeleeCriticalDmg2" name_key="Melee Critical Damage 2" description_key="Add 200% Melee Damage in 120s. 10% chance to get 300% Melee damage in 30s." icon="ui_game_symbol_sledge" icon_color="250,236,14" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="ignore"/>
+		<duration value="120"/>
+		<update_rate value="1"/>
+		<display_value value="@$MeleeCriticalDmg2Display"/><display_value_key value="+200% {0}S"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="MeleeCriticalDmg1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$MeleeCriticalDmg2Display" operation="set" value="120"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$MeleeCriticalDmg2Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$MeleeCriticalDmg2Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="MeleeCriticalDmg2"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="bow,gun,tool"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="MeleeCriticalDmg2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$MeleeCriticalDmg2Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="MeleeCriticalDmg3" name_key="Melee Critical Damage 3" description_key="Add 300% Melee Damage in 120s. 10% chance to get 400% Melee damage in 30s." icon="ui_game_symbol_sledge" icon_color="14,250,82" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="ignore"/>
+		<duration value="120"/>
+		<update_rate value="1"/>
+		<display_value value="@$MeleeCriticalDmg3Display"/><display_value_key value="+300% {0}S"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="MeleeCriticalDmg2"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$MeleeCriticalDmg3Display" operation="set" value="120"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$MeleeCriticalDmg3Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$MeleeCriticalDmg3Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="MeleeCriticalDmg3"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="bow,gun,tool"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="MeleeCriticalDmg3"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$MeleeCriticalDmg3Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="MeleeCriticalDmg4" name_key="Melee Critical Damage 4" description_key="Add 400% Melee Damage in 120s. 20% chance to get 400% Melee damage in 30s." icon="ui_game_symbol_sledge" icon_color="243,14,250" icon_blink="true">
+		<damage_type value="stun"/>
+		<stack_type value="replace"/>
+		<duration value="120"/>
+		<update_rate value="1"/>
+		<display_value value="@$MeleeCriticalDmg4Display"/><display_value_key value="+400% {0}S"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="MeleeCriticalDmg3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="MeleeCriticalDmg4t"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="@$MeleeCriticalDmg4Display" operation="set" value="120"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="@$MeleeCriticalDmg4Display" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$MeleeCriticalDmg4Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="2" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="MeleeCriticalDmg4"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="bow,gun,tool"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="MeleeCriticalDmg4"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="@$MeleeCriticalDmg4Display" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="MeleeCriticalDmg4r" hidden="true">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="MeleeCriticalDmg4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="MeleeCriticalDmg4t"/>
+		</effect_group>
+	
+	</buff>
+	
+	<buff name="MeleeCriticalDmg4t" hidden="true">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="MeleeCriticalDmg4r"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="MeleeCriticalDmg4"/>
+		</effect_group>
+	</buff>
+		
+	</append>
+</configs>

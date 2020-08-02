@@ -1,0 +1,12 @@
+<configs>
+		<set xpath="/progression/perks/perk[@name='perkAnimalTracker']/@max_level">4</set>
+		<set xpath="/progression/perks/perk[@name='perkAnimalTracker']/@name_key">The Tracker</set>
+		<set xpath="/progression/perks/perk[@name='perkAnimalTracker']/@desc_key">Learn to detect and track animals, zombies and zombified animals that are nearby and never go hungry or get ambushed again.</set>
+			
+		<append xpath="/progression/perks/perk[@name='perkAnimalTracker']">	
+				<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
+				<effect_group>						
+					<effect_description level="4" desc_base="Zombie Slayer" long_desc_key="Become the unsuprisable zombie slayer. You have grown tired of getting ambushed by zombies so now you can detect zombies and zombified animals."/>					
+				</effect_group>
+		</append>
+</configs>

@@ -1,0 +1,415 @@
+<configs>
+
+<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='1,1,2,2,3,4']/@value">1,1,1,1,1,1</set> 
+<set xpath="/items/item[@name='schematicMaster']/property[@name='Material']/@value">MresourceSchem</set> 
+
+<insertAfter xpath="/items/item/effect_group/passive_effect[@name='ModSlots']">
+	<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+	<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+	<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+	<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+	<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+	<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+</insertAfter>
+<insertAfter xpath="/items/item/effect_group/passive_effect[@name='DegradationMax']">
+	<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+</insertAfter>
+
+<append xpath="/items">
+
+<item name="Elite Item Parts">
+			<property name="Extends" value="gunMGT1AK47Parts"/>
+			<property name="CustomIcon" value="decoCarMotorFlat"/>
+			<property name="CustomIconTint" value="180,180,255"/>
+			<property name="Material" value="MEliteParts"/>
+		</item>
+
+<item name="Obsidian Stone Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="resourceRockSmall"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Obsidian Stone"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Stone" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Stone Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Obsidian Stone">
+	<property name="Extends" value="resourceSilverNugget"/>
+	<property name="Tags" value="gems"/>
+	<property name="CustomIcon" value="resourceRockSmall"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="EconomicValue" value="2000"/>
+	<property name="CraftingIngredientTime" value="200"/>
+	<property name="DescriptionKey" value="rareOresGroupDesc"/>
+	<property name="UnlockedBy" value="Obsidian Stone Schematic,Alchemy technique"/>
+</item>
+
+<item name="Original Schematic">
+	<property name="HoldType" value="45"/>
+	<property name="Tags" value="junk"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceSchem"/>
+	<property name="CustomIcon" value="signDinersMenu"/>
+	<property name="Stacknumber" value="500"/>
+	<property name="FuelValue" value="1"/>
+	<property name="Weight" value="1"/>
+	<property name="EconomicValue" value="10"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+</item>
+
+<item name="Pen"> <!-- scrap material -->
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="CustomIcon" value="cntModularClosetEnd"/>
+	<property name="Material" value="MresourceWood"/>
+	<property name="Weight" value="5"/>
+	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="FuelValue" value="50"/>
+	<property name="EconomicValue" value="25"/>
+	<property name="EconomicBundleSize" value="50"/>
+	<property name="Group" value="Resources"/>
+	<property name="RepairAmount" value="100"/>
+	<property name="LootExpValue" value="1"/>
+	<property name="CraftingIngredientTime" value=".25"/>
+</item>
+<item name="Ink Jar"> <!-- respec potion, admin version -->
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="drinkJarGrandpasForgettingElixir"/> <property name="CustomIconTint" value="0,0,0"/>
+	<property name="TintColor" value="0,0,0"/>
+	<property name="HoldType" value="3"/>
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Weight" value="10"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Group" value="Resources"/>
+	<property name="ShowQuality" value="false"/>
+</item>
+
+<item name="Empty Book"> <!-- first book -->
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="CustomIcon" value="looseBoardsTrapPlate1x1"/>
+	<property name="Material" value="MresourceWood"/>
+	<property name="Weight" value="5"/>
+	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="FuelValue" value="50"/>
+	<property name="EconomicValue" value="25"/>
+	<property name="EconomicBundleSize" value="50"/>
+	<property name="Group" value="Resources"/>
+	<property name="RepairAmount" value="100"/>
+	<property name="LootExpValue" value="1"/>
+	<property name="CraftingIngredientTime" value=".25"/>
+</item>
+
+<item name="EliteBoxMaster">
+	<property name="DescriptionKey" value="schematicGeneralGroupDesc"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="HoldType" value="21"/>
+	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Stacknumber" value="5"/>
+	<property name="EconomicValue" value="8000"/>
+	<property name="Group" value="Books"/>
+	<property name="CustomIcon" value="cntToolBoxClosed"/>
+	<property name="CustomIconTint" value="7106C4"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+</item>
+<item name="Elite Titanium Helmet Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Titanium Helmet"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Titanium Vest Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Titanium Vest"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Titanium Gloves Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Titanium Gloves"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Titanium Legs Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Titanium Legs"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Titanium Boots Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Titanium Boots"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+
+<item name="Elite Obsidian Helmet Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Obsidian Helmet"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Obsidian Chest Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Obsidian Chest"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Obsidian Gloves Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Obsidian Gloves"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Obsidian Legs Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Obsidian Legs"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Obsidian Boots Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Obsidian Boots"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+
+<item name="PP19 Bizon Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="PP19 Bizon"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Springfield Saint SMG Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Springfield Saint SMG"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="OTs-14 Groza SMG Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="OTs-14 Groza SMG"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Pump Shotgun Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Pump Shotgun"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Vulcan Machine Gun Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Vulcan Machine Gun"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite AWM Sniper Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite AWM Sniper"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Scythe Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Scythe"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Quad Barrels Shotgun Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Quad Barrels Shotgun"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Photon Projector Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Photon Projector"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Neutron Projector Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Neutron Projector"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+<item name="Elite Compound Crossbow Box">
+	<property name="Extends" value="EliteBoxMaster"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+		<property name="Create_item" value="Elite Compound Crossbow"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+
+<item name="Infinity Gaunlet">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="armorMilitaryGloves"/>
+	<property name="CustomIconTint" value="FFFF00"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,lightArmor,lightArmorPenalty,superItem,lightArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="6"/>
+		<passive_effect name="HealthMax" operation="base_add" value="100"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="2" tags="melee"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.08"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".326,.456" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_gloves"/>
+		<property name="Overlay0" value="armor_kevlar_gloves"/>
+		<property name="Overlay0Tint" value="255,255,0"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+</append>
+</configs>

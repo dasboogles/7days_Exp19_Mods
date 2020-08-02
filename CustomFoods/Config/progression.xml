@@ -1,0 +1,10 @@
+<configs>
+
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='1,5']/@tags">,foodHoney,Honey Glazed Sham,Chicken Noodle Soup,Dog Beef Stew,Meats and Oats Cat Food,Sugar</append>
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='2,5']/@tags">,Apple Cake,Eve Pudding,Bottle of brandy,Fruit Pie,Pie Crust,Jello Fruit Salad,Painkiller Jar,NearDeathRemover Jar</append>
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='3,5']/@tags">,Apple Juice Smoothie,Full Restoration Drinks,Yangzhou fried rice,Speghetti with Meat Sauce,Speghetti,Wreck it Ralph,Tuna Salad Sandwich,Pho,Miso Ramen,Run Forrest Run,Tom Yum Goong</append>
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='4,5']/@tags">,Lamb Kheema,Beef and Barley Soup,Solid Head Drinks,Lynxeyed Drinks</append>
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='5,5']/@tags">,Goldenrod Moonshine,Zhonya's Hourglass</append>
+
+</configs>
+

@@ -1,0 +1,10 @@
+<configs>
+
+	<!-- <append xpath="/progression/perks/perk[@name='perkMachineGunner']/effect_group/passive_effect[@level='1,5']/@tags">,AWM Sniper Rifle,</append> -->
+	<append xpath="/progression/perks/perk[@name='perkDemolitionsExpert']/effect_group/passive_effect[@level='3,5']/@tags">,Lethal Grenade,Stun Grenade</append>
+	<append xpath="/progression/perks/perk[@name='perkSniperComplete']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="5.56mm Ammo Bundle,HP 5.56mm Ammo Bundle,AP 5.56mm Ammo Bundle"/>
+	</append>
+
+</configs>
+

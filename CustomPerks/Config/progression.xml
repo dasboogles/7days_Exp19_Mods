@@ -1,0 +1,1368 @@
+<configs>
+	
+	<append xpath="/progression/attributes">
+	<attribute name="Bonus" name_key="Skill Bonus" desc_key="Skill Bonus" icon="ui_game_symbol_unlock" min_level="0" max_level="10" base_skill_point_cost="1">
+		<level_requirements level="1"> <requirement name="PlayerLevel" operation="GTE" value="50" desc_key="Need Level 50"/></level_requirements>
+		<level_requirements level="2"> <requirement name="PlayerLevel" operation="GTE" value="100" desc_key="Need Level 100"/></level_requirements>
+		<level_requirements level="3"> <requirement name="PlayerLevel" operation="GTE" value="150" desc_key="Need Level 150"/></level_requirements>
+		<level_requirements level="4"> <requirement name="PlayerLevel" operation="GTE" value="200" desc_key="Need Level 200"/></level_requirements>
+		<level_requirements level="5"> <requirement name="PlayerLevel" operation="GTE" value="250" desc_key="Need Level 250"/></level_requirements>
+		<level_requirements level="6"> <requirement name="PlayerLevel" operation="GTE" value="300" desc_key="Need Level 300"/></level_requirements>
+		<level_requirements level="7"> <requirement name="PlayerLevel" operation="GTE" value="350" desc_key="Need Level 350"/></level_requirements>
+		<level_requirements level="8"> <requirement name="PlayerLevel" operation="GTE" value="400" desc_key="Need Level 400"/></level_requirements>
+		<level_requirements level="9"> <requirement name="PlayerLevel" operation="GTE" value="450" desc_key="Need Level 450"/></level_requirements>
+		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="500" desc_key="Need Level 500"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,10" value=".05,.5"/>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,10" value=".05,.5"/>
+			<passive_effect name="HealthMax" operation="base_add" level="1,10" value="10,100"/>
+			<passive_effect name="StaminaMax" operation="base_add" level="1,10" value="10,100"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" level="1,10" value="1,10"/>
+			
+			<effect_description level="1" desc_base="+ 10 Max health, 10 Max stamina, 1 Armor rating, 5% Block damage, 5% Enity damage" long_desc_key="Increase your Max health and Stamina by 10, 5% Block and Entity Damage, 1 Armor rating"/>
+			<effect_description level="2" desc_base="+ 20 Max health, 20 Max stamina, 2 Armor rating, 10% Block damage, 10% Enity damage" long_desc_key="Increase your Max health and Stamina by 20, 10% Block and Entity Damage, 2 Armor rating"/>
+			<effect_description level="3" desc_base="+ 30 Max health, 30 Max stamina, 3 Armor rating, 15% Block damage, 15% Enity damage" long_desc_key="Increase your Max health and Stamina by 30, 15% Block and Entity Damage, 3 Armor rating"/>
+			<effect_description level="4" desc_base="+ 40 Max health, 40 Max stamina, 4 Armor rating, 20% Block damage, 20% Enity damage" long_desc_key="Increase your Max health and Stamina by 40, 20% Block and Entity Damage, 4 Armor rating"/>
+			<effect_description level="5" desc_base="+ 50 Max health, 50 Max stamina, 5 Armor rating, 25% Block damage, 25% Enity damage" long_desc_key="Increase your Max health and Stamina by 50, 25% Block and Entity Damage, 5 Armor rating"/>
+			<effect_description level="6" desc_base="+ 60 Max health, 60 Max stamina, 6 Armor rating, 30% Block damage, 30% Enity damage" long_desc_key="Increase your Max health and Stamina by 60, 30% Block and Entity Damage, 6 Armor rating"/>
+			<effect_description level="7" desc_base="+ 70 Max health, 70 Max stamina, 7 Armor rating, 35% Block damage, 35% Enity damage" long_desc_key="Increase your Max health and Stamina by 70, 35% Block and Entity Damage, 7 Armor rating"/>
+			<effect_description level="8" desc_base="+ 80 Max health, 80 Max stamina, 8 Armor rating, 40% Block damage, 40% Enity damage" long_desc_key="Increase your Max health and Stamina by 80, 40% Block and Entity Damage, 8 Armor rating"/>
+			<effect_description level="9" desc_base="+ 90 Max health, 90 Max stamina, 9 Armor rating, 45% Block damage, 45% Enity damage" long_desc_key="Increase your Max health and Stamina by 90, 45% Block and Entity Damage, 9 Armor rating"/>
+			<effect_description level="10" desc_base="+ 100 Max health, 100 Max stamina, 10 Armor rating, 50% Block damage, 50% Enity damage" long_desc_key="Increase your Max health and Stamina by 100, 50% Block and Entity Damage, 10 Armor rating"/>
+			
+		</effect_group>
+	</attribute>
+	</append>
+	
+<append xpath="/progression/perks">
+	
+	<perk name="perkRifleBonus" parent="Bonus" name_key="Rifle Damage Bonus" max_level="20" base_skill_point_cost="1" desc_key="You've mastered the arts of the rifle." long_desc_key="You've mastered the arts of the rifle." icon="ui_game_symbol_rifle">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="perkMachineGunner,perkDeadEye"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,20" value=".1,2"/>
+			
+			<effect_description level="1" desc_base="+ 1% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 1%"/>
+			<effect_description level="2" desc_base="+ 2% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 2%"/>
+			<effect_description level="3" desc_base="+ 3% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 3%"/>
+			<effect_description level="4" desc_base="+ 4% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 4%"/>
+			<effect_description level="5" desc_base="+ 5% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 5%"/>
+			<effect_description level="6" desc_base="+ 6% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 6%"/>
+			<effect_description level="7" desc_base="+ 7% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 7%"/>
+			<effect_description level="8" desc_base="+ 8% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 8%"/>
+			<effect_description level="9" desc_base="+ 9% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 9%"/>
+			<effect_description level="10" desc_base="+ 10% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 10%"/>
+			<effect_description level="11" desc_base="+ 11% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 11%"/>
+			<effect_description level="12" desc_base="+ 12% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 12%"/>
+			<effect_description level="13" desc_base="+ 13% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 13%"/>
+			<effect_description level="14" desc_base="+ 14% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 14%"/>
+			<effect_description level="15" desc_base="+ 15% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 15%"/>
+			<effect_description level="16" desc_base="+ 16% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 16%"/>
+			<effect_description level="17" desc_base="+ 17% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 17%"/>
+			<effect_description level="18" desc_base="+ 18% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 18%"/>
+			<effect_description level="19" desc_base="+ 19% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 19%"/>
+			<effect_description level="20" desc_base="+ 20% Rifle damage." long_desc_key="Increase your entity damage with rifle gun by 20%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkShotgunBonus" parent="Bonus" name_key="Shotgun Damage Bonus" max_level="20" base_skill_point_cost="1" desc_key="You've mastered the arts of the shotgun" long_desc_key="You've mastered the arts of the shotgun" icon="ui_game_symbol_shotgun">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="perkBoomstick"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,20" value=".1,2"/>
+			
+			<effect_description level="1" desc_base="+ 1% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 1%"/>
+			<effect_description level="2" desc_base="+ 2% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 2%"/>
+			<effect_description level="3" desc_base="+ 3% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 3%"/>
+			<effect_description level="4" desc_base="+ 4% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 4%"/>
+			<effect_description level="5" desc_base="+ 5% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 5%"/>
+			<effect_description level="6" desc_base="+ 6% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 6%"/>
+			<effect_description level="7" desc_base="+ 7% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 7%"/>
+			<effect_description level="8" desc_base="+ 8% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 8%"/>
+			<effect_description level="9" desc_base="+ 9% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 9%"/>
+			<effect_description level="10" desc_base="+ 10% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 10%"/>
+			<effect_description level="11" desc_base="+ 11% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 11%"/>
+			<effect_description level="12" desc_base="+ 12% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 12%"/>
+			<effect_description level="13" desc_base="+ 13% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 13%"/>
+			<effect_description level="14" desc_base="+ 14% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 14%"/>
+			<effect_description level="15" desc_base="+ 15% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 15%"/>
+			<effect_description level="16" desc_base="+ 16% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 16%"/>
+			<effect_description level="17" desc_base="+ 17% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 17%"/>
+			<effect_description level="18" desc_base="+ 18% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 18%"/>
+			<effect_description level="19" desc_base="+ 19% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 19%"/>
+			<effect_description level="20" desc_base="+ 20% Shotgun damage." long_desc_key="Increase your entity damage with Shotgun gun by 20%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkSMGBonus" parent="Bonus" name_key="SMG and Pistol Damage Bonus" max_level="20" base_skill_point_cost="1" desc_key="You've mastered the arts of sub machine gun." long_desc_key="You've mastered the arts of sub machine gun." icon="ui_game_symbol_gunslinger">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="perkGunslinger"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,20" value=".1,2"/>
+			
+			<effect_description level="1" desc_base="+ 1% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 1%"/>
+			<effect_description level="2" desc_base="+ 2% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 2%"/>
+			<effect_description level="3" desc_base="+ 3% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 3%"/>
+			<effect_description level="4" desc_base="+ 4% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 4%"/>
+			<effect_description level="5" desc_base="+ 5% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 5%"/>
+			<effect_description level="6" desc_base="+ 6% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 6%"/>
+			<effect_description level="7" desc_base="+ 7% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 7%"/>
+			<effect_description level="8" desc_base="+ 8% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 8%"/>
+			<effect_description level="9" desc_base="+ 9% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 9%"/>
+			<effect_description level="10" desc_base="+ 10% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 10%"/>
+			<effect_description level="11" desc_base="+ 11% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 11%"/>
+			<effect_description level="12" desc_base="+ 12% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 12%"/>
+			<effect_description level="13" desc_base="+ 13% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 13%"/>
+			<effect_description level="14" desc_base="+ 14% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 14%"/>
+			<effect_description level="15" desc_base="+ 15% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 15%"/>
+			<effect_description level="16" desc_base="+ 16% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 16%"/>
+			<effect_description level="17" desc_base="+ 17% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 17%"/>
+			<effect_description level="18" desc_base="+ 18% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 18%"/>
+			<effect_description level="19" desc_base="+ 19% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 19%"/>
+			<effect_description level="20" desc_base="+ 20% SMG and Pistol damage." long_desc_key="Increase your entity damage with SMG and Pistol gun by 20%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkBowBonus" parent="Bonus" name_key="Bow Damage Bonus" max_level="20" base_skill_point_cost="1" desc_key="You've mastered the arts of the bow." long_desc_key="You've mastered the arts of the bow." icon="ui_game_symbol_archery">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="perkArchery"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,20" value=".1,2"/>
+			
+			<effect_description level="1" desc_base="+ 1% Bow damage." long_desc_key="Increase your entity damage with Bow by 1%"/>
+			<effect_description level="2" desc_base="+ 2% Bow damage." long_desc_key="Increase your entity damage with Bow by 2%"/>
+			<effect_description level="3" desc_base="+ 3% Bow damage." long_desc_key="Increase your entity damage with Bow by 3%"/>
+			<effect_description level="4" desc_base="+ 4% Bow damage." long_desc_key="Increase your entity damage with Bow by 4%"/>
+			<effect_description level="5" desc_base="+ 5% Bow damage." long_desc_key="Increase your entity damage with Bow by 5%"/>
+			<effect_description level="6" desc_base="+ 6% Bow damage." long_desc_key="Increase your entity damage with Bow by 6%"/>
+			<effect_description level="7" desc_base="+ 7% Bow damage." long_desc_key="Increase your entity damage with Bow by 7%"/>
+			<effect_description level="8" desc_base="+ 8% Bow damage." long_desc_key="Increase your entity damage with Bow by 8%"/>
+			<effect_description level="9" desc_base="+ 9% Bow damage." long_desc_key="Increase your entity damage with Bow by 9%"/>
+			<effect_description level="10" desc_base="+ 10% Bow damage." long_desc_key="Increase your entity damage with Bow by 10%"/>
+			<effect_description level="11" desc_base="+ 11% Bow damage." long_desc_key="Increase your entity damage with Bow by 11%"/>
+			<effect_description level="12" desc_base="+ 12% Bow damage." long_desc_key="Increase your entity damage with Bow by 12%"/>
+			<effect_description level="13" desc_base="+ 13% Bow damage." long_desc_key="Increase your entity damage with Bow by 13%"/>
+			<effect_description level="14" desc_base="+ 14% Bow damage." long_desc_key="Increase your entity damage with Bow by 14%"/>
+			<effect_description level="15" desc_base="+ 15% Bow damage." long_desc_key="Increase your entity damage with Bow by 15%"/>
+			<effect_description level="16" desc_base="+ 16% Bow damage." long_desc_key="Increase your entity damage with Bow by 16%"/>
+			<effect_description level="17" desc_base="+ 17% Bow damage." long_desc_key="Increase your entity damage with Bow by 17%"/>
+			<effect_description level="18" desc_base="+ 18% Bow damage." long_desc_key="Increase your entity damage with Bow by 18%"/>
+			<effect_description level="19" desc_base="+ 19% Bow damage." long_desc_key="Increase your entity damage with Bow by 19%"/>
+			<effect_description level="20" desc_base="+ 20% Bow damage." long_desc_key="Increase your entity damage with Bow by 20%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkMeleeBonus" parent="Bonus" name_key="Melee Damage Bonus" max_level="20" base_skill_point_cost="1" desc_key="You've mastered the arts of the melee weapon" long_desc_key="You've mastered the arts of the melee weapon" icon="ui_game_symbol_deep_cuts">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="perkSkullCrusher,perkPummelPete,perkJavelinMaster,perkBrawler,perkDeepCuts"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,20" value=".1,2"/>
+				
+			<effect_description level="1" desc_base="+ 1% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 1%"/>
+			<effect_description level="2" desc_base="+ 2% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 2%"/>
+			<effect_description level="3" desc_base="+ 3% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 3%"/>
+			<effect_description level="4" desc_base="+ 4% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 4%"/>
+			<effect_description level="5" desc_base="+ 5% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 5%"/>
+			<effect_description level="6" desc_base="+ 6% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 6%"/>
+			<effect_description level="7" desc_base="+ 7% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 7%"/>
+			<effect_description level="8" desc_base="+ 8% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 8%"/>
+			<effect_description level="9" desc_base="+ 9% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 9%"/>
+			<effect_description level="10" desc_base="+ 10% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 10%"/>
+			<effect_description level="11" desc_base="+ 11% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 11%"/>
+			<effect_description level="12" desc_base="+ 12% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 12%"/>
+			<effect_description level="13" desc_base="+ 13% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 13%"/>
+			<effect_description level="14" desc_base="+ 14% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 14%"/>
+			<effect_description level="15" desc_base="+ 15% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 15%"/>
+			<effect_description level="16" desc_base="+ 16% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 16%"/>
+			<effect_description level="17" desc_base="+ 17% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 17%"/>
+			<effect_description level="18" desc_base="+ 18% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 18%"/>
+			<effect_description level="19" desc_base="+ 19% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 19%"/>
+			<effect_description level="20" desc_base="+ 20% Melee weapon damage." long_desc_key="Increase your entity damage with Melee weapon by 20%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkExplosiveMastery" parent="Bonus" name_key="Explosives Mastery Bonus" max_level="20" base_skill_point_cost="1" desc_key="You really do love fireworks, right? Vastly increase your damamge with explosives." icon="ui_game_symbol_explosion">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkDemolitionsExpert"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,20" value=".01,.2"/>
+
+			<effect_description level="1" desc_base="+ 1% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 1%"/>
+			<effect_description level="2" desc_base="+ 2% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 2%"/>
+			<effect_description level="3" desc_base="+ 3% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 3%"/>
+			<effect_description level="4" desc_base="+ 4% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 4%"/>
+			<effect_description level="5" desc_base="+ 5% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 5%"/>
+			<effect_description level="6" desc_base="+ 6% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 6%"/>
+			<effect_description level="7" desc_base="+ 7% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 7%"/>
+			<effect_description level="8" desc_base="+ 8% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 8%"/>
+			<effect_description level="9" desc_base="+ 9% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 9%"/>
+			<effect_description level="10" desc_base="+ 10% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 10%"/>
+			<effect_description level="11" desc_base="+ 11% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 11%"/>
+			<effect_description level="12" desc_base="+ 12% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 12%"/>
+			<effect_description level="13" desc_base="+ 13% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 13%"/>
+			<effect_description level="14" desc_base="+ 14% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 14%"/>
+			<effect_description level="15" desc_base="+ 15% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 15%"/>
+			<effect_description level="16" desc_base="+ 16% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 16%"/>
+			<effect_description level="17" desc_base="+ 17% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 17%"/>
+			<effect_description level="18" desc_base="+ 18% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 18%"/>
+			<effect_description level="19" desc_base="+ 19% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 19%"/>
+			<effect_description level="20" desc_base="+ 20% Explosives weapon damage." long_desc_key="Increase your entity damage with Explosives weapon by 20%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkArmorBonus" parent="Bonus" name_key="Armor Bonus" max_level="20" base_skill_point_cost="1" desc_key="Your armor feels like a second skin an thus is even more defend now." long_desc_key="Your armor feels like a second skin an thus is even more defend now." icon="ui_game_symbol_armor_iron">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" level="1,20" value="1,20"/>
+				
+			<effect_description level="1" desc_base="+ 1 Armor rating" long_desc_key="Increase your Armor rating by 1"/>
+			<effect_description level="2" desc_base="+ 2 Armor rating" long_desc_key="Increase your Armor rating by 2"/>
+			<effect_description level="3" desc_base="+ 3 Armor rating" long_desc_key="Increase your Armor rating by 3"/>
+			<effect_description level="4" desc_base="+ 4 Armor rating" long_desc_key="Increase your Armor rating by 4"/>
+			<effect_description level="5" desc_base="+ 5 Armor rating" long_desc_key="Increase your Armor rating by 5"/>
+			<effect_description level="6" desc_base="+ 6 Armor rating" long_desc_key="Increase your Armor rating by 6"/>
+			<effect_description level="7" desc_base="+ 7 Armor rating" long_desc_key="Increase your Armor rating by 7"/>
+			<effect_description level="8" desc_base="+ 8 Armor rating" long_desc_key="Increase your Armor rating by 8"/>
+			<effect_description level="9" desc_base="+ 9 Armor rating" long_desc_key="Increase your Armor rating by 9"/>
+			<effect_description level="10" desc_base="+ 10 Armor rating" long_desc_key="Increase your Armor rating by 10"/>
+			<effect_description level="11" desc_base="+ 11 Armor rating" long_desc_key="Increase your Armor rating by 11"/>
+			<effect_description level="12" desc_base="+ 12 Armor rating" long_desc_key="Increase your Armor rating by 12"/>
+			<effect_description level="13" desc_base="+ 13 Armor rating" long_desc_key="Increase your Armor rating by 13"/>
+			<effect_description level="14" desc_base="+ 14 Armor rating" long_desc_key="Increase your Armor rating by 14"/>
+			<effect_description level="15" desc_base="+ 15 Armor rating" long_desc_key="Increase your Armor rating by 15"/>
+			<effect_description level="16" desc_base="+ 16 Armor rating" long_desc_key="Increase your Armor rating by 16"/>
+			<effect_description level="17" desc_base="+ 17 Armor rating" long_desc_key="Increase your Armor rating by 17"/>
+			<effect_description level="18" desc_base="+ 18 Armor rating" long_desc_key="Increase your Armor rating by 18"/>
+			<effect_description level="19" desc_base="+ 19 Armor rating" long_desc_key="Increase your Armor rating by 19"/>
+			<effect_description level="20" desc_base="+ 20 Armor rating" long_desc_key="Increase your Armor rating by 20"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkHPBonus" parent="Bonus" name_key="Health Bonus" max_level="20" base_skill_point_cost="1" desc_key="Increase your hardiness and thus your maximum health." long_desc_key="Increase your hardiness and thus your maximum health." icon="ui_game_symbol_add">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<!-- <passive_effect name="HealthMaxModifierOT" operation="base_add" level="1,20" value="10,200"/> -->
+				<passive_effect name="HealthMax" operation="base_add" level="1,20" value="20,200"/>
+			<effect_description level="1" desc_base="+ 10 Max health" long_desc_key="Increase your Max health by 10"/>
+			<effect_description level="2" desc_base="+ 20 Max health" long_desc_key="Increase your Max health by 20"/>
+			<effect_description level="3" desc_base="+ 30 Max health" long_desc_key="Increase your Max health by 30"/>
+			<effect_description level="4" desc_base="+ 40 Max health" long_desc_key="Increase your Max health by 40"/>
+			<effect_description level="5" desc_base="+ 50 Max health" long_desc_key="Increase your Max health by 50"/>
+			<effect_description level="6" desc_base="+ 60 Max health" long_desc_key="Increase your Max health by 60"/>
+			<effect_description level="7" desc_base="+ 70 Max health" long_desc_key="Increase your Max health by 70"/>
+			<effect_description level="8" desc_base="+ 80 Max health" long_desc_key="Increase your Max health by 80"/>
+			<effect_description level="9" desc_base="+ 90 Max health" long_desc_key="Increase your Max health by 90"/>
+			<effect_description level="10" desc_base="+ 100 Max health" long_desc_key="Increase your Max health by 100"/>
+			<effect_description level="11" desc_base="+ 110 Max health" long_desc_key="Increase your Max health by 110"/>
+			<effect_description level="12" desc_base="+ 120 Max health" long_desc_key="Increase your Max health by 120"/>
+			<effect_description level="13" desc_base="+ 130 Max health" long_desc_key="Increase your Max health by 130"/>
+			<effect_description level="14" desc_base="+ 140 Max health" long_desc_key="Increase your Max health by 140"/>
+			<effect_description level="15" desc_base="+ 150 Max health" long_desc_key="Increase your Max health by 150"/>
+			<effect_description level="16" desc_base="+ 160 Max health" long_desc_key="Increase your Max health by 160"/>
+			<effect_description level="17" desc_base="+ 170 Max health" long_desc_key="Increase your Max health by 170"/>
+			<effect_description level="18" desc_base="+ 180 Max health" long_desc_key="Increase your Max health by 180"/>
+			<effect_description level="19" desc_base="+ 190 Max health" long_desc_key="Increase your Max health by 190"/>
+			<effect_description level="20" desc_base="+ 200 Max health" long_desc_key="Increase your Max health by 200"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkStaminaBonus" parent="Bonus" name_key="Stamina Bonus" max_level="20" base_skill_point_cost="1" desc_key="Increase your endurance and thus your maximum stamina." long_desc_key="Increase your endurance and thus your maximum stamina." icon="ui_game_symbol_medical">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<passive_effect name="StaminaMax" operation="base_add" level="1,20" value="10,200"/>
+			<effect_description level="1" desc_base="+ 10 Max stamina" long_desc_key="Increase your Max stamina by 10"/>
+			<effect_description level="2" desc_base="+ 20 Max stamina" long_desc_key="Increase your Max stamina by 20"/>
+			<effect_description level="3" desc_base="+ 30 Max stamina" long_desc_key="Increase your Max stamina by 30"/>
+			<effect_description level="4" desc_base="+ 40 Max stamina" long_desc_key="Increase your Max stamina by 40"/>
+			<effect_description level="5" desc_base="+ 50 Max stamina" long_desc_key="Increase your Max stamina by 50"/>
+			<effect_description level="6" desc_base="+ 60 Max stamina" long_desc_key="Increase your Max stamina by 60"/>
+			<effect_description level="7" desc_base="+ 70 Max stamina" long_desc_key="Increase your Max stamina by 70"/>
+			<effect_description level="8" desc_base="+ 80 Max stamina" long_desc_key="Increase your Max stamina by 80"/>
+			<effect_description level="9" desc_base="+ 90 Max stamina" long_desc_key="Increase your Max stamina by 90"/>
+			<effect_description level="10" desc_base="+ 100 Max stamina" long_desc_key="Increase your Max stamina by 100"/>
+			<effect_description level="11" desc_base="+ 110 Max stamina" long_desc_key="Increase your Max stamina by 110"/>
+			<effect_description level="12" desc_base="+ 120 Max stamina" long_desc_key="Increase your Max stamina by 120"/>
+			<effect_description level="13" desc_base="+ 130 Max stamina" long_desc_key="Increase your Max stamina by 130"/>
+			<effect_description level="14" desc_base="+ 140 Max stamina" long_desc_key="Increase your Max stamina by 140"/>
+			<effect_description level="15" desc_base="+ 150 Max stamina" long_desc_key="Increase your Max stamina by 150"/>
+			<effect_description level="16" desc_base="+ 160 Max stamina" long_desc_key="Increase your Max stamina by 160"/>
+			<effect_description level="17" desc_base="+ 170 Max stamina" long_desc_key="Increase your Max stamina by 170"/>
+			<effect_description level="18" desc_base="+ 180 Max stamina" long_desc_key="Increase your Max stamina by 180"/>
+			<effect_description level="19" desc_base="+ 190 Max stamina" long_desc_key="Increase your Max stamina by 190"/>
+			<effect_description level="20" desc_base="+ 200 Max stamina" long_desc_key="Increase your Max stamina by 200"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkSpeedBonus" parent="Bonus" name_key="Speed Bonus" max_level="20" base_skill_point_cost="1" desc_key="Increase your maximum running speed." long_desc_key="Increase your maximum running speed." icon="ui_game_symbol_agility">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_add" level="1,20" value=".05,.5"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" level="1,20" value=".05,.5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" level="1,20" value=".05,.5"/>
+			<effect_description level="1" desc_base="+ 5% Movement speed" long_desc_key="Increase your Movement speed by 5%"/>
+			<effect_description level="2" desc_base="+ 7.4% Movement speed" long_desc_key="Increase your Movement speed by 7.4%"/>
+			<effect_description level="3" desc_base="+ 9.7% Movement speed" long_desc_key="Increase your Movement speed by 9.7%"/>
+			<effect_description level="4" desc_base="+ 12.1% Movement speed" long_desc_key="Increase your Movement speed by 12.1%"/>
+			<effect_description level="5" desc_base="+ 14.5% Movement speed" long_desc_key="Increase your Movement speed by 14.5%"/>
+			<effect_description level="6" desc_base="+ 16.8% Movement speed" long_desc_key="Increase your Movement speed by 16.8%"/>
+			<effect_description level="7" desc_base="+ 19.2% Movement speed" long_desc_key="Increase your Movement speed by 19.2%"/>
+			<effect_description level="8" desc_base="+ 21.6% Movement speed" long_desc_key="Increase your Movement speed by 21.6%"/>
+			<effect_description level="9" desc_base="+ 23.9% Movement speed" long_desc_key="Increase your Movement speed by 23.9%"/>
+			<effect_description level="10" desc_base="+ 26.3% Movement speed" long_desc_key="Increase your Movement speed by 26.3%"/>
+			<effect_description level="11" desc_base="+ 28.7% Movement speed" long_desc_key="Increase your Movement speed by 28.7%"/>
+			<effect_description level="12" desc_base="+ 31.1% Movement speed" long_desc_key="Increase your Movement speed by 31.1%"/>
+			<effect_description level="13" desc_base="+ 33.4% Movement speed" long_desc_key="Increase your Movement speed by 33.4%"/>
+			<effect_description level="14" desc_base="+ 35.8% Movement speed" long_desc_key="Increase your Movement speed by 35.8%"/>
+			<effect_description level="15" desc_base="+ 38.2% Movement speed" long_desc_key="Increase your Movement speed by 38.2%"/>
+			<effect_description level="16" desc_base="+ 40.5% Movement speed" long_desc_key="Increase your Movement speed by 40.5%"/>
+			<effect_description level="17" desc_base="+ 42.9% Movement speed" long_desc_key="Increase your Movement speed by 42.9%"/>
+			<effect_description level="18" desc_base="+ 45.3% Movement speed" long_desc_key="Increase your Movement speed by 45.3%"/>
+			<effect_description level="19" desc_base="+ 47.6% Movement speed" long_desc_key="Increase your Movement speed by 47.6%"/>
+			<effect_description level="20" desc_base="+ 50% Movement speed" long_desc_key="Increase your Movement speed by 50%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkModMastery" parent="Bonus" name_key="Mod Mastery" max_level="20" base_skill_point_cost="1" desc_key="Your nimble fingers allow mods on your items to perform better." icon="ui_game_symbol_paint_copy_block">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+		
+		<passive_effect name="ModPowerBonus" operation="perc_add" level="1,5" value=".005,.025" tags="EntityDamage,BlockDamage,melee,ranged"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" level="6,10" value=".0275,.0375" tags="EntityDamage,BlockDamage,melee,ranged"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" level="11,15" value=".039,.045" tags="EntityDamage,BlockDamage,melee,ranged"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" level="16,20" value=".046,.05" tags="EntityDamage,BlockDamage,melee,ranged"/>
+
+		<passive_effect name="ModSlots" operation="base_add" level="10,19" value="1" tier="1,6"/>
+		<passive_effect name="ModSlots" operation="base_add" level="20" value="2" tier="1,6"/>
+
+			<effect_description level="1" desc_base="+ 0,5% Mod Power" long_desc_key="Increase your power bonus per attached mod by 0,5%"/>
+			<effect_description level="2" desc_base="+ 1% Mod Power" long_desc_key="Increase your power bonus per attached mod by 1%"/>
+			<effect_description level="3" desc_base="+ 1,5% Mod Power" long_desc_key="Increase your power bonus per attached mod by 1,5%"/>
+			<effect_description level="4" desc_base="+ 2% Mod Power" long_desc_key="Increase your power bonus per attached mod by 2%"/>
+			<effect_description level="5" desc_base="+ 2,5% Mod Power" long_desc_key="Increase your power bonus per attached mod by 2,5%"/>
+			<effect_description level="6" desc_base="+ 2,75% Mod Power" long_desc_key="Increase your power bonus per attached mod by 2,75"/>
+			<effect_description level="7" desc_base="+ 3% Mod Power" long_desc_key="Increase your power bonus per attached mod by 3%"/>
+			<effect_description level="8" desc_base="+ 3,25% Mod Power" long_desc_key="Increase your power bonus per attached mod by 3,25%"/>
+			<effect_description level="9" desc_base="+ 3,5% Mod Power" long_desc_key="Increase your power bonus per attached mod by 3,5%"/>
+			<effect_description level="10" desc_base="+ 3,75% Mod Power and + 1 Mod Slot" long_desc_key="Increase your power bonus per attached mod by 3,75% and gain an additional mod slot"/>
+			<effect_description level="11" desc_base="+ 3,9% Mod Power" long_desc_key="Increase your power bonus per attached mod by 3,9%"/>
+			<effect_description level="12" desc_base="+ 4,05% Mod Power" long_desc_key="Increase your power bonus per attached mod by 4,05%"/>
+			<effect_description level="13" desc_base="+ 4,2% Mod Power" long_desc_key="Increase your power bonus per attached mod by 4,2%"/>
+			<effect_description level="14" desc_base="+ 4,35% Mod Power" long_desc_key="Increase your power bonus per attached mod by 4,35%"/>
+			<effect_description level="15" desc_base="+ 4,5% Mod Power" long_desc_key="Increase your power bonus per attached mod by 4,5%"/>
+			<effect_description level="16" desc_base="+ 4,6% Mod Power" long_desc_key="Increase your power bonus per attached mod by 4,6%"/>
+			<effect_description level="17" desc_base="+ 4,7% Mod Power" long_desc_key="Increase your power bonus per attached mod by 4,7%"/>
+			<effect_description level="18" desc_base="+ 4,8% Mod Power" long_desc_key="Increase your power bonus per attached mod by 4,8%"/>
+			<effect_description level="19" desc_base="+ 4,9% Mod Power" long_desc_key="Increase your power bonus per attached mod by 4,9%"/>
+			<effect_description level="20" desc_base="+ 5% Mod Power and + 2 Mod Slots" long_desc_key="Increase your power bonus per attached mod by 5% and gain 2 additional mod slots"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkAPM" parent="Bonus" name_key="Attack Speed" max_level="20" base_skill_point_cost="1" desc_key="All those blows you've dealt evolved into a daily routine. Now you're able too attack even faster." icon="ui_game_symbol_knunchuck">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="melee"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,5" value=".025,.125"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="6,10" value=".1375,.1875"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="11,15" value=".195,.225"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="16,20" value=".23,.25"/>
+
+			<effect_description level="1" desc_base="+ 2,5% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 2,5%"/>
+			<effect_description level="2" desc_base="+ 50% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 5%"/>
+			<effect_description level="3" desc_base="+ 7,5% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 7,5%"/>
+			<effect_description level="4" desc_base="+ 10% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 10%"/>
+			<effect_description level="5" desc_base="+ 12,5% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 12,5%"/>
+			<effect_description level="6" desc_base="+ 13,75% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 13,75%"/>
+			<effect_description level="7" desc_base="+ 15% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 15%"/>
+			<effect_description level="8" desc_base="+ 16,25% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 16,25%"/>
+			<effect_description level="9" desc_base="+ 17,5% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 17,5%"/>
+			<effect_description level="10" desc_base="+ 18,75% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 18,75%"/>
+			<effect_description level="11" desc_base="+ 19,5% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 19,5%"/>
+			<effect_description level="12" desc_base="+ 20,25% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 20,25%"/>
+			<effect_description level="13" desc_base="+ 21% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 21%"/>
+			<effect_description level="14" desc_base="+ 21,75% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 21,75%"/>
+			<effect_description level="15" desc_base="+ 22,5% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 22,5%"/>
+			<effect_description level="16" desc_base="+ 23% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 23%"/>
+			<effect_description level="17" desc_base="+ 23,5% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 23,5%"/>
+			<effect_description level="18" desc_base="+ 24% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 24%"/>
+			<effect_description level="19" desc_base="+ 24,5% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 24,5%"/>
+			<effect_description level="20" desc_base="+ 25% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 25%"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkMobility" parent="Bonus" name_key="Mobility" max_level="20" base_skill_point_cost="1" desc_key="Running hundreds and thousands of miles earned you some well conditioned legs. You're now able too move faster independent of the circumstances." icon="ui_game_symbol_run">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="Mobility" operation="perc_add" value=".03,.15" level="1,5"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".165,.225" level="6,10"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".235,.275" level="11,15"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".28,.3" level="16,20"/>
+
+			<effect_description level="1" desc_base="+ 3% Mobility" long_desc_key="Increase your mobility by 3%"/>
+			<effect_description level="2" desc_base="+ 6% Mobility" long_desc_key="Increase your mobility by 6%"/>
+			<effect_description level="3" desc_base="+ 9% Mobility" long_desc_key="Increase your mobility by 9%"/>
+			<effect_description level="4" desc_base="+ 12% Mobility" long_desc_key="Increase your mobility by 12%"/>
+			<effect_description level="5" desc_base="+ 15% Mobility" long_desc_key="Increase your mobility by 15%"/>
+			<effect_description level="6" desc_base="+ 16,5% Mobility " long_desc_key="Increase your mobility by 16,5%"/>
+			<effect_description level="7" desc_base="+ 18% Mobility" long_desc_key="Increase your mobility by 18%"/>
+			<effect_description level="8" desc_base="+ 19,5% Mobility" long_desc_key="Increase your mobility by 19,5%"/>
+			<effect_description level="9" desc_base="+ 21% Mobility" long_desc_key="Increase your mobility by 21%"/>
+			<effect_description level="10" desc_base="+ 22,5% Mobility" long_desc_key="Increase your mobility by 22,5%"/>
+			<effect_description level="11" desc_base="+ 23,5% Mobility" long_desc_key="Increase your mobility by 23,5%"/>
+			<effect_description level="12" desc_base="+ 24,5% Mobility" long_desc_key="Increase your mobility by 24,5%"/>
+			<effect_description level="13" desc_base="+ 25,5% Mobility" long_desc_key="Increase your mobility by 25,5%"/>
+			<effect_description level="14" desc_base="+ 26,5% Mobility" long_desc_key="Increase your mobility by 26,5%"/>
+			<effect_description level="15" desc_base="+ 27,5% Mobility" long_desc_key="Increase your mobility by 27,5%"/>
+			<effect_description level="16" desc_base="+ 28% Mobility" long_desc_key="Increase your mobility by 28%"/>
+			<effect_description level="17" desc_base="+ 28,5% Mobility" long_desc_key="Increase your mobility by 28,5%"/>
+			<effect_description level="18" desc_base="+ 29% Mobility" long_desc_key="Increase your mobility by 29%"/>
+			<effect_description level="19" desc_base="+ 29,5% Mobility" long_desc_key="Increase your mobility by 29,5%"/>
+			<effect_description level="20" desc_base="+ 30% Mobility" long_desc_key="Increase your mobility by 30%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkSneakBonus" parent="Bonus" name_key="Sneak Damage Bonus" max_level="20" base_skill_point_cost="1" desc_key="Increase your Sneak Damage against unaware enemies." long_desc_key="Increase your Sneak Damage against unaware enemies." icon="ui_game_symbol_sneak_attack">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+				<passive_effect name="DamageBonus" operation="base_add" level="0,20" value=".05,1"/> <!--For UI-->
+				<passive_effect name="EntityDamage" operation="perc_add" level="0,20" value=".05,1"/>
+			<effect_description level="1" desc_base="+ 5% Sneak damage" long_desc_key="Increase your Sneak damage by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Sneak damage" long_desc_key="Increase your Sneak damage by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Sneak damage" long_desc_key="Increase your Sneak damage by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Sneak damage" long_desc_key="Increase your Sneak damage by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Sneak damage" long_desc_key="Increase your Sneak damage by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Sneak damage" long_desc_key="Increase your Sneak damage by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Sneak damage" long_desc_key="Increase your Sneak damage by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Sneak damage" long_desc_key="Increase your Sneak damage by 40%"/>
+			<effect_description level="9" desc_base="+ 45% Sneak damage" long_desc_key="Increase your Sneak damage by 45%"/>
+			<effect_description level="10" desc_base="+ 50% Sneak damage" long_desc_key="Increase your Sneak damage by 50%"/>
+			<effect_description level="11" desc_base="+ 55% Sneak damage" long_desc_key="Increase your Sneak damage by 55%"/>
+			<effect_description level="12" desc_base="+ 60% Sneak damage" long_desc_key="Increase your Sneak damage by 60%"/>
+			<effect_description level="13" desc_base="+ 65% Sneak damage" long_desc_key="Increase your Sneak damage by 65%"/>
+			<effect_description level="14" desc_base="+ 70% Sneak damage" long_desc_key="Increase your Sneak damage by 70%"/>
+			<effect_description level="15" desc_base="+ 75% Sneak damage" long_desc_key="Increase your Sneak damage by 75%"/>
+			<effect_description level="16" desc_base="+ 80% Sneak damage" long_desc_key="Increase your Sneak damage by 80%"/>
+			<effect_description level="17" desc_base="+ 85% Sneak damage" long_desc_key="Increase your Sneak damage by 85%"/>
+			<effect_description level="18" desc_base="+ 90% Sneak damage" long_desc_key="Increase your Sneak damage by 90%"/>
+			<effect_description level="19" desc_base="+ 95% Sneak damage" long_desc_key="Increase your Sneak damage by 95%"/>
+			<effect_description level="20" desc_base="+ 100% Sneak damage" long_desc_key="Increase your Sneak damage by 100%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkSilentBonus" parent="Bonus" name_key="Noise Muffled Bonus" max_level="20" base_skill_point_cost="1" desc_key="You're a sneaky mongrel thus enemies have an even harder time to detect you." long_desc_key="You're a sneaky mongrel thus enemies have an even harder time to detect you." icon="ui_game_symbol_bat">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>		
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+
+			<passive_effect name="LightMultiplier" operation="perc_add" level="1,5" value="-.03,-.15">
+				<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
+			</passive_effect>
+			<passive_effect name="LightMultiplier" operation="perc_add" level="6,10" value="-.165,-.225">
+				<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
+			</passive_effect>
+			<passive_effect name="LightMultiplier" operation="perc_add" level="11,15" value="-.234,-.27">
+				<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
+			</passive_effect>
+			<passive_effect name="LightMultiplier" operation="perc_add" level="16,20" value="-.276,-.3">
+				<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
+			</passive_effect>
+			
+			<passive_effect name="NoiseMultiplier" operation="perc_add" level="1,5" value="-.03,-.15"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" level="6,10" value="-.165,-.225"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" level="11,15" value="-.234,-.27"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" level="16,20" value="-.276,-.3"/>
+
+			<effect_description level="1" desc_base="- 3% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 3%"/>
+			<effect_description level="2" desc_base="- 6% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 6%"/>
+			<effect_description level="3" desc_base="- 9% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 9%"/>
+			<effect_description level="4" desc_base="- 12% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 12%"/>
+			<effect_description level="5" desc_base="- 15% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 15%"/>
+			<effect_description level="6" desc_base="- 16,5% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 16,5%"/>
+			<effect_description level="7" desc_base="- 18% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 18%"/>
+			<effect_description level="8" desc_base="- 19,5% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 19,5%"/>
+			<effect_description level="9" desc_base="- 21% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 21%"/>
+			<effect_description level="10" desc_base="- 22,5% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 22,5%"/>
+			<effect_description level="11" desc_base="- 23,4% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 23,4%"/>
+			<effect_description level="12" desc_base="- 24,3% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 24,3%"/>
+			<effect_description level="13" desc_base="- 25,2% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 25,2%"/>
+			<effect_description level="14" desc_base="- 26,1% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 26,1%"/>
+			<effect_description level="15" desc_base="- 27% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 27%"/>
+			<effect_description level="16" desc_base="- 27,6% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 27,6%"/>
+			<effect_description level="17" desc_base="- 28,2% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 28,2%"/>
+			<effect_description level="18" desc_base="- 28,8% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 28,8%"/>
+			<effect_description level="19" desc_base="- 29,4% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 29,4%"/>
+			<effect_description level="20" desc_base="- 30% visibility and noise" long_desc_key="Decrease your visibility in light and the noise you make while crouching by 30%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkLooter" parent="Bonus" name_key="Better Loot" max_level="20" base_skill_point_cost="1" desc_key="You're even more observant now. You know where to look for the good stuff. Find even more and better loot now." icon="ui_game_symbol_shopping_cart">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="LootGamestage" operation="base_add" level="1,5" value="30,150"/>
+			<passive_effect name="LootGamestage" operation="base_add" level="6,10" value="165,225"/>
+			<passive_effect name="LootGamestage" operation="base_add" level="11,15" value="235,275"/>
+			<passive_effect name="LootGamestage" operation="base_add" level="16,20" value="280,300"/>
+			
+			<passive_effect name="ScavengingTime" operation="perc_subtract" level="1,5" value=".02,.1,"/>
+			<passive_effect name="ScavengingTime" operation="perc_subtract" level="6,10" value=".11,.15,"/>
+			<passive_effect name="ScavengingTime" operation="perc_subtract" level="11,15" value=".156,.18,"/>
+			<passive_effect name="ScavengingTime" operation="perc_subtract" level="16,20" value=".184,.2"/>
+
+			<effect_description level="1" desc_base="+ 30 Loot Bonus and % looting speed" long_desc_key="Add an additional 30 to the Loot Bonus and an additional 2% to your looting speed."/>
+			<effect_description level="2" desc_base="+ 60 Loot Bonus and % looting speed" long_desc_key="Add an additional 60 to the Loot Bonus and an additional 4% to your looting speed."/>
+			<effect_description level="3" desc_base="+ 90 Loot Bonus and % looting speed" long_desc_key="Add an additional 90 to the Loot Bonus and an additional 6% to your looting speed."/>
+			<effect_description level="4" desc_base="+ 120 Loot Bonus and % looting speed" long_desc_key="Add an additional 120 to the Loot Bonas and an additional 8% to your looting speed."/>
+			<effect_description level="5" desc_base="+ 150 Loot Bonus and % looting speed" long_desc_key="Add an additional 150 to the Loot Bonas and an additional 10% to your looting speed."/>
+			<effect_description level="6" desc_base="+ 165 Loot Bonus and % looting speed" long_desc_key="Add an additional 165 to the Loot Bonas and an additional 11% to your looting speed."/>
+			<effect_description level="7" desc_base="+ 180 Loot Bonus and % looting speed" long_desc_key="Add an additional 180 to the Loot Bonas and an additional 12% to your looting speed."/>
+			<effect_description level="8" desc_base="+ 195 Loot Bonus and % looting speed" long_desc_key="Add an additional 195 to the Loot Bonas and an additional 13% to your looting speed."/>
+			<effect_description level="9" desc_base="+ 210 Loot Bonus and % looting speed" long_desc_key="Add an additional 210 to the Loot Bonas and an additional 14% to your looting speed."/>
+			<effect_description level="10" desc_base="+ 225 Loot Bonus and % looting speed" long_desc_key="Add an additional 225 to the Loot Bonus and an additional 15% to your looting speed."/>
+			<effect_description level="11" desc_base="+ 235 Loot Bonus and % looting speed" long_desc_key="Add an additional 235 to the Loot Bonus and an additional 15.6% to your looting speed."/>
+			<effect_description level="12" desc_base="+ 245 Loot Bonus and % looting speed" long_desc_key="Add an additional 245 to the Loot Bonus and an additional 16.2% to your looting speed."/>
+			<effect_description level="13" desc_base="+ 255 Loot Bonus and % looting speed" long_desc_key="Add an additional 255 to the Loot Bonus and an additional 16.8% to your looting speed."/>
+			<effect_description level="14" desc_base="+ 265 Loot Bonus and % looting speed" long_desc_key="Add an additional 265 to the Loot Bonus and an additional 17.4% to your looting speed."/>
+			<effect_description level="15" desc_base="+ 275 Loot Bonus and % looting speed" long_desc_key="Add an additional 275 to the Loot Bonus and an additional 18% to your looting speed."/>
+			<effect_description level="16" desc_base="+ 280 Loot Bonus and % looting speed" long_desc_key="Add an additional 280 to the Loot Bonus and an additional 18-4% to your looting speed."/>
+			<effect_description level="17" desc_base="+ 285 Loot Bonus and % looting speed" long_desc_key="Add an additional 285 to the Loot Bonus and an additional 18.8% to your looting speed."/>
+			<effect_description level="18" desc_base="+ 290 Loot Bonus and % looting speed" long_desc_key="Add an additional 290 to the Loot Bonus and an additional 19.2% to your looting speed."/>
+			<effect_description level="19" desc_base="+ 295 Loot Bonus and % looting speed" long_desc_key="Add an additional 295 to the Loot Bonus and an additional 19.6% to your looting speed."/>
+			<effect_description level="20" desc_base="+ 300 Loot Bonus and % looting speed" long_desc_key="Add an additional 300 to the Loot Bonus and an additional 20% to your looting speed."/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkTradeBonus" parent="Bonus" name_key="Trade Bonus" max_level="20" base_skill_point_cost="1" desc_key="Increase your items selling price." long_desc_key="Increase your items selling price." icon="ui_game_symbol_barter">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<!-- <passive_effect name="BarteringBuying" operation="base_add" level="1,10" value=".05,.5"/> -->
+				<passive_effect name="BarteringSelling" operation="base_add" level="1,20" value=".025,.5"/>
+				<passive_effect name="SecretStash" operation="base_add" level="1,20" value="1000,5000"/>
+			<effect_description level="1" desc_base="+ 2.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 2.5%"/>
+			<effect_description level="2" desc_base="+ 5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 5%"/>
+			<effect_description level="3" desc_base="+ 7.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 7.5%"/>
+			<effect_description level="4" desc_base="+ 10% Trade Bonus" long_desc_key="Increase your Trade Bonus by 10%"/>
+			<effect_description level="5" desc_base="+ 12.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 12.5%"/>
+			<effect_description level="6" desc_base="+ 15% Trade Bonus" long_desc_key="Increase your Trade Bonus by 15%"/>
+			<effect_description level="7" desc_base="+ 17.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 17.5%"/>
+			<effect_description level="8" desc_base="+ 20% Trade Bonus" long_desc_key="Increase your Trade Bonus by 20%"/>
+			<effect_description level="9" desc_base="+ 22.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 22.5%"/>
+			<effect_description level="10" desc_base="+ 25% Trade Bonus" long_desc_key="Increase your Trade Bonus by 25%"/>
+			<effect_description level="11" desc_base="+ 27.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 27.5%"/>
+			<effect_description level="12" desc_base="+ 30% Trade Bonus" long_desc_key="Increase your Trade Bonus by 30%"/>
+			<effect_description level="13" desc_base="+ 32.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 32.5%"/>
+			<effect_description level="14" desc_base="+ 35% Trade Bonus" long_desc_key="Increase your Trade Bonus by 35%"/>
+			<effect_description level="15" desc_base="+ 37.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 37.5%"/>
+			<effect_description level="16" desc_base="+ 40% Trade Bonus" long_desc_key="Increase your Trade Bonus by 40%"/>
+			<effect_description level="17" desc_base="+ 42.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 42.5%"/>
+			<effect_description level="18" desc_base="+ 45% Trade Bonus" long_desc_key="Increase your Trade Bonus by 45%"/>
+			<effect_description level="19" desc_base="+ 47.5% Trade Bonus" long_desc_key="Increase your Trade Bonus by 47.5%"/>
+			<effect_description level="20" desc_base="+ 50% Trade Bonus" long_desc_key="Increase your Trade Bonus by 50%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkCraftBonus" parent="Bonus" name_key="Crafting Speed Bonus" max_level="20" base_skill_point_cost="1" desc_key="Your nimble fingers allow you to craft even faster than before." long_desc_key="Your nimble fingers allow you to craft even faster than before." icon="ui_game_symbol_sledge">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<passive_effect name="CraftingTime" operation="perc_add" level="1,20" value="-.025,-.5"/>
+			<effect_description level="1" desc_base="- 2.5% Crafting time" long_desc_key="Decrease your Crafting time by 2.5%"/>
+			<effect_description level="2" desc_base="- 5% Crafting time" long_desc_key="Decrease your Crafting time by 5%"/>
+			<effect_description level="3" desc_base="- 7.5% Crafting time" long_desc_key="Decrease your Crafting time by 7.5%"/>
+			<effect_description level="4" desc_base="- 10% Crafting time" long_desc_key="Decrease your Crafting time by 10%"/>
+			<effect_description level="5" desc_base="- 12.5% Crafting time" long_desc_key="Decrease your Crafting time by 12.5%"/>
+			<effect_description level="6" desc_base="- 15% Crafting time" long_desc_key="Decrease your Crafting time by 15%"/>
+			<effect_description level="7" desc_base="- 17.5% Crafting time" long_desc_key="Decrease your Crafting time by 17.5%"/>
+			<effect_description level="8" desc_base="- 20% Crafting time" long_desc_key="Decrease your Crafting time by 20%"/>
+			<effect_description level="9" desc_base="- 22.5% Crafting time" long_desc_key="Decrease your Crafting time by 22.5%"/>
+			<effect_description level="10" desc_base="- 25% Crafting time" long_desc_key="Decrease your Crafting time by 25%"/>
+			<effect_description level="11" desc_base="- 27.5% Crafting time" long_desc_key="Decrease your Crafting time by 27.5%"/>
+			<effect_description level="12" desc_base="- 30% Crafting time" long_desc_key="Decrease your Crafting time by 30%"/>
+			<effect_description level="13" desc_base="- 32.5% Crafting time" long_desc_key="Decrease your Crafting time by 32.5%"/>
+			<effect_description level="14" desc_base="- 35% Crafting time" long_desc_key="Decrease your Crafting time by 35%"/>
+			<effect_description level="15" desc_base="- 37.5% Crafting time" long_desc_key="Decrease your Crafting time by 37.5%"/>
+			<effect_description level="16" desc_base="- 40% Crafting time" long_desc_key="Decrease your Crafting time by 40%"/>
+			<effect_description level="17" desc_base="- 42.5% Crafting time" long_desc_key="Decrease your Crafting time by 42.5%"/>
+			<effect_description level="18" desc_base="- 45% Crafting time" long_desc_key="Decrease your Crafting time by 45%"/>
+			<effect_description level="19" desc_base="- 47.5% Crafting time" long_desc_key="Decrease your Crafting time by 47.5%"/>
+			<effect_description level="20" desc_base="- 50% Crafting time" long_desc_key="Decrease your Crafting time by 50%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkArmorSpecialist" parent="Bonus" name_key="Armor Specialist" max_level="20" base_skill_point_cost="1" desc_key="Your armor feels like a second skin an thus is even more durable now." icon="ui_game_symbol_armor_iron">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="1,5" value="-.05,-.25" tags="heavyArmorDeg,lightArmorDeg"/>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="6,10" value="-.275,-.375" tags="heavyArmorDeg,lightArmorDeg"/>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="11,15" value="-.39,-.45" tags="heavyArmorDeg,lightArmorDeg"/>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="16,20" value="-.46,-.5" tags="heavyArmorDeg,lightArmorDeg"/>
+
+			<effect_description level="1" desc_base="- 5% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 5%"/>
+			<effect_description level="2" desc_base="- 10% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 10%"/>
+			<effect_description level="3" desc_base="- 15% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 15%"/>
+			<effect_description level="4" desc_base="- 20% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 20%"/>
+			<effect_description level="5" desc_base="- 25% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 25%"/>
+			<effect_description level="6" desc_base="- 27,5% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 27,5%"/>
+			<effect_description level="7" desc_base="- 30% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 30%"/>
+			<effect_description level="8" desc_base="- 32,5% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 32,5%"/>
+			<effect_description level="9" desc_base="- 35% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 35%"/>
+			<effect_description level="10" desc_base="- 37,5% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 37,5%"/>
+			<effect_description level="11" desc_base="- 39% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 39%"/>
+			<effect_description level="12" desc_base="- 40,5% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 40,5%"/>
+			<effect_description level="13" desc_base="- 42% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 42%"/>
+			<effect_description level="14" desc_base="- 43,5% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 43,5%"/>
+			<effect_description level="15" desc_base="- 45% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 45%"/>
+			<effect_description level="16" desc_base="- 46 Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 46%"/>
+			<effect_description level="17" desc_base="- 47% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 47%"/>
+			<effect_description level="18" desc_base="- 48% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 48%"/>
+			<effect_description level="19" desc_base="- 49% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 49%"/>
+			<effect_description level="20" desc_base="- 50% Armor Wearout" long_desc_key="Decrease the wearout of your armor by an additional 50%"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkWeaponSpecialist" parent="Bonus" name_key="Weapon Specialist" max_level="20" base_skill_point_cost="1" desc_key="Your weapon feels like a second skin an thus is even more durable now." icon="ui_game_symbol_rifle">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="1,5" value="-.05,-.25" tags="melee,ranged"/>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="6,10" value="-.275,-.375" tags="melee,ranged"/>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="11,15" value="-.39,-.45" tags="melee,ranged"/>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="16,20" value="-.46,-.5" tags="melee,ranged"/>
+
+			<effect_description level="1" desc_base="- 5% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 5%"/>
+			<effect_description level="2" desc_base="- 10% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 10%"/>
+			<effect_description level="3" desc_base="- 15% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 15%"/>
+			<effect_description level="4" desc_base="- 20% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 20%"/>
+			<effect_description level="5" desc_base="- 25% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 25%"/>
+			<effect_description level="6" desc_base="- 27,5% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 27,5%"/>
+			<effect_description level="7" desc_base="- 30% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 30%"/>
+			<effect_description level="8" desc_base="- 32,5% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 32,5%"/>
+			<effect_description level="9" desc_base="- 35% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 35%"/>
+			<effect_description level="10" desc_base="- 37,5% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 37,5%"/>
+			<effect_description level="11" desc_base="- 39% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 39%"/>
+			<effect_description level="12" desc_base="- 40,5% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 40,5%"/>
+			<effect_description level="13" desc_base="- 42% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 42%"/>
+			<effect_description level="14" desc_base="- 43,5% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 43,5%"/>
+			<effect_description level="15" desc_base="- 45% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 45%"/>
+			<effect_description level="16" desc_base="- 46 Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 46%"/>
+			<effect_description level="17" desc_base="- 47% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 47%"/>
+			<effect_description level="18" desc_base="- 48% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 48%"/>
+			<effect_description level="19" desc_base="- 49% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 49%"/>
+			<effect_description level="20" desc_base="- 50% Weapon Wearout" long_desc_key="Decrease the wearout of your weapons by an additional 50%"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkSuperiorMetabolism" parent="Bonus" name_key="Superior Metabolism" max_level="20" base_skill_point_cost="1" desc_key="Your organs take it easy. Lose even less food and water from physical exertion." icon="ui_game_symbol_stomach">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+
+			<passive_effect name="FoodLossPerStaminaPointGained" operation="perc_subtract" level="1,20" value="0.05,1.0"/>
+			<passive_effect name="WaterLossPerStaminaPointGained" operation="perc_subtract" level="1,20" value="0.05,1.0"/>
+
+			<effect_description level="1" desc_base="- 5% Food and Water loss" long_desc_key="Lose 5% less food and water from physical exertion."/>
+			<effect_description level="2" desc_base="- 10% Food and Water loss" long_desc_key="Lose 10% less food and water from physical exertion."/>
+			<effect_description level="3" desc_base="- 15% Food and Water loss" long_desc_key="Lose 15% less food and water from physical exertion."/>
+			<effect_description level="4" desc_base="- 20% Food and Water loss" long_desc_key="Lose 20% less food and water from physical exertion."/>
+			<effect_description level="5" desc_base="- 25% Food and Water loss" long_desc_key="Lose 25% less food and water from physical exertion."/>
+			<effect_description level="6" desc_base="- 30% Food and Water loss" long_desc_key="Lose 30% less food and water from physical exertion."/>
+			<effect_description level="7" desc_base="- 35% Food and Water loss" long_desc_key="Lose 35% less food and water from physical exertion."/>
+			<effect_description level="8" desc_base="- 40% Food and Water loss" long_desc_key="Lose 40% less food and water from physical exertion."/>
+			<effect_description level="9" desc_base="- 45% Food and Water loss" long_desc_key="Lose 45% less food and water from physical exertion."/>
+			<effect_description level="10" desc_base="- 50% Food and Water loss" long_desc_key="Lose 50% less food and water from physical exertion."/>
+			<effect_description level="11" desc_base="- 55% Food and Water loss" long_desc_key="Lose 55% less food and water from physical exertion."/>
+			<effect_description level="12" desc_base="- 60% Food and Water loss" long_desc_key="Lose 60% less food and water from physical exertion."/>
+			<effect_description level="13" desc_base="- 65% Food and Water loss" long_desc_key="Lose 65% less food and water from physical exertion."/>
+			<effect_description level="14" desc_base="- 70% Food and Water loss" long_desc_key="Lose 70% less food and water from physical exertion."/>
+			<effect_description level="15" desc_base="- 75% Food and Water loss" long_desc_key="Lose 75% less food and water from physical exertion."/>
+			<effect_description level="16" desc_base="- 80% Food and Water loss" long_desc_key="Lose 80% less food and water from physical exertion."/>
+			<effect_description level="17" desc_base="- 85% Food and Water loss" long_desc_key="Lose 85% less food and water from physical exertion."/>
+			<effect_description level="18" desc_base="- 90% Food and Water loss" long_desc_key="Lose 90% less food and water from physical exertion."/>
+			<effect_description level="19" desc_base="- 95% Food and Water loss" long_desc_key="Lose 95% less food and water from physical exertion."/>
+			<effect_description level="20" desc_base="- 100% Food and Water loss" long_desc_key="Lose 100% less food and water from physical exertion."/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkRecuperate" parent="Bonus" name_key="Recuperate" max_level="20" base_skill_point_cost="1" desc_key="You've got a very healthy body and can regenerate even faster than other people. (For comparison: level 5 of healing factor gives you the same amount as lvl 10 of this. So you will regenerate 1 health every 2 seconds with both perks fully skilled.)" icon="ui_game_symbol_healing_factor">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_add" level="1,5" value=".025,.125"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" level="6,10" value=".1375,.1875"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" level="11,15" value=".195,.225"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" level="16,20" value=".23,.25"/>
+
+			<effect_description level="1" desc_base="+ 0.025 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.025 health per second at all times"/>
+			<effect_description level="2" desc_base="+ 0.05 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.05 health per second at all times"/>
+			<effect_description level="3" desc_base="+ 0.075 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.075 health per second at all times"/>
+			<effect_description level="4" desc_base="+ 0.1 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.1 health per second at all times"/>
+			<effect_description level="5" desc_base="+ 0.125 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.125 health per second at all times"/>
+			<effect_description level="6" desc_base="+ 0.1375 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.1375 health per second at all times"/>
+			<effect_description level="7" desc_base="+ 0.15 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.15 health per second at all times"/>
+			<effect_description level="8" desc_base="+ 0.1625 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.1625 health per second at all times"/>
+			<effect_description level="9" desc_base="+ 0.175 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.175 health per second at all times"/>
+			<effect_description level="10" desc_base="+ 0.1875 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.1875 health per second at all times"/>
+			<effect_description level="11" desc_base="+ 0.195 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.195 health per second at all times"/>
+			<effect_description level="12" desc_base="+ 0.2025 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.2025 health per second at all times"/>
+			<effect_description level="13" desc_base="+ 0.21 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.21 health per second at all times"/>
+			<effect_description level="14" desc_base="+ 0.2175 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.2175 health per second at all times"/>
+			<effect_description level="15" desc_base="+ 0.225 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.225 health per second at all times"/>
+			<effect_description level="16" desc_base="+ 0.23 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.23 health per second at all times"/>
+			<effect_description level="17" desc_base="+ 0.235 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.235 health per second at all times"/>
+			<effect_description level="18" desc_base="+ 0.24 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.24 health per second at all times"/>
+			<effect_description level="19" desc_base="+ 0.245 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.245 health per second at all times"/>
+			<effect_description level="20" desc_base="+ 0.25 Health Regeneration per sec." long_desc_key="Regenerate an additional 0.25 health per second at all times"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkMinerBonus" parent="Bonus" name_key="Miner Damage Bonus" max_level="20" base_skill_point_cost="1" desc_key="Increase miner Damage Bonus" long_desc_key="Increase miner Damage Bonus" icon="ui_game_symbol_mining">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="perkMiner69r"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="1,20" value=".05,1"/>
+			<effect_description level="1" desc_base="+ 5% Block damage" long_desc_key="Increase your Block damage with tools by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Block damage" long_desc_key="Increase your Block damage with tools by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Block damage" long_desc_key="Increase your Block damage with tools by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Block damage" long_desc_key="Increase your Block damage with tools by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Block damage" long_desc_key="Increase your Block damage with tools by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Block damage" long_desc_key="Increase your Block damage with tools by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Block damage" long_desc_key="Increase your Block damage with tools by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Block damage" long_desc_key="Increase your Block damage with tools by 40%"/>
+			<effect_description level="9" desc_base="+ 45% Block damage" long_desc_key="Increase your Block damage with tools by 45%"/>
+			<effect_description level="10" desc_base="+ 50% Block damage" long_desc_key="Increase your Block damage with tools by 50%"/>
+			<effect_description level="11" desc_base="+ 55% Block damage" long_desc_key="Increase your Block damage with tools by 55%"/>
+			<effect_description level="12" desc_base="+ 60% Block damage" long_desc_key="Increase your Block damage with tools by 60%"/>
+			<effect_description level="13" desc_base="+ 65% Block damage" long_desc_key="Increase your Block damage with tools by 65%"/>
+			<effect_description level="14" desc_base="+ 70% Block damage" long_desc_key="Increase your Block damage with tools by 70%"/>
+			<effect_description level="15" desc_base="+ 75% Block damage" long_desc_key="Increase your Block damage with tools by 75%"/>
+			<effect_description level="16" desc_base="+ 80% Block damage" long_desc_key="Increase your Block damage with tools by 80%"/>
+			<effect_description level="17" desc_base="+ 85% Block damage" long_desc_key="Increase your Block damage with tools by 85%"/>
+			<effect_description level="18" desc_base="+ 90% Block damage" long_desc_key="Increase your Block damage with tools by 90%"/>
+			<effect_description level="19" desc_base="+ 95% Block damage" long_desc_key="Increase your Block damage with tools by 95%"/>
+			<effect_description level="20" desc_base="+ 100% Block damage" long_desc_key="Increase your Block damage with tools by 100%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkHarvestBonus" parent="Bonus" name_key="Harvest Bonus" max_level="20" base_skill_point_cost="1" desc_key="You've acquired the knowledge how to gather more resources fromt Plant crop and animal." long_desc_key="You've acquired the knowledge how to gather more resources fromt Plant crop and animal." icon="ui_game_symbol_tree">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<passive_effect name="HarvestCount" operation="perc_add" level="1,20" value=".05,1" tags="cropHarvest,wildCropsHarvest,butcherHarvest"/>
+			<effect_description level="1" desc_base="+ 5% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 40%"/>
+			<effect_description level="9" desc_base="+ 45% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 45%"/>
+			<effect_description level="10" desc_base="+ 50% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 50%"/>
+			<effect_description level="11" desc_base="+ 55% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 55%"/>
+			<effect_description level="12" desc_base="+ 60% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 60%"/>
+			<effect_description level="13" desc_base="+ 65% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 65%"/>
+			<effect_description level="14" desc_base="+ 70% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 70%"/>
+			<effect_description level="15" desc_base="+ 75% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 75%"/>
+			<effect_description level="16" desc_base="+ 80% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 80%"/>
+			<effect_description level="17" desc_base="+ 85% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 85%"/>
+			<effect_description level="18" desc_base="+ 90% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 90%"/>
+			<effect_description level="19" desc_base="+ 95% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 95%"/>
+			<effect_description level="20" desc_base="+ 100% Plant crop and animal harvest count" long_desc_key="Increase your Plant crop and animal harvest count by 100%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkSalvageBonus" parent="Bonus" name_key="Salvage Bonus" max_level="20" base_skill_point_cost="1" desc_key="You've acquired the knowledge how to gather more resources while salvaging." long_desc_key="You've acquired the knowledge how to gather more resources while salvaging." icon="ui_game_symbol_scrap">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<requirement name="HoldingItemHasTags" tags="perkSalvageOperations"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="1,20" value=".05,1"/>
+				<passive_effect name="HarvestCount" operation="perc_add" level="1,20" value=".05,1" tags="salvageHarvest"/>
+			<effect_description level="1" desc_base="+ 5% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 40%"/>
+			<effect_description level="9" desc_base="+ 45% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 45%"/>
+			<effect_description level="10" desc_base="+ 50% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 50%"/>
+			<effect_description level="11" desc_base="+ 55% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 55%"/>
+			<effect_description level="12" desc_base="+ 60% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 60%"/>
+			<effect_description level="13" desc_base="+ 65% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 65%"/>
+			<effect_description level="14" desc_base="+ 70% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 70%"/>
+			<effect_description level="15" desc_base="+ 75% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 75%"/>
+			<effect_description level="16" desc_base="+ 80% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 80%"/>
+			<effect_description level="17" desc_base="+ 85% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 85%"/>
+			<effect_description level="18" desc_base="+ 90% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 90%"/>
+			<effect_description level="19" desc_base="+ 95% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 95%"/>
+			<effect_description level="20" desc_base="+ 100% Block damage and harvest count" long_desc_key="Increase your Block damage and harvest count with wrench by 100%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkResourcesBonus" parent="Bonus" name_key="Resources Bonus" max_level="20" base_skill_point_cost="1" desc_key="You've acquired the knowledge how to gather more resources while mining" long_desc_key="You've acquired the knowledge how to gather more resources while mining" icon="ui_game_symbol_mother_load">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<passive_effect name="HarvestCount" operation="perc_add" level="1,20" value=".05,1" tags="oreWoodHarvest"/>
+			<effect_description level="1" desc_base="+ 5% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 40%"/>
+			<effect_description level="9" desc_base="+ 45% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 45%"/>
+			<effect_description level="10" desc_base="+ 50% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 50%"/>
+			<effect_description level="11" desc_base="+ 55% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 55%"/>
+			<effect_description level="12" desc_base="+ 60% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 60%"/>
+			<effect_description level="13" desc_base="+ 65% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 65%"/>
+			<effect_description level="14" desc_base="+ 70% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 70%"/>
+			<effect_description level="15" desc_base="+ 75% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 75%"/>
+			<effect_description level="16" desc_base="+ 80% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 80%"/>
+			<effect_description level="17" desc_base="+ 85% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 85%"/>
+			<effect_description level="18" desc_base="+ 90% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 90%"/>
+			<effect_description level="19" desc_base="+ 95% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 95%"/>
+			<effect_description level="20" desc_base="+ 100% Resource harves count" long_desc_key="Increase your Resource harves count with tools by 100%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perkExpBonus" parent="Bonus" name_key="Exp Bonus" max_level="20" base_skill_point_cost="1" desc_key="Increase your smarts and thus learn faster." long_desc_key="Increase your smarts and thus learn faster." icon="ui_game_symbol_influence">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="1" desc_key="Skill Bonus Lv 1"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="2" desc_key="Skill Bonus Lv 2"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="3" desc_key="Skill Bonus Lv 3"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="4" desc_key="Skill Bonus Lv 4"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="5" desc_key="Skill Bonus Lv 5"/></level_requirements>
+		<level_requirements level="11"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="12"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="6" desc_key="Skill Bonus Lv 6"/></level_requirements>
+		<level_requirements level="13"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="14"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="7" desc_key="Skill Bonus Lv 7"/></level_requirements>
+		<level_requirements level="15"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="16"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="8" desc_key="Skill Bonus Lv 8"/></level_requirements>
+		<level_requirements level="17"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="18"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="9" desc_key="Skill Bonus Lv 9"/></level_requirements>
+		<level_requirements level="19"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<level_requirements level="20"><requirement name="ProgressionLevel" progression_name="Bonus" operation="GTE" value="10" desc_key="Skill Bonus Lv 10"/></level_requirements>
+		<effect_group>
+				<passive_effect name="PlayerExpGain" operation="perc_add" level="1,20" value="1.0,20.0"/>
+			<effect_description level="1" desc_base="+ 100% Exp gain" long_desc_key="Increase your Exp gain by 100%"/>
+			<effect_description level="2" desc_base="+ 200% Exp gain" long_desc_key="Increase your Exp gain by 200%"/>
+			<effect_description level="3" desc_base="+ 300% Exp gain" long_desc_key="Increase your Exp gain by 300%"/>
+			<effect_description level="4" desc_base="+ 400% Exp gain" long_desc_key="Increase your Exp gain by 400%"/>
+			<effect_description level="5" desc_base="+ 500% Exp gain" long_desc_key="Increase your Exp gain by 500%"/>
+			<effect_description level="6" desc_base="+ 600% Exp gain" long_desc_key="Increase your Exp gain by 600%"/>
+			<effect_description level="7" desc_base="+ 700% Exp gain" long_desc_key="Increase your Exp gain by 700%"/>
+			<effect_description level="8" desc_base="+ 800% Exp gain" long_desc_key="Increase your Exp gain by 800%"/>
+			<effect_description level="9" desc_base="+ 900% Exp gain" long_desc_key="Increase your Exp gain by 900%"/>
+			<effect_description level="10" desc_base="+ 1000% Exp gain" long_desc_key="Increase your Exp gain by 1000%"/>
+			<effect_description level="11" desc_base="+ 1100% Exp gain" long_desc_key="Increase your Exp gain by 1100%"/>
+			<effect_description level="12" desc_base="+ 1200% Exp gain" long_desc_key="Increase your Exp gain by 1200%"/>
+			<effect_description level="13" desc_base="+ 1300% Exp gain" long_desc_key="Increase your Exp gain by 1300%"/>
+			<effect_description level="14" desc_base="+ 1400% Exp gain" long_desc_key="Increase your Exp gain by 1400%"/>
+			<effect_description level="15" desc_base="+ 1500% Exp gain" long_desc_key="Increase your Exp gain by 1500%"/>
+			<effect_description level="16" desc_base="+ 1600% Exp gain" long_desc_key="Increase your Exp gain by 1600%"/>
+			<effect_description level="17" desc_base="+ 1700% Exp gain" long_desc_key="Increase your Exp gain by 1700%"/>
+			<effect_description level="18" desc_base="+ 1800% Exp gain" long_desc_key="Increase your Exp gain by 1800%"/>
+			<effect_description level="19" desc_base="+ 1900% Exp gain" long_desc_key="Increase your Exp gain by 1900%"/>
+			<effect_description level="20" desc_base="+ 2000% Exp gain" long_desc_key="Increase your Exp gain by 2000%"/>
+		</effect_group>
+	</perk>
+	
+	</append>
+
+</configs>
+

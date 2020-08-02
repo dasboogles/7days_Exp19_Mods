@@ -1,0 +1,14 @@
+<configs>
+	<!-- <set xpath="/npc/npc_info/@dialog_id">traderjen</set> -->
+	<append xpath="/npc">
+	<npc_info
+		id="questmaster"
+		name="Quest Master"
+		name_key="npc_joel"
+		faction="whiteriver"
+		portrait="npc_joel"
+		greeting_type="nearby"
+		stance="Like" voice_set="trader"
+		trader_id="1" dialog_id="traderjen" />
+	</append>
+</configs>

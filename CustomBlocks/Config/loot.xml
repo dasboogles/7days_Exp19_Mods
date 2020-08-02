@@ -1,0 +1,61 @@
+<config>
+<!-- Loot Groups with contents of bags -->
+<insertAfter xpath="/lootcontainers/lootgroup[@name='schematicsToolsRare']/item[@name='chemistryStationSchematic']" >
+	<item name="Healing Machine Schematic 1"/>
+	<item name="Healing Machine Schematic 2"/>
+	<item name="Computer Workstation Schematic"/>
+	<item name="Jump Pad Schematic"/>
+	<item name="Alchemy furnace Schematic"/>
+	<item name="toolAndDieSet Schematic"/>
+	<item name="Gem Crafting Mold Schematic"/>
+	<item name="Thermometer Schematic"/>
+	<item name="Silver Nugget Schematic"/>
+	<item name="Gold Nugget Schematic"/>
+	<item name="Raw Diamond Schematic"/>
+	<item name="Obsidian Stone Schematic"/>
+	<item name="Sniper Turret Schematic"/>
+	<item name="Super Sensor Schematic"/>
+	<item name="Ore Miner Schematic"/>
+</insertAfter>
+
+<append xpath="/lootcontainers">
+
+<lootcontainer id="146" count="1,3" size="6,2" destroy_on_close="true" sound_open="UseActions/open_garbage" sound_close="UseActions/open_garbage" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item name="foodEgg" count="1,4" prob="1"/>
+	<item name="resourceFeather" count="1,5" prob="0.75"/>
+	<item name="foodRawMeat" count="1,4" prob="0.5"/>
+	<item name="foodCropCorn" count="1,4" prob="0.2"/>
+	<!-- <item name="Rice" count="1,4" prob="0.2"/> -->
+</lootcontainer>
+
+<lootcontainer id="147" count="1,3" size="3,1" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item name="resourceScrapIron" count="500,6000"/>
+</lootcontainer>
+
+<lootcontainer id="148" count="1,3" size="3,1" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item name="resourceCoal" count="500,6000"/>
+</lootcontainer>
+
+<lootcontainer id="149" count="1,3" size="3,1" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item name="resourcePotassiumNitratePowder" count="500,6000"/>
+</lootcontainer>
+
+<lootcontainer id="150" count="1,3" size="3,1" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item name="resourceRockSmall" count="500,6000"/>
+</lootcontainer>
+
+<lootcontainer id="151" count="1,3" size="3,1" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item name="resourceScrapLead" count="500,6000"/>
+</lootcontainer>
+
+<lootcontainer id="152" count="1,3" size="3,1" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item name="resourceOilShale" count="500,6000"/>
+</lootcontainer>
+
+<lootcontainer id="153" count="1,3" size="3,1" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item name="resourceClayLump" count="500,6000"/>
+</lootcontainer>
+	
+</append>
+
+</config>

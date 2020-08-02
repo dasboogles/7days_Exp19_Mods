@@ -1,0 +1,230 @@
+<configs>
+	<append xpath="/recipes" >
+	
+	<recipe name="Elite Item Parts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+
+<recipe name="Victory Flag" count="1" craft_time="1">
+	<ingredient name="resourceMetalPipe" count="10"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceCloth" count="30"/>
+</recipe>
+<recipe name="Military Uniform Chest" count="1" craft_time="1">
+	<ingredient name="armorMilitaryHelmet" count="1"/>
+	<ingredient name="armorMilitaryVest" count="1"/>
+	<ingredient name="armorMilitaryGloves" count="1"/>
+	<ingredient name="armorMilitaryLegs" count="1"/>
+	<ingredient name="armorMilitaryBoots" count="1"/>
+</recipe>
+<recipe name="Military Weapon Chest" count="1" craft_time="1">
+	<ingredient name="gunHandgunT1Pistol" count="1"/>
+	<ingredient name="gunHandgunT3SMG5" count="1"/>
+	<ingredient name="gunRifleT2MarksmanRifle" count="1"/>
+	<ingredient name="gunMGT1AK47" count="1"/>
+	<ingredient name="gunMGT3M60" count="1"/>
+</recipe>
+<recipe name="Military Medical Chest" count="1" craft_time="1">
+	<ingredient name="medicalFirstAidBandage" count="2"/>
+	<ingredient name="medicalFirstAidKit" count="2"/>
+	<ingredient name="medicalBloodBag" count="2"/>
+	<ingredient name="drugVitamins" count="2"/>
+	<ingredient name="drugPainkillers" count="2"/>
+</recipe>
+<recipe name="Military Food Chest" count="1" craft_time="1">
+	<ingredient name="foodCanBeef" count="2"/>
+	<ingredient name="foodCanChicken" count="2"/>
+	<ingredient name="foodCanLamb" count="2"/>
+	<ingredient name="foodCanSham" count="2"/>
+	<ingredient name="foodCanSalmon" count="2"/>
+</recipe>
+<recipe name="Military Farm Chest" count="1" craft_time="1">
+	<ingredient name="foodCropPotato" count="15"/>
+	<ingredient name="foodCropBlueberries" count="15"/>
+	<ingredient name="foodCropPumpkin" count="15"/>
+	<ingredient name="foodCropCorn" count="15"/>
+	<ingredient name="Rice" count="15"/>
+</recipe>
+
+
+<recipe name="Obsidian Stone" count="1">
+	<ingredient name="Victory Medal" count="10"/>
+</recipe>
+<recipe name="vehicle4x4TruckPlaceable" count="1">
+	<ingredient name="Victory Medal" count="40"/>
+</recipe>
+<recipe name="vehicleGyrocopterPlaceable" count="1">
+	<ingredient name="Victory Medal" count="40"/>
+</recipe>
+<recipe name="JetPack" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="Armored Car" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="Raft" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="HellBeast" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="Sled" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="Army Truck" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Exp Book (Small)" count="1">
+	<ingredient name="Victory Medal" count="10"/>
+</recipe>
+<recipe name="Exp Book (Medium)" count="1">
+	<ingredient name="Victory Medal" count="20"/>
+</recipe>
+<recipe name="Exp Book (Large)" count="1">
+	<ingredient name="Victory Medal" count="40"/>
+</recipe>
+<recipe name="SkillBook" count="1">
+	<ingredient name="Victory Medal" count="10"/>
+</recipe>
+<recipe name="Knowledge Book" count="1">
+	<ingredient name="Victory Medal" count="40"/>
+</recipe>
+<recipe name="Schematics Book" count="1">
+	<ingredient name="Victory Medal" count="40"/>
+</recipe>
+<recipe name="Event Gift Box" count="1">
+	<ingredient name="Victory Medal" count="5"/>
+</recipe>
+<recipe name="Perennial Mod" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="modGunMeleeBlessedMetal" count="1">
+	<ingredient name="Victory Medal" count="100"/>
+</recipe>
+<recipe name="Air Drop Box" count="1">
+	<ingredient name="Victory Medal" count="20"/>
+</recipe>
+<recipe name="Elite Armor Box" count="1">
+	<ingredient name="Victory Medal" count="40"/>
+</recipe>
+<recipe name="Elite Armor Box" count="1">
+	<ingredient name="Elite Item Parts" count="10"/>
+</recipe>
+
+<recipe name="Elite Titanium Helmet Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Titanium Vest Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Titanium Gloves Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Titanium Legs Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Titanium Boots Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Obsidian Helmet Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Obsidian Chest Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Obsidian Gloves Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Obsidian Legs Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Obsidian Boots Box" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Elite Titanium Helmet Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+<recipe name="Elite Titanium Vest Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+<recipe name="Elite Titanium Gloves Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+<recipe name="Elite Titanium Legs Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+<recipe name="Elite Titanium Boots Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+<recipe name="Elite Obsidian Helmet Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+<recipe name="Elite Obsidian Chest Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+<recipe name="Elite Obsidian Gloves Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+<recipe name="Elite Obsidian Legs Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+<recipe name="Elite Obsidian Boots Box" count="1">
+	<ingredient name="Elite Item Parts" count="20"/>
+</recipe>
+
+ <recipe name="DNT Exp Gain Plus" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Magazine Extender" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Fast Craft Plus" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Mesh Man" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Block Damage Plus" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Stamina Plus" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Running Fast" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Health Plus" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Storage Pocket" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Armor Plating" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Fuel Tank" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe>
+<recipe name="DNT Muzzle Brake" count="1">
+	<ingredient name="Victory Medal" count="60"/>
+</recipe> 
+
+<recipe name="Melee Critical Damage Mod" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Bow Critical Damage Mod" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+<recipe name="Gun Critical Damage Mod" count="1">
+	<ingredient name="Victory Medal" count="80"/>
+</recipe>
+
+<recipe name="Lamborghini Impact" count="1">
+	<ingredient name="Victory Medal" count="50"/>
+</recipe>
+<recipe name="Vehicle Fuel Saver" count="1">
+	<ingredient name="Victory Medal" count="30"/>
+</recipe>
+<recipe name="Vehicle Fuel Tank" count="1">
+	<ingredient name="Victory Medal" count="20"/>
+</recipe>
+	</append>
+</configs>

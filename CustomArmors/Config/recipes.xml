@@ -1,0 +1,304 @@
+<configs>
+<append xpath="/recipes">	
+
+<recipe name="Mining Vest" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="resourceScrapPolymers" count="15"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceSewingKit" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceScrapPolymers,resourceLeather,resourceDuctTape"/>
+	</effect_group>
+</recipe>
+<recipe name="Mining Gloves" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="resourceScrapPolymers" count="15"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceSewingKit" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceScrapPolymers,resourceLeather,resourceDuctTape"/>
+	</effect_group>
+</recipe>
+<recipe name="Mining Legs" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="resourceScrapPolymers" count="15"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceSewingKit" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceScrapPolymers,resourceLeather,resourceDuctTape"/>
+	</effect_group>
+</recipe>
+<recipe name="Mining Boots" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="resourceScrapPolymers" count="15"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceSewingKit" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceScrapPolymers,resourceLeather,resourceDuctTape"/>
+	</effect_group>
+</recipe>
+<recipe name="Diamond Helmet Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Diamond Chest Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Diamond Gloves Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Diamond Legs Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Diamond Boots Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+
+<recipe name="Obsidian Helmet Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Obsidian Chest Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Obsidian Gloves Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Obsidian Legs Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Obsidian Boots Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+
+<recipe name="Carbon Fiber Helmet Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Carbon Fiber Vest Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Carbon Fiber Gloves Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Carbon Fiber Legs Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Carbon Fiber Boots Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+
+<recipe name="Titanium Helmet Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Titanium Vest Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Titanium Gloves Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Titanium Legs Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+<recipe name="Titanium Boots Schematic" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Empty Book" count="1"/>
+	<ingredient name="Ink Jar" count="1"/>
+	<ingredient name="Pen" count="1"/>
+</recipe>
+
+
+<recipe name="Diamond Helmet" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+<recipe name="Diamond Chest" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+<recipe name="Diamond Gloves" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+<recipe name="Diamond Legs" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+<recipe name="Diamond Boots" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+
+<recipe name="Obsidian Helmet" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+<recipe name="Obsidian Chest" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+<recipe name="Obsidian Gloves" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+<recipe name="Obsidian Legs" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+<recipe name="Obsidian Boots" count="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceForgedSteel" count="24"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+</recipe>
+
+<recipe name="Carbon Fiber Boots" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Carbon Fiber Stealth Boots" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Carbon Fiber Gloves" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Carbon Fiber Helmet" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Carbon Fiber Legs" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Carbon Fiber Vest" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="resourceRawDiamond" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+
+<recipe name="Titanium Boots" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Titanium Stealth Boots" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Titanium Gloves" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Titanium Helmet" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Titanium Legs" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+<recipe name="Titanium Vest" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="4"/>
+	<ingredient name="Obsidian Stone" count="3"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+
+</append>
+</configs>

@@ -1,0 +1,37 @@
+<config>
+
+
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='weaponsGunsT2']">
+<item name="Remington M4A1"/>
+<item name="Mini UZI"/>
+<item name="Auto SlingGun"/>
+<item name="M249 Squad Rifle"/>
+<item name="M416 Assault Rifle"/>
+<item name="Grid Launcher"/>
+<!-- <item name="AWM Sniper Rifle"/> -->
+<item name="NearDeathRemover Jar"/>
+</append>
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsWeaponsCommon']">
+<item name="Mini UZI Schematic"/>
+<item name="Grid Launcher Schematic"/>
+</append>
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='rareBooks']">
+<item name="M249 Squad Rifle Schematic"/>
+<item name="M416 Assault Rifle Schematic"/>
+<item name="Improved Shotgun Schematic"/>
+<!-- <item name="AWM Sniper Rifle Schematic"/> -->
+<item name="Master Nailgun Schematic"/>
+<item name="Health Plus Schematic"/>
+<item name="Weapon Brace Schematic"/>
+<item name="Stamina Plus Schematic"/>
+<item name="Block Damage Plus Schematic"/>
+<item name="Fast Craft Plus Schematic"/>
+<item name="Exp Gain Plus Schematic"/>
+<item name="Master Nailgun Schematic"/>
+<item name="Regeneration Mod Schematic"/>
+</append>
+
+</config>

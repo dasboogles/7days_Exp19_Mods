@@ -1,0 +1,57 @@
+<configs>
+<append xpath="/entity_classes">  
+<!-- BOSS iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+
+<entity_class name="zombieGeneralBoss" extends="zombieWightFeral">
+	<property name="Tags" value="entity,zombie,walker,feral,radiated,boss"/>
+	<property name="Mesh" value="Zombies/zombieStandardDemolitionRagdoll"/>
+	<property name="WalkType" value="2"/>
+	<property name="ReplaceMaterial0" value="particleeffects/materials/p_spark_electricity"/>
+	<property name="ReplaceMaterial1" value="particleeffects/materials/p_spark_electricity"/>	
+	<property name="AIPathCostScale" value=".65, .9"/>
+	<property name="SizeScale" value="1.4"/>
+	<property name="MoveSpeedAggro" value=".5, 1.35"/>
+	<property name="Mass" value="500"/>		
+	<property name="DismemberMultiplierHead" value="0"/>
+	<property name="DismemberMultiplierArms" value="0"/>
+	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="LegCrawlerThreshold" value="0"/>
+	<property name="LegCrippleThreshold" value="0"/>
+	<property name="KnockdownProneDamageThreshold" value="0"/>
+	<property name="KnockdownKneelDamageThreshold" value="0"/>
+	<property name="AITask-1" value="BreakBlock"/>
+	<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
+	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+	<property name="AITask-4" value="ApproachSpot"/>
+	<property name="AITask-5" value="Look"/>
+	<property name="AITask-6" value="Wander"/>
+	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->	
+	<property name="SoundRandom" value="Enemies/Burnt_Zombie/zombieburntroam"/>
+    <property name="SoundSpawn" value="Ambient_Loops/a_fire_embersmoke_sm_lp"/>
+	<property name="SoundAlert" value="Enemies/Burnt_Zombie/zombieburntalert"/>
+	<property name="SoundAttack" value="Enemies/Burnt_Zombie/zombieburntattack"/>
+	<property name="SoundHurt" value="Enemies/Burnt_Zombie/zombieburntpain"/>
+	<property name="SoundDeath" value="Enemies/Burnt_Zombie/zombieburntdeath"/>
+	<property name="SoundSense" value="Enemies/Burnt_Zombie/zombieburntsense"/>
+	<property name="SoundFootstepModifier" value="Enemies/Burnt_Zombie/zombieburntfootstep"/>
+	<property name="PainResistPerHit" value="1"/>
+	<property name="HandItem" value="meleehandZombieBurningBoss"/>
+	<property name="ExperienceGain" value="32000"/> <!-- XP strong -->	
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="35000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="85"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRingOfFireBoss"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffElementFreezingMod,buffShocked,buffInjuryKnockdown01,buffInjuryKnockdown02"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="Quest Master" extends="npcTraderTemplate">
+	<property name="Tags" value="entity,npc,human"/>
+	<property name="Mesh" value="#Entities/Traders?JoelRagdoll.prefab"/>
+	<property name="NPCID" value="questmaster"/>
+</entity_class>
+</append>
+
+</configs>

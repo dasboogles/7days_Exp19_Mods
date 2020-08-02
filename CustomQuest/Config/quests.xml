@@ -1,0 +1,822 @@
+<configs>
+
+<append xpath="/quests/quest[contains(@id, 'challenge_')]">
+		<reward type="Item" id="Victory Medal" value="3"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier1_')]">
+		<reward type="Item" id="Victory Medal" value="3"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier2_')]">
+		<reward type="Item" id="Victory Medal" value="3"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier3_fetch')]">
+		<reward type="Item" id="Victory Medal" value="3"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier3_clear')]">
+		<reward type="Item" id="Victory Medal" value="5"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier3_fetch_clear')]">
+		<reward type="Item" id="Victory Medal" value="5"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier4_fetch')]">
+		<reward type="Item" id="Victory Medal" value="4"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier4_clear')]">
+		<reward type="Item" id="Victory Medal" value="6"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier4_fetch_clear')]">
+		<reward type="Item" id="Victory Medal" value="6"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier5_fetch')]">
+		<reward type="Item" id="Victory Medal" value="4"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier5_clear')]">
+		<reward type="Item" id="Victory Medal" value="8"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier5_fetch_clear')]">
+		<reward type="Item" id="Victory Medal" value="8"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier6_fetch')]">
+		<reward type="Item" id="Victory Medal" value="5"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier6_clear')]">
+		<reward type="Item" id="Victory Medal" value="10"/>
+</append>
+<append xpath="/quests/quest[contains(@id, 'tier6_fetch_clear')]">
+		<reward type="Item" id="Victory Medal" value="10"/>
+</append>
+
+<append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
+		<reward type="Quest" id="challenge_kill10"/>
+</append>
+
+<append xpath="/quests">
+
+	<quest id="challenge_skillpoint">
+		<property name="name_key" value="Added 1 Skill point"/>
+		<property name="subtitle_key" value="Added 1 Skill point"/>
+		<property name="description_key" value="Added 1 Skill point"/>
+		<property name="icon" value="ui_game_symbol_add"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Added 1 Skill point."/>
+		<property name="difficulty" value="easy"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="ZombieKill" value="0" phase="1"/>
+
+		<reward type="SkillPoints" value="1"/>
+	</quest>
+	
+	<!-- Event Quest ================================================================================================================ -->
+	<quest id="challenge_kill30zb">
+		<property name="name_key" value="Kill 30 zombies"/>
+		<property name="subtitle_key" value="Kill 30 zombies"/>
+		<property name="description_key" value="Kill 30 zombies"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill 30 zombies"/>
+		<property name="statement_key" value="Kill 30 zombies"/>
+		<property name="response_key" value="Kill 30 zombies"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="ZombieKill" value="30" phase="1"/>
+		
+		<objective type="FetchKeep" id="resourceMetalPipe" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceDuctTape" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceCloth" value="30" phase="2"/>
+		
+		<objective type="Craft" id="Victory Flag" value="1" phase="2"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="3">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="4"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Victory Flag" value="1" phase="5"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6"/>
+		</objective>
+
+		<reward type="Exp" value="3000"/>
+		<reward type="Item" id="casinoCoin" value="900"/>
+		<reward type="Item" id="Victory Medal" value="2"/>
+		
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMelee,groupQuestRanged" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+	</quest>
+	
+	<quest id="challenge_kill60zb">
+		<property name="name_key" value="Kill 60 zombies"/>
+		<property name="subtitle_key" value="Kill 60 zombies"/>
+		<property name="description_key" value="Kill 60 zombies"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill 60 zombies"/>
+		<property name="statement_key" value="Kill 60 zombies"/>
+		<property name="response_key" value="Kill 60 zombies"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="ZombieKill" value="60" phase="1"/>
+		
+		<objective type="FetchKeep" id="resourceMetalPipe" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceDuctTape" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceCloth" value="30" phase="2"/>
+		
+		<objective type="Craft" id="Victory Flag" value="1" phase="2"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="3">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="4"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Victory Flag" value="1" phase="5"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6"/>
+		</objective>
+
+		<reward type="Exp" value="4500"/>
+		<reward type="Item" id="casinoCoin" value="1200"/>
+		<reward type="Item" id="Victory Medal" value="3"/>
+		
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMelee,groupQuestRanged" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+	</quest>
+	
+	<quest id="challenge_kill100zb">
+		<property name="name_key" value="Kill 100 zombies"/>
+		<property name="subtitle_key" value="Kill 100 zombies"/>
+		<property name="description_key" value="Kill 100 zombies"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill 100 zombies"/>
+		<property name="statement_key" value="Kill 100 zombies"/>
+		<property name="response_key" value="Kill 100 zombies"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="ZombieKill" value="100" phase="1"/>
+		
+		<objective type="FetchKeep" id="resourceMetalPipe" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceDuctTape" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceCloth" value="30" phase="2"/>
+		
+		<objective type="Craft" id="Victory Flag" value="1" phase="2"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="3">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="4"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Victory Flag" value="1" phase="5"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6"/>
+		</objective>
+
+		<reward type="Exp" value="6000"/>
+		<reward type="Item" id="casinoCoin" value="1500"/>
+		<reward type="Item" id="Victory Medal" value="4"/>
+		
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="4"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestMelee,groupQuestRanged" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="4"/>
+	</quest>
+	
+	<quest id="challenge_killhellzb">
+		<property name="name_key" value="Kill 50 Hell zombie"/>
+		<property name="subtitle_key" value="Kill 50 Hell zombie"/>
+		<property name="description_key" value="Kill 50 Hell zombie"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill 50 Hell zombie"/>
+		<property name="statement_key" value="Kill 50 Hell zombie"/>
+		<property name="response_key" value="Kill 50 Hell zombie"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="ZombieKill" id="zombieWightHell,zombieBoeHell,zombieFemaleFatHell,zombieJoeHell,zombieArleneHell,zombieLabHell,zombieScreamerHell,zombieDarleneHell,zombieMarleneHell,zombieYoHell,zombieSteveHell,zombieSpiderHell,zombieFatCopHell,zombieSoldierHell,zombieSkateboarderHell,zombieCheerleaderHell,zombieOldTimerHell,zombieBikerHell,zombieUtilityWorkerHell,zombieBusinessManHell,zombieNurseHell" value="50" phase="1"/>
+		
+		<objective type="FetchKeep" id="resourceMetalPipe" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceDuctTape" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceCloth" value="30" phase="2"/>
+		
+		<objective type="Craft" id="Victory Flag" value="1" phase="2"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="3">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="4"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Victory Flag" value="1" phase="5"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6"/>
+		</objective>
+
+		<reward type="Exp" value="7500"/>
+		<reward type="Item" id="casinoCoin" value="1800"/>
+		<reward type="Item" id="Victory Medal" value="5"/>
+	</quest>
+	
+	<quest id="challenge_killbosszb">
+		<property name="name_key" value="Kill any Boss zombie"/>
+		<property name="subtitle_key" value="Kill any Boss zombies"/>
+		<property name="description_key" value="Kill any Boss zombies"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill any Boss zombies"/>
+		<property name="statement_key" value="Kill any Boss zombies"/>
+		<property name="response_key" value="Kill any Boss zombies"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="ZombieKill" id="zombieFreezeBoss,zombieFierBoss,zombieFreezeBoss,zombieShockerBoss,zombieIllusionBoss,zombieBurningBoss,zombieGiantBoss,zombieIronBoss,zombieBiggerBoss,zombieScreamerBoss,zombieSamaraBoss,zombieMummyBoss" value="1" phase="1"/>
+		
+		<objective type="FetchKeep" id="resourceMetalPipe" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceDuctTape" value="10" phase="2"/>
+		<objective type="FetchKeep" id="resourceCloth" value="30" phase="2"/>
+		
+		<objective type="Craft" id="Victory Flag" value="1" phase="2"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="3">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="4"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Victory Flag" value="1" phase="5"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6"/>
+		</objective>
+
+		<reward type="Exp" value="9000"/>
+		<reward type="Item" id="casinoCoin" value="2200"/>
+		<reward type="Item" id="Victory Medal" value="5"/>
+	</quest>
+	
+	<quest id="challenge_craftweaponchest">
+		<property name="name_key" value="Craft and place Military weapon chest"/>
+		<property name="subtitle_key" value="Craft and place Military weapon chest"/>
+		<property name="description_key" value="Craft and place Military weapon chest"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Craft and place Military weapon chest"/>
+		<property name="statement_key" value="Craft and place Military weapon chest"/>
+		<property name="response_key" value="Craft and place Military weapon chest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="FetchKeep" id="gunHandgunT1Pistol" value="1" phase="1"/>
+		<objective type="FetchKeep" id="gunHandgunT3SMG5" value="1" phase="1"/>
+		<objective type="FetchKeep" id="gunRifleT2MarksmanRifle" value="1" phase="1"/>
+		<objective type="FetchKeep" id="gunMGT1AK47" value="1" phase="1"/>
+		<objective type="FetchKeep" id="gunMGT3M60" value="1" phase="1"/>
+		
+		<objective type="Craft" id="Military Weapon Chest" value="1" phase="1"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="2">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="3"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Military Weapon Chest" value="1" phase="4"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="5"/>
+		</objective>
+
+		<reward type="Exp" value="3500"/>
+		<reward type="Item" id="casinoCoin" value="1200"/>
+		<reward type="Item" id="Victory Medal" value="3"/>
+		
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMelee,groupQuestRanged" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+	</quest>
+	
+	<quest id="challenge_craftuniformchest">
+		<property name="name_key" value="Craft and place Military Uniform chest"/>
+		<property name="subtitle_key" value="Craft and place Military Uniform chest"/>
+		<property name="description_key" value="Craft and place Military Uniform chest"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Craft and place Military Uniform chest"/>
+		<property name="statement_key" value="Craft and place Military Uniform chest"/>
+		<property name="response_key" value="Craft and place Military Uniform chest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="FetchKeep" id="armorMilitaryHelmet" value="1" phase="1"/>
+		<objective type="FetchKeep" id="armorMilitaryVest" value="1" phase="1"/>
+		<objective type="FetchKeep" id="armorMilitaryGloves" value="1" phase="1"/>
+		<objective type="FetchKeep" id="armorMilitaryLegs" value="1" phase="1"/>
+		<objective type="FetchKeep" id="armorMilitaryBoots" value="1" phase="1"/>
+		
+		<objective type="Craft" id="Military Uniform Chest" value="1" phase="1"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="2">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="3"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Military Uniform Chest" value="1" phase="4"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="5"/>
+		</objective>
+
+		<reward type="Exp" value="3500"/>
+		<reward type="Item" id="casinoCoin" value="1200"/>
+		<reward type="Item" id="Victory Medal" value="3"/>
+		
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMelee,groupQuestRanged" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+	</quest>
+	
+	<quest id="challenge_craftmedicalchest">
+		<property name="name_key" value="Craft and place Military Medical chest"/>
+		<property name="subtitle_key" value="Craft and place Military Medical chest"/>
+		<property name="description_key" value="Craft and place Military Medical chest"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Craft and place Military Medical chest"/>
+		<property name="statement_key" value="Craft and place Military Medical chest"/>
+		<property name="response_key" value="Craft and place Military Medical chest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="FetchKeep" id="medicalFirstAidBandage" value="2" phase="1"/>
+		<objective type="FetchKeep" id="medicalFirstAidKit" value="2" phase="1"/>
+		<objective type="FetchKeep" id="medicalBloodBag" value="2" phase="1"/>
+		<objective type="FetchKeep" id="drugVitamins" value="2" phase="1"/>
+		<objective type="FetchKeep" id="drugPainkillers" value="2" phase="1"/>
+		
+		<objective type="Craft" id="Military Medical Chest" value="1" phase="1"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="2">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="3"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Military Medical Chest" value="1" phase="4"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="5"/>
+		</objective>
+
+		<reward type="Exp" value="3500"/>
+		<reward type="Item" id="casinoCoin" value="1200"/>
+		<reward type="Item" id="Victory Medal" value="3"/>
+		
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMelee,groupQuestRanged" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+	</quest>
+	
+	<quest id="challenge_craftfoodchest">
+		<property name="name_key" value="Craft and place Military Food chest"/>
+		<property name="subtitle_key" value="Craft and place Military Food chest"/>
+		<property name="description_key" value="Craft and place Military Food chest"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Craft and place Military Food chest"/>
+		<property name="statement_key" value="Craft and place Military Food chest"/>
+		<property name="response_key" value="Craft and place Military Food chest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="FetchKeep" id="foodCanBeef" value="2" phase="1"/>
+		<objective type="FetchKeep" id="foodCanChicken" value="2" phase="1"/>
+		<objective type="FetchKeep" id="foodCanLamb" value="2" phase="1"/>
+		<objective type="FetchKeep" id="foodCanSham" value="2" phase="1"/>
+		<objective type="FetchKeep" id="foodCanSalmon" value="2" phase="1"/>
+		
+		<objective type="Craft" id="Military Food Chest" value="1" phase="1"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="2">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="3"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Military Food Chest" value="1" phase="4"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="5"/>
+		</objective>
+
+		<reward type="Exp" value="3500"/>
+		<reward type="Item" id="casinoCoin" value="1200"/>
+		<reward type="Item" id="Victory Medal" value="3"/>
+		
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMelee,groupQuestRanged" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+	</quest>
+	
+	<quest id="challenge_craftfarmchest">
+		<property name="name_key" value="Craft and place Military Farm chest"/>
+		<property name="subtitle_key" value="Craft and place Military Farm chest"/>
+		<property name="description_key" value="Craft and place Military Farm chest"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Craft and place Military Farm chest"/>
+		<property name="statement_key" value="Craft and place Military Farm chest"/>
+		<property name="response_key" value="Craft and place Military Farm chest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="I'M SO HAPPY TODAY. THANK'S!"/>
+		
+		<action type="TrackQuest"/>
+		
+		<objective type="FetchKeep" id="foodCropPotato" value="15" phase="1"/>
+		<objective type="FetchKeep" id="foodCropBlueberries" value="15" phase="1"/>
+		<objective type="FetchKeep" id="foodCropPumpkin" value="15" phase="1"/>
+		<objective type="FetchKeep" id="foodCropCorn" value="15" phase="1"/>
+		<objective type="FetchKeep" id="Rice" value="15" phase="1"/>
+		
+		<objective type="Craft" id="Military Farm Chest" value="1" phase="1"/>
+		
+		<objective type="RandomGoto" value="100-200" phase="2">
+			<property name="completion_distance" value="5"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="3"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="Military Farm Chest" value="1" phase="4"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="5"/>
+		</objective>
+
+		<reward type="Exp" value="3500"/>
+		<reward type="Item" id="casinoCoin" value="1200"/>
+		<reward type="Item" id="Victory Medal" value="3"/>
+		
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMelee,groupQuestRanged" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+	</quest>
+	<!-- End of Event Quest ================================================================================================================ -->
+	
+	<!-- Basic Quest ================================================================================================================ -->
+	
+	<quest id="challenge_kill10">
+		<property name="name_key" value="Kill 10 Zombies"/>
+		<property name="subtitle_key" value="Kill 10 Zombies"/>
+		<property name="description_key" value="Kill 10 Zombies and get reward"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill 10 Any Zombies."/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<action type="ShowTip" value="Kill 10 Any Zombies. Reward: 350 Casino Coins"/>
+
+		<objective type="ZombieKill" value="10" phase="1"/>
+
+		<reward type="Item" id="casinoCoin" value="350"/>
+		<reward type="Quest" id="challenge_resources200"/>
+	</quest>
+	
+	<quest id="challenge_resources200">
+		<property name="group_name_key" value="Finding 200 Resources"/>
+		<property name="name_key" value="Finding 200 Resources"/>
+		<property name="subtitle_key" value="Finding 200 Resources"/>
+		<property name="description_key" value="Finding 200 Resources of stone, wood, iron, clay"/>
+		<property name="icon" value="ui_game_symbol_tailoring"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
+		<property name="offer_key" value="Finding 200 Resources of stone, wood, iron, clay"/>
+
+		<objective type="FetchKeep" id="resourceWood" value="200" phase="1"/>
+		<objective type="FetchKeep" id="resourceRockSmall" value="200" phase="1"/>
+		<objective type="FetchKeep" id="resourceScrapIron" value="200" phase="1"/>
+		<objective type="FetchKeep" id="resourceClayLump" value="200" phase="1"/>
+		
+		<reward type="Exp" value="6000"/>
+		<reward type="Item" id="resourceSilverNugget" value="10"/>
+		<reward type="Quest" id="challenge_kill50"/>
+	</quest>
+	
+	<quest id="challenge_kill50">
+		<property name="name_key" value="Kill 50 Zombies"/>
+		<property name="subtitle_key" value="Kill 50 Zombies"/>
+		<property name="description_key" value="Kill 50 Zombies and get reward"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill 50 Any Zombies."/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="ZombieKill" value="50" phase="1"/>
+
+		<reward type="Item" id="casinoCoin" value="1500"/>
+		<reward type="Item" id="resourceGoldNugget" value="10"/>
+		<reward type="Quest" id="challenge_craftforge"/>
+	</quest>
+	
+	<quest id="challenge_craftforge">
+		<property name="name_key" value="Craft a forge"/>
+		<property name="subtitle_key" value="Craft a forge"/>
+		<property name="description_key" value="Craft a forge"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Craft a forge"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="FetchKeep" id="resourceYuccaFibers" value="50" phase="1"/>
+		<objective type="FetchKeep" id="resourceClayLump" value="60" phase="1"/>
+		<objective type="FetchKeep" id="resourceLeather" value="10" phase="1"/>
+		<objective type="FetchKeep" id="resourceDuctTape" value="3" phase="1"/>
+		<objective type="FetchKeep" id="resourceMetalPipe" value="3" phase="1"/>
+		<objective type="Craft" id="forge" value="1" phase="2"/>
+		<objective type="BlockPlace" id="forge" value="1" phase="2"/>
+
+		<reward type="Exp" value="7000"/>
+		<reward type="Item" id="foodVegetableStew" value="30"/>
+		<reward type="Quest" id="challenge_kill100"/>
+	</quest>
+	
+	<quest id="challenge_kill100">
+		<property name="name_key" value="Kill 100 Zombies"/>
+		<property name="subtitle_key" value="Kill 100 Zombies"/>
+		<property name="description_key" value="Kill 100 Zombies and get reward"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill 100 Any Zombies."/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="ZombieKill" value="100" phase="1"/>
+
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="Item" id="resourceRawDiamond" value="3"/>
+		<reward type="Quest" id="challenge_craftforgediron100"/>
+	</quest>
+	
+	<quest id="challenge_craftforgediron100">
+		<property name="name_key" value="Craft 100 forged iron"/>
+		<property name="subtitle_key" value="Craft 100 forged iron"/>
+		<property name="description_key" value="Craft 100 forged iron"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Craft 100 forged iron"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="Craft" id="resourceForgedIron" value="100" phase="1"/>
+
+		<reward type="Exp" value="8000"/>
+		<reward type="Item" id="resourceRawDiamond" value="5"/>
+		<reward type="Quest" id="challenge_kill200"/>
+	</quest>
+	
+	<quest id="challenge_kill200">
+		<property name="name_key" value="Kill 200 Zombies"/>
+		<property name="subtitle_key" value="Kill 200 Zombies"/>
+		<property name="description_key" value="Kill 200 Zombies and get reward"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill 200 Any Zombies."/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="ZombieKill" value="200" phase="1"/>
+
+		<reward type="Item" id="casinoCoin" value="4000"/>
+		<reward type="Item" id="Obsidian Stone" value="1"/>
+		<reward type="Quest" id="challenge_upgradeblock"/>
+	</quest>
+	
+	<quest id="challenge_upgradeblock">
+		<property name="name_key" value="Upgrade a block to Titanium block"/>
+		<property name="subtitle_key" value="Upgrade a block to Titanium block"/>
+		<property name="description_key" value="Upgrade a Wood frame block to Titanium block"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Upgrade a Wood frame block to Titanium block"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="BlockPlace" id="woodFrameBlock" value="1" phase="1"/>
+		<objective type="BlockUpgrade" id="woodFrameBlock" value="1" phase="1"/>
+		<objective type="BlockUpgrade" id="woodBlock" value="1" phase="2"/>
+		<objective type="BlockUpgrade" id="rWoodBlock" value="1" phase="3"/>
+		<objective type="BlockUpgrade" id="cobblestoneBlock" value="1" phase="4"/>
+		<objective type="BlockUpgrade" id="ConcreteBlock" value="1" phase="5"/>
+		<objective type="BlockUpgrade" id="RConcreteBlock" value="1" phase="6"/>
+		<objective type="BlockUpgrade" id="steelBlock" value="1" phase="7"/>
+		<objective type="BlockUpgrade" id="stainlessSteelBlock" value="1" phase="8"/>
+		<objective type="BlockUpgrade" id="rSteelBlock" value="1" phase="9"/>
+
+		<reward type="Exp" value="9000"/>
+		<reward type="Item" id="Obsidian Stone" value="2"/>
+		<reward type="Quest" id="challenge_getweapon"/>
+	</quest>
+	
+	<quest id="challenge_getweapon">
+		<property name="name_key" value="Get Ak47 and 200 7.62 bullet ammo"/>
+		<property name="subtitle_key" value="Get Ak47 and 200 7.62 bullet ammo"/>
+		<property name="description_key" value="Get Ak47 and 200 7.62 bullet ammo"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Get Ak47 and 200 7.62 bullet ammo"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="FetchKeep" id="gunAK47" value="1" phase="1"/>
+		<objective type="FetchKeep" id="ammo762mmBulletBall" value="200" phase="1"/>
+
+		<reward type="Item" id="medicalFirstAidKit" value="10"/>
+		<reward type="Quest" id="challenge_killboss"/>
+	</quest>
+	
+	<quest id="challenge_killboss">
+		<property name="group_name_key" value="8 Secret Statues"/>
+		<property name="name_key" value="Kill 1 Iron Zombies Boss"/>
+		<property name="subtitle_key" value="Kill 1 Iron Zombies Boss"/>
+		<property name="description_key" value="There was a creature that stole our precious item. It involves some important secrets. We need you to find and kill the creature, and get an item from it for us. Thank you!"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="Kill 1 Iron Zombies Boss."/>
+		<property name="statement_key" value="Kill 1 Iron Zombies Boss."/>
+		<property name="response_key" value="Kill 1 Iron Zombies Boss."/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="login_rally_reset" value="true"/>
+		
+		<action type="ShowTip" value="There was a creature that stole our precious item. It involves some important secrets. We need you to find and kill the creature, and get an item from it for us. Thank you!"/>
+		<action type="TrackQuest"/>
+		
+		<objective type="RandomGoto" value="500-800" phase="1">
+			<property name="completion_distance" value="50"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="2"/>
+		</objective>
+
+		<action type="SpawnEnemy" id="zombieDemolition" value="1" phase="3"/>
+
+		<objective type="ZombieKill" id="zombieDemolition" value="1" phase="3"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+		</objective>
+	
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="Obsidian Stone" value="5"/>
+		<reward type="Item" id="casinoCoin" value="10000"/>
+		<reward type="Quest" id="challenge_VM"/>
+	</quest>
+	
+	<quest id="challenge_VM">
+		<property name="group_name_key" value="Finding 100 Victory Medals"/>
+		<property name="name_key" value="Finding 100 Victory Medals"/>
+		<property name="subtitle_key" value="Finding 100 Victory Medals"/>
+		<property name="description_key" value="Finding 100 Victory Medals"/>
+		<property name="icon" value="ui_game_symbol_tailoring"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="offer_key" value="Finding 100 Victory Medals"/>
+
+		<objective type="FetchKeep" id="Victory Medal" value="100" phase="1"/>
+
+		
+		<reward type="Exp" value="10000"/>
+	</quest>
+	
+</append>
+</configs>
+

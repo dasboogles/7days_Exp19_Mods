@@ -1,0 +1,1138 @@
+<configs>
+<!-- Death Penalty -->
+<append xpath="/buffs/buff[@name='buffElementWet']/effect_group">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDeathPenalty1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDeathPenalty2"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDeathPenalty3"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDeathPenalty4"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDeathPenalty5"/>
+</append>
+<append xpath="/buffs/buff[@name='buffElementCold']/effect_group">
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDeathPenalty1">
+				<requirement name="HasBuff" buff="buffDeathPenalty2"/>
+			</triggered_effect>
+</append>
+<append xpath="/buffs/buff[@name='buffElementHot']/effect_group">
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDeathPenalty2">
+				<requirement name="HasBuff" buff="buffDeathPenalty3"/>
+			</triggered_effect>
+</append>
+<append xpath="/buffs/buff[@name='buffElementFreezing']/effect_group">
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDeathPenalty3">
+				<requirement name="HasBuff" buff="buffDeathPenalty4"/>
+			</triggered_effect>
+</append>
+<append xpath="/buffs/buff[@name='buffElementSweltering']/effect_group">
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDeathPenalty4">
+				<requirement name="HasBuff" buff="buffDeathPenalty5"/>
+			</triggered_effect>
+</append>
+
+<!-- ###################################################################################################### -->
+<append xpath="/buffs">
+<!-- Death Penalty -->
+<buff name="buffDeathPenaltyTrigger" hidden="true">
+		<stack_type value="replace"/>
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDeathPenalty1">
+				<requirement name="NotHasBuff" buff="buffDeathPenalty1"/>
+				<requirement name="NotHasBuff" buff="buffDeathPenalty2"/>
+				<requirement name="NotHasBuff" buff="buffDeathPenalty3"/>
+				<requirement name="NotHasBuff" buff="buffDeathPenalty4"/>
+				<requirement name="NotHasBuff" buff="buffDeathPenalty5"/>
+				<requirement name="PlayerLevel" operation="GT" value="50" />
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffDeathPenalty1" name_key="Death Penalty 1" description_key="Death Penalty 1 -10% dmg, armor, health, speed - Take a shower or use Near Death Remover to cures it" tooltip_key="Death Penalty 1 - Use Near Death Remover to cures it" remove_on_death="false" icon="ui_game_symbol_bat" icon_color="255,120,0">
+		<stack_type value="replace" />
+		<update_rate value="1"/>
+		<duration value="600"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty5"/>
+			<triggered_effect trigger="onSelfDied" action="AddBuff" buff="buffDeathPenalty2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<passive_effect name="AttributeLevel" operation="base_subtract" value="1"/>
+			<passive_effect name="SkillLevel" operation="base_subtract" value="1"/>
+			<passive_effect name="PerkLevel" operation="base_subtract" value="1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.1"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="-.1"/>
+			<passive_effect name="PhysicalDamageResist" operation="perc_add" value="-.1" tags="coredamageresist"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="-.1"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="-.1"/>
+			<passive_effect name="StaminaMax" operation="perc_add" value="-.1"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="-.05"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="-.05"/>
+			<passive_effect name="CrouchSpeed" operation="perc_add" value="-.05"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="buffDeathPenalty2" name_key="Death Penalty 2" description_key="Death Penalty 2 -20% dmg, armor, health, speed  - Get Cool or use Near Death Remover to cures it" tooltip_key="Death Penalty 2 - Use Near Death Remover to cures it" remove_on_death="false" icon="ui_game_symbol_bat" icon_color="255,90,0">
+		<stack_type value="replace" />
+		<update_rate value="1"/>
+		<duration value="900"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty5"/>
+			<triggered_effect trigger="onSelfDied" action="AddBuff" buff="buffDeathPenalty3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<passive_effect name="AttributeLevel" operation="base_subtract" value="2"/>
+			<passive_effect name="SkillLevel" operation="base_subtract" value="2"/>
+			<passive_effect name="PerkLevel" operation="base_subtract" value="2"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.2"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="-.2"/>
+			<passive_effect name="PhysicalDamageResist" operation="perc_add" value="-.2" tags="coredamageresist"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="-.2"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="-.2"/>
+			<passive_effect name="StaminaMax" operation="perc_add" value="-.2"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="-.1"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="-.1"/>
+			<passive_effect name="CrouchSpeed" operation="perc_add" value="-.1"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="buffDeathPenalty3" name_key="Death Penalty 3" description_key="Death Penalty 3 -30% dmg, armor, health, speed  - Get Hot or use Near Death Remover to cures it" tooltip_key="Death Penalty 3 - Use Near Death Remover to cures it" remove_on_death="false" icon="ui_game_symbol_bat" icon_color="255,60,0">
+		<stack_type value="replace" />
+		<update_rate value="1"/>
+		<duration value="1200"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty5"/>
+			<triggered_effect trigger="onSelfDied" action="AddBuff" buff="buffDeathPenalty4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<passive_effect name="AttributeLevel" operation="base_subtract" value="3"/>
+			<passive_effect name="SkillLevel" operation="base_subtract" value="3"/>
+			<passive_effect name="PerkLevel" operation="base_subtract" value="3"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.3"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="-.3"/>
+			<passive_effect name="PhysicalDamageResist" operation="perc_add" value="-.3" tags="coredamageresist"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="-.3"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="-.3"/>
+			<passive_effect name="StaminaMax" operation="perc_add" value="-.3"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="-.15"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="-.15"/>
+			<passive_effect name="CrouchSpeed" operation="perc_add" value="-.15"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="buffDeathPenalty4" name_key="Death Penalty 4" description_key="Death Penalty 4 -40% dmg, armor, health, speed  - Get Freezing or use Near Death Remover to cures it" tooltip_key="Death Penalty 4 - Use Near Death Remover to cures it" remove_on_death="false" icon="ui_game_symbol_bat" icon_color="255,30,0">
+		<stack_type value="replace" />
+		<update_rate value="1"/>
+		<duration value="1500"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty5"/>
+			<triggered_effect trigger="onSelfDied" action="AddBuff" buff="buffDeathPenalty5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<passive_effect name="AttributeLevel" operation="base_subtract" value="4"/>
+			<passive_effect name="SkillLevel" operation="base_subtract" value="4"/>
+			<passive_effect name="PerkLevel" operation="base_subtract" value="4"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.4"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="-.4"/>
+			<passive_effect name="PhysicalDamageResist" operation="perc_add" value="-.4" tags="coredamageresist"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="-.4"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="-.4"/>
+			<passive_effect name="StaminaMax" operation="perc_add" value="-.4"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="-.2"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="-.2"/>
+			<passive_effect name="CrouchSpeed" operation="perc_add" value="-.2"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="buffDeathPenalty5" name_key="Death Penalty 5" description_key="Death Penalty 5 -50% dmg, armor, health, speed  - Get Sweltering or use Near Death Remover to cures it" tooltip_key="Death Penalty 5 - Use Near Death Remover to cures it" remove_on_death="false" icon="ui_game_symbol_bat" icon_color="255,0,0">
+		<stack_type value="replace" />
+		<update_rate value="1"/>
+		<duration value="1800"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDeathPenalty4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<passive_effect name="AttributeLevel" operation="base_subtract" value="5"/>
+			<passive_effect name="SkillLevel" operation="base_subtract" value="5"/>
+			<passive_effect name="PerkLevel" operation="base_subtract" value="5"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.5"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="-.5"/>
+			<passive_effect name="PhysicalDamageResist" operation="perc_add" value="-.5" tags="coredamageresist"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="-.5"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="-.5"/>
+			<passive_effect name="StaminaMax" operation="perc_add" value="-.5"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="-.25"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="-.25"/>
+			<passive_effect name="CrouchSpeed" operation="perc_add" value="-.25"/>
+		</effect_group>
+		
+	</buff>
+
+<!-- Learned and clear Schems -->
+	<buff name="buffSchemLearn" name_key="SchemLearn" description_key="SchemLearn" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemLearn1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemLearn2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemLearn3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemLearn4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemLearn5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemLearn1" name_key="SchemLearn1" description_key="SchemLearn1" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeWpnClubT1BaseballBatSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeWpnSledgeT1IronSledgehammerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeWpnSledgeT3SteelSledgehammerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeWpnBladeT1HuntingKnifeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeWpnBladeT3MacheteSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeWpnBatonT2StunBatonSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolIronSetSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolSteelSetSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolSalvageT1WrenchSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolSalvageT2RatchetSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolSalvageT3ImpactDriverSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolFarmT1IronHoeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolPickT3AugerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolAxeT3ChainsawSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeWpnSpearT1IronSpearSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeWpnKnucklesT1IronKnucklesSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeWpnKnucklesT3SteelKnucklesSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunBowT1WoodenBowSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunBowT3CompoundBowSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunBowT1IronCrossbowSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunBowT3CompoundCrossbowSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunHandgunT1PistolSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunHandgunT2Magnum44Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunHandgunT3DesertVultureSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunShotgunT1DoubleBarrelSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunShotgunT2PumpShotgunSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunShotgunT3AutoShotgunSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunHandgunT3SMG5Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunMGT1AK47Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunMGT2TacticalARSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunMGT3M60Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunRifleT1HuntingRifleSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunRifleT2MarksmanRifleSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunRifleT3SniperRifleSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunExplosivesT3RocketLauncherSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunBotT1JunkSledgeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunBotT2JunkTurretSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunBotT3JunkDroneSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="armorLeatherSetSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="armorMilitarySetSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="resourceMilitaryFiberSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="armorIronSetSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="armorSteelSetSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="thrownAmmoPipeBombSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="thrownGrenadeContactSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="thrownGrenadeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="thrownDynamiteSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="thrownTimedChargeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ammoArrowFlamingSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ammoCrossbowBoltExplodingSchematic" operation="set" value="1"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemLearn2" name_key="SchemLearn2" description_key="SchemLearn2" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolRepairT3NailgunSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalFirstAidBandageSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalFirstAidKitSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalPlasterCastSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="toolBellowsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="toolForgeCrucibleSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="toolAnvilSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cementMixerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="workbenchSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="forgeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="chemistryStationSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleAnySchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleBicycleChassisSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleBicycleHandlebarsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleMinibikeChassisSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleMinibikeHandlebarsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleMotorcycleChassisSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleMotorcycleHandlebarsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicle4x4TruckChassisSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicle4x4TruckAccessoriesSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleGyroCopterChassisSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleGyroCopterAccessoriesSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="generatorbankSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="pressureplateSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="poweredDoorsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bladeTrapSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="dartTrapSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="shotgunTurretSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="autoTurretSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="electricfencepostSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="motionsensorSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="speakerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="spotlightPlayerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="switchSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="batterybankSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="electrictimerrelaySchematic" operation="set" value="1"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemLearn3" name_key="SchemLearn3" description_key="SchemLearn3" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunBarrelExtenderSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMuzzleBrakeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunSoundSuppressorSilencerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunLaserSightSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunFlashlightSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunScopeSmallSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunScopeMediumSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunScopeLargeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunReflexSightSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunTriggerGroupSemiSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunTriggerGroupBurst3Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunTriggerGroupAutomaticSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunBipodSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunForegripSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunRetractingStockSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunDuckbillSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunChokeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMagazineExtenderSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modShotgunSawedOffBarrelSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunCrippleEmSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunBowPolymerStringSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunBowArrowRestSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMeleeTheHunterSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMeleeRadRemoverSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMeleeBlessedMetalSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeTemperedBladeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeSerratedBladeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeWeightedHeadSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeStructuralBraceSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeErgonomicGripSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeFortifyingGripSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeClubBarbedWireSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeClubMetalSpikesSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeGraveDiggerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeBunkerBusterSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeIronBreakerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeWoodSplitterSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeClubBurningShaftSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorInsulatedLinerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorCoolingMeshSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorImprovedFittingsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorCustomizedFittingsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorPlatingBasicSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorPlatingReinforcedSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorStoragePocketSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorDoubleStoragePocketSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorTripleStoragePocketSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorMuffledConnectorsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorAdvancedMuffledConnectorsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorImpactBracingSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorBandolierSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorWaterPurifierSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorHelmetLightSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modFuelTankSmallSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modFuelTankLargeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ammoGasCanSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="resourceOilSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drugAntibioticsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drugHerbalAntibioticsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodCanShamSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarBeerSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarCoffeeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarGoldenRodTeaSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarGrandpasAwesomeSauceSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarGrandpasLearningElixirSchematic" operation="set" value="1"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemLearn4" name_key="SchemLearn4" description_key="SchemLearn4" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarGrandpasMoonshineSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarRedTeaSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkYuccaJuiceSmoothieSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodBaconAndEggsSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodBakedPotatoSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodBlueberryPieSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodPumpkinPieSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodPumpkinCheesecakeSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodPumpkinBreadSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodGumboStewSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodShepardsPieSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodSpaghettiSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodTunaFishGravyToastSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodBoiledMeatSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodChiliDogSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodCornBreadSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodCornOnTheCobSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodFishTacosSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodGrilledMeatSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodHoboStewSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodMeatStewSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodShamChowderSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodSteakAndPotatoSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodVegetableStewSchematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedAloe1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedBlueberry1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedChrysanthemum1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedCoffee1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedCorn1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedCotton1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedGoldenrod1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedGraceCorn1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedHop1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedMushroom1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedPotato1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedYucca1Schematic" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedPumpkin1Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Cooking Stove Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Drinking Mixer Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Book of experience" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Auger Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Chainsaw Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Weapon Brace Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Health Plus Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Stamina Plus Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Block Damage Plus Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Fast Craft Plus Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Exp Gain Plus Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Regeneration Mod Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Master Nailgun Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Jump Pad Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Running Fast Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DNT Mods Pack Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Machete Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Fireaxe Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Pickaxe Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Shovel Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Wrench Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Sledgehammer Schematic" operation="set" value="1"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemLearn5" name_key="SchemLearn5" description_key="SchemLearn5" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Machete Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Fireaxe Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Pickaxe Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Shovel Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Wrench Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Sledgehammer Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Gem Crafting Mold Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Thermometer Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="toolAndDieSet Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Healing Machine Schematic 1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Healing Machine Schematic 2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Silver Nugget Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Gold Nugget Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Raw Diamond Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Stone Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Alchemy furnace Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="M249 Squad Rifle Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="M416 Assault Rifle Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Remington M4A1 Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Mini UZI Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="PP19 Bizon Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Grid Launcher Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="AWM Sniper Rifle Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Helmet Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Chest Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Gloves Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Legs Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Helmet Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Chest Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Gloves Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Legs Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Helmet Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Vest Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Gloves Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Legs Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Helmet Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Vest Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Gloves Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Legs Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Ore Miner Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Springfield Saint SMG Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Anvil Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Bellows Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Forge Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Crucible Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Sensor Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Sniper Turret Schematic" operation="set" value="1"/>
+		
+		<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="read_skillbook_final" play_in_head="true"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemClear" name_key="SchemClear" description_key="SchemClear" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemClear1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemClear2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemClear3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemClear4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSchemClear5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemClear1" name_key="SchemClear1" description_key="SchemClear1" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolIronSetSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolSteelSetSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolSledgehammerIronSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolSledgehammerSteelSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolKnifeIronSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolKnifeMacheteSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeStunBatonSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolIronSetSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolSteelSetSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolWrenchSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolAugerSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeToolChainsawSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeThrownSpearIronSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeThrownSpearSteelSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeKnucklesIronSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeKnucklesSteelSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunBowWoodenSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunBowCompoundSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunCrossbowIronSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunCrossbowCompoundSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunPistolSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gun44MagnumSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunDoubleBarrelShotgunSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunPumpShotgunSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunSMG5Schematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunAK47Schematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunHuntingRifleSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunMR10Schematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunRocketLauncherSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunJunkTurretSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="armorLeatherSetSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="armorMilitarySetSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="resourceMilitaryFiberSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="armorIronSetSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="armorSteelSetSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="thrownAmmoPipeBombSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="thrownGrenadeContactSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="thrownGrenadeSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="thrownDynamiteSchematic" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunToolNailgunSchematic" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemClear2" name_key="SchemClear2" description_key="SchemClear2" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalFirstAidBandageSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalFirstAidKitSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalPlasterCastSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalBloodDrawKitSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="toolBellowsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="toolForgeCrucibleSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="toolAnvilSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cementMixerSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="workbenchSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="forgeSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="tableSawSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="chemistryStationSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleBicycleChassisSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleBicycleHandlebarsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleMinibikeChassisSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleMinibikeHandlebarsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleMotorcycleChassisSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleMotorcycleHandlebarsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicle4x4TruckChassisSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicle4x4TruckAccessoriesSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleGyroCopterChassisSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="vehicleGyroCopterAccessoriesSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="generatorbankSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="pressureplateSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="poweredDoorsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bladeTrapSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="dartTrapSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="shotgunTurretSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="autoTurretSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="electricfencepostSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="motionsensorSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="speakerSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="spotlightPlayerSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="switchSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="batterybankSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="electrictimerrelaySchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunBarrelExtenderSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMuzzleBrakeSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunSoundSuppressorSilencerSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunLaserSightSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunFlashlightSchematic" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemClear3" name_key="SchemClear3" description_key="SchemClear3" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunScopeSmallSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunScopeMediumSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunScopeLargeSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunReflexSightSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunTriggerGroupSemiSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunTriggerGroupBurst3Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunTriggerGroupAutomaticSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunRodAndSpringSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunBipodSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunForegripSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunRetractingStockSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunDuckbillSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunChokeSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMagazineExtenderSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modShotgunSawedOffBarrelSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunCrippleEmSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunBowPolymerStringSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunBowArrowRestSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMeleeTheHunterSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMeleeRadRemoverSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modGunMeleeBlessedMetalSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeTemperedBladeSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeSerratedBladeSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeWeightedHeadSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeStructuralBraceSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeErgonomicGripSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeFortifyingGripSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeClubBarbedWireSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeClubMetalSpikesSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeGraveDiggerSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeBunkerBusterSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeIronBreakerSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeWoodSplitterSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modMeleeClubBurningShaftSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorInsulatedLinerSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorCoolingMeshSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorImprovedFittingsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorCustomizedFittingsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorPlatingBasicSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorPlatingReinforcedSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorStoragePocketSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorDoubleStoragePocketSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorTripleStoragePocketSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorMuffledConnectorsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorAdvancedMuffledConnectorsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorImpactBracingSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorBandolierSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorWaterPurifierSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modArmorHelmetLightSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modFuelTankSmallSchematic" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemClear4" name_key="SchemClear4" description_key="SchemClear4" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modFuelTankLargeSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ammoGasCanSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drugAntibioticsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drugHerbalAntibioticsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodCanShamSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarBeerSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarCoffeeSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarGoldenRodTeaSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarGrandpasAwesomeSauceSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarGrandpasLearningElixirSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarGrandpasMoonshineSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkJarRedTeaSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="drinkYuccaJuiceSmoothieSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodBaconAndEggsSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodBakedPotatoSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodBlueberryPieSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodPumpkinPieSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodPumpkinCheesecakeSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodPumpkinBreadSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodBoiledMeatSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodChiliDogSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodCornBreadSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodCornOnTheCobSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodFishTacosSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodGrilledMeatSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodHoboStewSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodMeatStewSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodShamChowderSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodSteakAndPotatoSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodVegetableStewSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedAloe1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedBlueberry1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedChrysanthemum1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedCoffee1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedCorn1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedCotton1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedGoldenrod1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedGraceCorn1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedHop1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedMushroom1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedPotato1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedYucca1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="plantedPumpkin1Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meleeClubIronSchematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Cooking Stove Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Drinking Mixer Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Book of experience" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Auger Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Chainsaw Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Weapon Brace Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Health Plus Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Stamina Plus Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Block Damage Plus Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Fast Craft Plus Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Exp Gain Plus Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Regeneration Mod Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Master Nailgun Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Jump Pad Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Running Fast Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DNT Mods Pack Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Machete Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Fireaxe Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Pickaxe Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Shovel Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Wrench Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Sledgehammer Schematic" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSchemClear5" name_key="SchemClear5" description_key="SchemClear5" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Machete Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Fireaxe Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Pickaxe Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Shovel Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Wrench Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Sledgehammer Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Gem Crafting Mold Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Thermometer Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="toolAndDieSet Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Healing Machine Schematic 1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Healing Machine Schematic 2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Silver Nugget Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Gold Nugget Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Raw Diamond Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Stone Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Alchemy furnace Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="M249 Squad Rifle Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="M416 Assault Rifle Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Remington M4A1 Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Mini UZI Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="PP19 Bizon Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Grid Launcher Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="AWM Sniper Rifle Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Helmet Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Chest Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Gloves Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Legs Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Diamond Boots Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Helmet Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Chest Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Gloves Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Legs Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Obsidian Boots Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Helmet Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Vest Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Gloves Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Legs Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Carbon Fiber Boots Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Helmet Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Vest Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Gloves Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Legs Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Titanium Boots Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Ore Miner Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Springfield Saint SMG Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Anvil Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Bellows Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Forge Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Crucible Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Super Sensor Schematic" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Sniper Turret Schematic" operation="set" value="0"/>
+		
+		<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="read_skillbook_final" play_in_head="true"/>
+		</effect_group>
+	</buff>	
+<!-- Learned and clear Schems -->
+
+<!-- Learned and clear Books -->
+	<buff name="buffBookLearn" name_key="Book Learn" description_key="Book Learn" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacHeat" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacAxes" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacSpeed" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacMolotov" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacPrevention" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacHarvest" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacEquipment" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerStealthDamage" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerSilentNight" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerBlades" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerThiefAdrenaline" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerArchery" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerTwilightThief" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerSlumberParty" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterDukes" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterAmmunition" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterBrass" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterLead" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterperks" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterFood" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterMedical" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerDamage" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerApparel" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerPunks" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerIntimidation" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerAPAmmo" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerHPAmmo" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerCriminalPursuit" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpBigHits" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpMetalChain" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpGear" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpSlowPitch" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpKnockdown" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpMaintenance" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpBaseballBats" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistSafes" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistGems" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistTimedCharge" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistClaimed" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistAdrenalineFall" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistSprintSneak" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistMotionDetection" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresHoney" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresCoffins" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresAcid" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresWater" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresDoors" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresCloth" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresSinks" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadWinterWear" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadLegwear" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadFootwear" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadDesertWear" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadDusters" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadPufferCoats" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadPockets" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalBears" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalWolves" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalCoyotes" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalMountainLions" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalDeer" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalVultures" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalSelfDefense" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningLuckyStrike" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningDiamondTools" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningPallets" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningCoffee" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningBlackStrap" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningAvalanche" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningLantern" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersArrowRecovery" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersExplodingBolts" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersCripplingShot" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersAPAmmo" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersFlamingArrows" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersForestGuide" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersKnockdown" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteTakeAim" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteSwissKnees" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteSteadyHand" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteMaintenance" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteHPAmmo" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteAPAmmo" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteDamage" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahDamage" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahBreachingSlugs" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahLimbShot" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahSlugs" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahMaintenance" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahMagazine" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahPartyStarter" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperDamage" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperCripplingShot" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperHeadShot" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperReload" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperControlledBreathing" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperAPAmmo" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperHPAmmo" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsDamage" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsUncontrolledBurst" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsMaintenance" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsDrumMag" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsRecoil" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsRagdoll" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsMachineGuns" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatLanding" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatCigar" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatSneaking" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatJumping" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatLandMines" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatAdrenalineRush" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatRoomClearing" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatComplete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie1Damage" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie2Maintenance" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie3APAmmo" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie4Shells" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie5Repulsor" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie6BatonCharge" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie7Hydraulics" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie8Complete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling1BasicMoves" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling2DropABomb" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling3KillerInstinct" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling4FinishingMoves" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling5AdrenalineHealing" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling6RageMode" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling7BoozedUp" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling8Complete" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter1Damage" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter2Maintenance" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter3SteelSpears" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter4StrongArm" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter5RapidStrike" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter6PuncturedLung" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter7QuickStrike" level="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter8Complete" level="-1"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="read_skillbook_final" play_in_head="true"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffBookClear" name_key="Book Clear" description_key="Book Clear" hidden="true" remove_on_death="false">
+		<stack_type value="ignore" />
+		<update_rate value="1" />
+		<duration value="1" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacHeat" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacAxes" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacSpeed" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacMolotov" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacPrevention" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacHarvest" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacEquipment" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkFiremansAlmanacComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerStealthDamage" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerSilentNight" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerBlades" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerThiefAdrenaline" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerArchery" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerTwilightThief" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerSlumberParty" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNightStalkerComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterDukes" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterAmmunition" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterBrass" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterLead" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterperks" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterFood" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkLuckyLooterMedical" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerDamage" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerApparel" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerPunks" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerIntimidation" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerAPAmmo" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerHPAmmo" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerCriminalPursuit" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkEnforcerComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpBigHits" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpMetalChain" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpGear" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpSlowPitch" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpKnockdown" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpMaintenance" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpBaseballBats" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBatterUpComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistSafes" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistGems" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistTimedCharge" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistClaimed" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistAdrenalineFall" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistSprintSneak" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistMotionDetection" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkGreatHeistComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresHoney" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresCoffins" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresAcid" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresWater" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresDoors" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresCloth" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresSinks" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkWasteTreasuresComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadWinterWear" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadLegwear" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadFootwear" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadDesertWear" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadDusters" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadPufferCoats" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadPockets" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkNeedleAndThreadComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalBears" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalWolves" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalCoyotes" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalMountainLions" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalDeer" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalVultures" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalSelfDefense" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkHuntingJournalComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningLuckyStrike" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningDiamondTools" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningPallets" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningCoffee" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningBlackStrap" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningAvalanche" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningLantern" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkArtOfMiningComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersArrowRecovery" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersExplodingBolts" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersCripplingShot" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersAPAmmo" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersFlamingArrows" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersForestGuide" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkRangersKnockdown" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteTakeAim" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteSwissKnees" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteSteadyHand" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteMaintenance" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteHPAmmo" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteAPAmmo" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteDamage" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkPistolPeteComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahDamage" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahBreachingSlugs" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahLimbShot" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahSlugs" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahMaintenance" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahMagazine" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahPartyStarter" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkShotgunMessiahComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperDamage" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperCripplingShot" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperHeadShot" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperReload" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperControlledBreathing" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperAPAmmo" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperHPAmmo" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSniperComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsDamage" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsUncontrolledBurst" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsMaintenance" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsDrumMag" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsRecoil" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsRagdoll" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsMachineGuns" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkAutoWeaponsComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatLanding" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatCigar" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatSneaking" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatJumping" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatLandMines" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatAdrenalineRush" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatRoomClearing" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkUrbanCombatComplete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie1Damage" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie2Maintenance" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie3APAmmo" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie4Shells" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie5Repulsor" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie6BatonCharge" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie7Hydraulics" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkTechJunkie8Complete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling1BasicMoves" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling2DropABomb" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling3KillerInstinct" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling4FinishingMoves" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling5AdrenalineHealing" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling6RageMode" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling7BoozedUp" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkBarBrawling8Complete" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter1Damage" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter2Maintenance" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter3SteelSpears" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter4StrongArm" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter5RapidStrike" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter6PuncturedLung" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter7QuickStrike" level="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="perkSpearHunter8Complete" level="0"/>
+
+		</effect_group>
+	</buff>
+	
+</append>
+</configs>

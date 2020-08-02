@@ -1,0 +1,6 @@
+<delmod>
+	<!-- <remove xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='DropInventoryBlock'][@value='cntBackpackDropped']" /> -->
+    <set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">keystoneBlock,Starting Items Note</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">keystoneBlock,Starting Items Note</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">keystoneBlock,Starting Items Note</set> 
+</delmod>

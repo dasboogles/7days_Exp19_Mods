@@ -1,0 +1,110 @@
+<configs>
+
+<append xpath="/buffs">
+	<buff name="buffNewbieCoat" name_key="buffNewbieCoatName" description_key="buffNewbieCoatDesc"	icon="ui_game_symbol_light_armor" remove_on_death="false">
+		<!-- Be careful with that remove_on_death="false". You may have to restart screen effects, particles, etc. on game load. -->
+		<stack_type value="ignore"/>
+		<effect_group>
+			<requirement name="PlayerLevel" operation="LT" value="2"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="65"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="65"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="PlayerLevel" operation="Equals" value="20"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="52"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="52"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="PlayerLevel" operation="Equals" value="30"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="39"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="39"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="PlayerLevel" operation="Equals" value="40"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="26"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="26"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="PlayerLevel" operation="Equals" value="50"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="13"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="13"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="PlayerLevel" operation="LTE" value="50"/>
+				<passive_effect name="ExpDeficitPerDeathPercentage" operation="base_set" value="0"/>
+				<passive_effect name="ExpDeficitMaxPercentage" operation="base_set" value="0"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffNewbieCoat">
+				<requirement name="PlayerLevel" operation="GT" value="50"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffNewbieCoat">
+				<requirement name="CVarCompare" cvar="Genius Helmet" operation="Equals" value="1"/>
+			</triggered_effect>
+
+			<!-- Taking care of food/water not being maxed with all the game start / initial chunk generation -->
+			<passive_effect name="WaterChangeOT" operation="base_add" value="2,2" duration="0,8"/>
+			<!-- <passive_effect name="StaminaMaxModifierOT" operation="base_add" value="2,2" duration="0,8"/> -->
+			<passive_effect name="HealthChangeOT" operation="base_add" value="2,2" duration="0,8"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="99"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="99"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmount" operation="add" value="48"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmount" operation="add" value="48"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>
+		
+		<effect_group>
+		<effect_group>
+			<requirement name="PlayerLevel" operation="Equals" value="50"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="0"/>
+		</effect_group>
+			<requirement name="PlayerLevel" operation="LTE" value="50"/>
+			<requirement name="PlayerLevel" operation="GT" value="40"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="10" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".5"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="1"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="PlayerLevel" operation="LTE" value="40"/>
+			<requirement name="PlayerLevel" operation="GT" value="30"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="20" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="2"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="PlayerLevel" operation="LTE" value="30"/>
+			<requirement name="PlayerLevel" operation="GT" value="20"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="30" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1.5"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="3"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="PlayerLevel" operation="LTE" value="20"/>
+			<requirement name="PlayerLevel" operation="GT" value="10"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="40" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="2"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="2"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="4"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="PlayerLevel" operation="LTE" value="10"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="50" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="2.5"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="5"/>
+		</effect_group>
+	</buff>
+</append>
+</configs>

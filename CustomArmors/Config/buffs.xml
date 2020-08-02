@@ -1,0 +1,237 @@
+<configs>
+
+	<append xpath="/buffs" >
+		<buff name="ASTrigger" hidden="true">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="CLASEffect">
+					<requirement name="CVarCompare" cvar="$CLAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$CLAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$CLAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$CLAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$CLAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="LASEffect">
+					<requirement name="CVarCompare" cvar="$LAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$LAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$LAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$LAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$LAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="IASEffect">
+					<requirement name="CVarCompare" cvar="$IAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$IAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$IAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$IAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$IAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="SASEffect">
+					<requirement name="CVarCompare" cvar="$SAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$SAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$SAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$SAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$SAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="MASEffect">
+					<requirement name="CVarCompare" cvar="$MAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$MAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$MAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$MAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$MAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="DASEffect">
+					<requirement name="CVarCompare" cvar="$DAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$DAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$DAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$DAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$DAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="CASEffect">
+					<requirement name="CVarCompare" cvar="$CAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$CAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$CAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$CAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$CAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="TASEffect">
+					<requirement name="CVarCompare" cvar="$TAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$TAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$TAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$TAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$TAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ETASEffect">
+					<requirement name="CVarCompare" cvar="$ETAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$ETAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$ETAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$ETAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$ETAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="OSEffect">
+					<requirement name="CVarCompare" cvar="$OAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$OAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$OAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$OAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$OAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="EOASEffect">
+					<requirement name="CVarCompare" cvar="$EOAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$EOAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$EOAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$EOAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$EOAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="MNASEffect">
+					<requirement name="CVarCompare" cvar="$MNAS1" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$MNAS2" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$MNAS3" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$MNAS4" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$MNAS5" operation="Equals" value="1"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+		
+		<buff name="CLASEffect" name_key="Cloth Armor Set Effect" description_key="Cloth Armor Set Effect: +50 MaxHealth" tooltip_key="Cloth Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_add" value="50"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="MNASEffect" name_key="Mining Armor Set Effect" description_key="Mining Armor Set Effect: +25% Block Damage, +25% Havest Resources Count" tooltip_key="Mining Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<requirement name="ItemHasTags" tags="miningTool"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".25"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".25" tags="oreWoodHarvest"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="IASEffect" name_key="Iron Armor Set Effect" description_key="Iron Armor Set Effect: +3 Armor, +30 MaxHealth, +1 Fortitude" tooltip_key="Iron Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="3" tags="coredamageresist"/>
+				<passive_effect name="HealthMax" operation="base_add" value="30"/>
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="LASEffect" name_key="Leather Armor Set Effect" description_key="Leather Armor Set Effect: +3 Armor, +30 MaxHealth, +1 Agility" tooltip_key="Leather Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="3" tags="coredamageresist"/>
+				<passive_effect name="HealthMax" operation="base_add" value="30"/>
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="SASEffect" name_key="Steel Armor Set Effect" description_key="Steel Armor Set Effect: +5 Armor, +50 MaxHealth, +5% Damage, +1 Fortitude, +1 HeavyArmor" tooltip_key="Steel Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.05"/>
+				<passive_effect name="HealthMax" operation="base_add" value="50"/>
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkHeavyArmor" operation="base_add" value="1"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="MASEffect" name_key="Military Armor Set Effect" description_key="Military Armor Set Effect: +5 Armor, +50 MaxHealth, +5% Damage, +1 Agility, +1 LightArmor" tooltip_key="Military Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.05"/>
+				<passive_effect name="HealthMax" operation="base_add" value="50"/>
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkLightArmor" operation="base_add" value="1"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="DASEffect" name_key="Diamond Armor Set Effect" description_key="Diamond Armor Set Effect: +7 Armor, +70 MaxHealth, +10% Damage, +1 Fortitude, +1 HeavyArmor, +1 PainTolerance" tooltip_key="Diamond Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7" tags="coredamageresist"/>
+				<passive_effect name="HealthMax" operation="base_add" value="70"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.1"/>
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkHeavyArmor" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkPainTolerance" operation="base_add" value="2"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="CASEffect" name_key="Carbon Armor Set Effect" description_key="Carbon Armor Set Effect: +5 Armor, +40 MaxHealth, +10% Damage, +10% Speed, +1 Agility, +1 LightArmor, +2 Parkour" tooltip_key="Carbon Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.1"/>
+				<passive_effect name="HealthMax" operation="base_add" value="40"/>
+				<passive_effect name="WalkSpeed" operation="base_add" value="0.10"/>
+				<passive_effect name="RunSpeed" operation="base_add" value="0.10"/>
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkLightArmor" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkParkour" operation="base_add" value="2"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="TASEffect" name_key="Titanium Armor Set Effect" description_key="Titanium Armor Set Effect: +8 Armor, +80 MaxHealth, +12% Damage, +15% Speed, +2 Agility, +2 LightArmor, +2 Parkour, +2 FromTheShadows" tooltip_key="Titanium Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="8" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.12"/>
+				<passive_effect name="HealthMax" operation="base_add" value="80"/>
+				<passive_effect name="WalkSpeed" operation="base_add" value="0.15"/>
+				<passive_effect name="RunSpeed" operation="base_add" value="0.15"/>
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkLightArmor" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkParkour" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkFromTheShadows" operation="base_add" value="2"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="ETASEffect" name_key="Elite Titanium Armor Set Effect" description_key="Elite Titanium Armor Set Effect: +12 Armor, +120 MaxHealth, +15% Damage, +20% Speed, +2 Agility, +1 Intellect, +2 LightArmor, +3 Parkour, +2 HiddenStrike" tooltip_key="Elite Titanium Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="12" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.15"/>
+				<passive_effect name="HealthMax" operation="base_add" value="120"/>
+				<passive_effect name="WalkSpeed" operation="base_add" value="0.2"/>
+				<passive_effect name="RunSpeed" operation="base_add" value="0.2"/>
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="2"/>
+				<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkLightArmor" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkParkour" operation="base_add" value="3"/>
+				<passive_effect name="PerkLevel" tags="perkHiddenStrike" operation="base_add" value="2"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="OTASEffect" name_key="Obsidian Armor Set Effect" description_key="Obsidian Armor Set Effect" tooltip_key="Obsidian Armor Set Effect: +10 Armor, +100 MaxHealth, +12% Damage, +2 Fortitude, +2 HeavyArmor, +2 PainTolerance, +2 WellInsulated" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="10" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.12"/>
+				<passive_effect name="HealthMax" operation="base_add" value="100"/>
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkHeavyArmor" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkWellInsulated" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkPainTolerance" operation="base_add" value="2"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="EOASEffect" name_key="Elite Obsidian Armor Set Effect" description_key="Elite Obsidian Armor Set Effect: +15 Armor, +150 MaxHealth, +15% Damage, +10% Speed, +1 Strength, +2 Fortitude, +2 HeavyArmor, +3 PainTolerance, +2 HealingFactor" tooltip_key="Elite Obsidian Armor Set Effect" icon="ui_game_symbol_armor_iron" tags="armoreffect" icon_color="255,0,255">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="15" tags="coredamageresist"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.15"/>
+				<passive_effect name="HealthMax" operation="base_add" value="150"/>
+				<passive_effect name="WalkSpeed" operation="base_add" value="0.1"/>
+				<passive_effect name="RunSpeed" operation="base_add" value="0.1"/>
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkHealingFactor" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkHeavyArmor" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkPainTolerance" operation="base_add" value="3"/>
+			</effect_group>
+		</buff>
+		
+	</append>
+</configs>

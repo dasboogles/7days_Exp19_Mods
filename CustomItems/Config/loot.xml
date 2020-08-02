@@ -1,0 +1,64 @@
+<config>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='modGunT2']/item[@name='modGunShotgunTubeExtenderMagazine']" >
+	<item name="Weapon Brace"/>
+	<item name="Bow Critical Damage Mod" prob="0.2"/>
+	<item name="Melee Critical Damage Mod" prob="0.2"/>
+	<item name="Gun Critical Damage Mod" prob="0.2"/>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='modArmorT3']/item[@name='modArmorAdvancedMuffledConnectors']" >
+	<item name="Health Plus" prob="0.2"/>
+	<item name="Stamina Plus"/>
+	<item name="Block Damage Plus" prob="0.2"/>
+	<item name="Fast Craft Plus"/>
+	<item name="Exp Gain Plus" prob="0.2"/>
+	<item name="Regeneration Mod"/>
+	<item name="Running Fast" prob="0.2"/>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='schematicsModsRare']/item[@name='drugHerbalAntibioticsSchematic']" >
+	<item name="Weapon Brace Schematic"/>
+	<item name="Health Plus Schematic" prob="0.2"/>
+	<item name="Stamina Plus Schematic"/>
+	<item name="Block Damage Plus Schematic" prob="0.2"/>
+	<item name="Fast Craft Plus Schematic"/>
+	<item name="Exp Gain Plus Schematic" prob="0.2"/>
+	<item name="Regeneration Mod Schematic"/>
+	<item name="Running Fast Schematic" prob="0.2"/>
+	<item name="DNT Mods Pack Schematic"/>
+	<item name="Medium First Aid Kit Schematic"/>
+	<item name="Large First Aid Kit Schematic"/>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='schematicsToolsRare']/item[@name='chemistryStationSchematic']" >
+	<item name="Master Nailgun Schematic"/>
+	<item name="Solar Bank Schematic"/>
+	<item name="Obsidian Auger Schematic"/>
+	<item name="Obsidian Chainsaw Schematic"/>
+	<item name="Obsidian Fireaxe Schematic"/>
+	<item name="Obsidian Pickaxe Schematic"/>
+	<item name="Obsidian Shovel Schematic"/>
+	<item name="Obsidian Sledgehammer Schematic"/>
+	<item name="Obsidian Wrench Schematic"/>
+	<item name="Obsidian Machete Schematic"/>
+	<item name="Diamond Machete Schematic"/>
+	<item name="Diamond Fireaxe Schematic"/>
+	<item name="Diamond Pickaxe Schematic"/>
+	<item name="Diamond Shovel Schematic"/>
+	<item name="Diamond Sledgehammer Schematic"/>
+	<item name="Diamond Wrench Schematic"/>
+	<item name="Diamond Auger Schematic"/>
+	<item name="Diamond Chainsaw Schematic"/>
+	<item name="Master Nailgun Schematic"/>
+	<item name="Super Bellows Schematic"/>
+	<item name="Super Anvil Schematic"/>
+	<item name="Super Forge Schematic"/>
+	<item name="Super Crucible Schematic"/>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup/item[@name='apparelCigar']" >
+	<item name="Marijuana" prob="1"/>
+</insertAfter>
+
+</config>

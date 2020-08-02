@@ -1,0 +1,49 @@
+<config>
+<!-- Loot Groups with contents of bags -->
+<insertAfter xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipes']/item[@name='plantedYucca1Schematic']" >
+	<item name="Cooking Stove Schematic"/>
+	<item name="Drinking Mixer Schematic"/>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='rareFoodDrink']/item[@name='drinkCanMegaCrush']" >
+	<item name="Yangzhou fried rice"/>
+	<item name="Pho"/>
+	<item name="Tom Yum Goong"/>
+	<item name="Honey Glazed Sham"/>
+	<item name="Chicken Noodle Soup"/>
+	<item name="Dog Beef Stew"/>
+	<item name="Meats and Oats Cat Food"/>
+	<item name="Fruit Pie"/>
+	<item name="Piece of Pizza"/>
+	<item name="Pizza"/>
+	<item name="Pie Crust"/>
+	<item name="Jello Fruit Salad"/>
+	<item name="Speghetti with Meat Sauce"/>
+	<item name="Speghetti"/>
+	<item name="Tuna Salad Sandwich"/>
+	<item name="Miso Ramen"/>
+	<item name="Lamb Kheema"/>
+	<item name="Beef and Barley Soup"/>
+	<item name="Bottle of brandy"/>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='farmCrops']/item[@name='resourceCropGoldenrodPlant']" >
+	<item name="Rice"/>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='seeds']/item[@name='plantedPumpkin1']" >
+	<item name="Rice (seed)"/>
+	<item name="Sugar" count="5,10"/>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='rareFoodDrink']/item[@name='drinkCanMegaCrush']" >
+	<item name="Zhonya's Hourglass"/>
+	<item name="Wreck it Ralph"/>
+	<item name="Lynxeyed Drinks"/>
+	<item name="Solid Head Drinks"/>
+	<item name="Run Forrest Run"/>
+	<item name="NearDeathRemover Jar"/>
+	<item name="Goldenrod Moonshine"/>
+</insertAfter>
+
+</config>

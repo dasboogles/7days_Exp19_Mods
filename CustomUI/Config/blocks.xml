@@ -1,0 +1,8 @@
+<configs>
+
+<remove xpath="/blocks/block/property[@name='Stacknumber']"/>
+ <append xpath="/blocks/block" >
+<property name="Stacknumber" value="6000"/>
+</append>
+
+</configs>

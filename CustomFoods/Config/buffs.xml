@@ -1,0 +1,160 @@
+<configs>
+	<append xpath="/buffs" >
+
+	<buff name="buffLambKheema" name_key="Lamb Kheema" description_key="This hearty dish warms your body and soul." tooltip_key="Is it getting warm in here, or is it just me?" icon="ui_game_symbol_coffee" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="1800"/>
+		<effect_group>
+			<passive_effect name="HypothermalResist" operation="base_add" value="40"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffBeefBarley" name_key="Beef and Barley Soup" description_key="This delicious soup keeps you warm on those cold nights." tooltip_key="You feel warmer already." icon="ui_game_symbol_coffee" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="1800"/>
+		<effect_group>
+			<passive_effect name="HypothermalResist" operation="base_add" value="35"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffGoldenrodMoonshine" name_key="Goldenrod Moonshine" description_key="This drink keeps you cool and headstrong." tooltip_key="You feel like you can take on 100 buzzards in a sauna." icon="ui_game_symbol_defense" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="120"/>
+		<effect_group>
+						
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.5">
+				<requirement name="NotHasBuff" buff="buffHealWaterMax"/>
+			</passive_effect>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.40">
+				<requirement name="HasBuff" buff="buffHealWaterMax"/>
+			</passive_effect>
+		
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="50" tags="coredamageresist"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="50"/>
+		
+		</effect_group>
+	</buff>
+	
+	<buff name="buffJelloFruitSalad" name_key="Jello Fruit Salad" description_key="This wiggly, jiggly delicious desert keeps you on the cool side. +15 Heat Resist" tooltip_key="You feel like a cool kid again." icon="ui_game_symbol_coffee" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="1800"/>
+		<effect_group>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="15"/>
+		</effect_group>
+	</buff>	
+	
+	<buff name="runforrestrun" icon="ui_game_symbol_agility" icon_color="132,0,155" name_key="Run Forrest Run" description_key="You feel as light as a cloud. +4 Run Speed in 30 sec" tooltip_key="Running faster as you can. +400% Run Speed in 30 sec" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="30"/>
+		<effect_group>
+			<passive_effect name="WalkSpeed" operation="base_set" value="1.65"/>
+			<passive_effect name="RunSpeed" operation="base_set" value="4"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="onfire"  name_key="onfire" description_key="onfire" tooltip_key="onfire" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true">
+		<damage_type value="heat"/>
+		<stack_type value="replace"/>
+		<duration value="10"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffBurningElement"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" value="10,5,0" duration="0,5,10"/>
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value="2"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="30"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="-10"/>
+			<passive_effect name="WalkSpeed" operation="base_set" value=".2"/>
+			<passive_effect name="RunSpeed" operation="base_set" value=".5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="solidhead" icon="ui_game_symbol_armor_iron" icon_color="132,0,155" name_key="Solid Head Drinks" description_key="You feel harder than a rocks. +50% Armor in 120 sec" tooltip_key="You feel harder than a rocks. +10% Armor in 120 sec." tags="drug">
+		<stack_type value="replace"/>
+		<duration value="120"/>
+		<effect_group>
+			<passive_effect name="PhysicalDamageResist" operation="perc_add" value=".5" tags="coredamageresist"/>
+		</effect_group>
+	</buff>
+
+	<buff name="lynxeyed" icon="ui_game_symbol_skull_crusher" icon_color="132,0,155" name_key="Lynxeyed Drinks" description_key="You feel like killing. +20% Damage in 120 sec" tooltip_key="Shooting more 20% effectively in 120 sec." tags="drug">
+		<stack_type value="replace"/>
+		<duration value="120"/>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".2"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="wreckitralph" icon="ui_game_symbol_mining" icon_color="132,0,155" name_key="Wreck it Ralph" description_key="You feel like mining. +20% Block damage in 5 min" tooltip_key="Mining more 20% effectively." tags="drug">
+		<stack_type value="replace"/>
+		<duration value="300"/>
+		<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" value=".2"/>
+		</effect_group>
+	</buff>
+	<buff name="Zhonya'sHourglass" name_key="buffRingOfFireNameZhonya" icon="ui_game_symbol_fire" icon_color="200,200,0" icon_blink="true" remove_on_death="true" description_key="Invulnerable, deal 450 damage nearby for 10 seconds, but is unable to move." tooltip_key="Invulnerable, deal 450 damage nearby for 10 seconds, but is unable to move." tags="drug">
+		<stack_type value="replace"/>
+		<duration value="10"/>
+		<update_rate value=".7"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="Zhonya'sHourglassEffect"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="otherAOE" range="10" buff="Zhonya'sHourglassEffect"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="-.5"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="-.5"/>
+			<passive_effect name="CrouchSpeed" operation="perc_add" value="-.5"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="500"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="500" tags="coredamageresist"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="electric_fence_impact" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" target="self" sound="electric_fence_impact" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" target="self" sound="forge_fire_die" play_in_head="true"/>
+		</effect_group>
+	</buff>
+	<buff name="Zhonya'sHourglassEffect" name_key="Zhonya'sHourglassEffect" description_key="buffRingOfFireEffectDesc" tooltip_key="buffRingOfFireEffectDesc"
+		icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+		<damage_type value="electrical"/>
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="1.2"/>
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,10" value="0,200"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />
+		</effect_group>
+	</buff>
+	<buff name="fullrestoration" name_key="Full Restoration" description_key="You feel full restoration." tooltip_key="You feel full restoration." icon="ui_game_symbol_add" icon_color="132,0,155">
+		<stack_type value="replace"/>
+		<duration value="3"/>
+		<effect_group>
+			<passive_effect name="HealthLoss" operation="base_set" value="0"/>
+			<passive_effect name="HealthLoss" operation="perc_set" value="0"/>
+			<passive_effect name="HealthChangeOT" operation="perc_set" value="0"/>
+			<passive_effect name="WaterChangeOT" operation="perc_set" value="0"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="1000"/>
+			<!-- <passive_effect name="HealthMaxModifierOT" operation="base_add" value="100"/> -->
+			<!-- <passive_effect name="StaminaMaxModifierOT" operation="base_add" value="100"/> -->
+			<passive_effect name="CarryCapacity" operation="base_set" value="45"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="200" tags="coredamageresist"/>
+			<passive_effect name="HealthLoss" operation="perc_add" value="-1.2"/>
+
+			<!-- <triggered_effect trigger="onSelfBuffStart" action="GiveExp" exp="@_expdeficit"/> -->
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveAllNegativeBuffs"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="1000"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="1000"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="set" value="1000"/>
+
+			<!--
+			<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Crouching"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="_sheltered"/>
+			-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtDuration" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	</append>
+</configs>

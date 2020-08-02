@@ -1,0 +1,2227 @@
+<configs>
+
+<append xpath="items/item[contains(@name,'armor')]/effect_group">
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="6,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="7,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="8,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="9,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="10,40"/>
+	<passive_effect name="PhysicalDamageResist" operation="base_subtract" value="4"/>
+</append>
+
+<append xpath="items/item[@name='armorSteelHelmet']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$SAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$SAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="SASEffect"/>
+</append>
+<append xpath="items/item[@name='armorSteelChest']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$SAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$SAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="SASEffect"/>
+</append>
+<append xpath="items/item[@name='armorSteelGloves']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$SAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$SAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="SASEffect"/>
+</append>
+<append xpath="items/item[@name='armorSteelLegs']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$SAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$SAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="SASEffect"/>
+</append>
+<append xpath="items/item[@name='armorSteelBoots']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$SAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$SAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="SASEffect"/>
+</append>
+
+<append xpath="items/item[@name='armorMilitaryHelmet']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MASEffect"/>
+</append>
+<append xpath="items/item[@name='armorMilitaryVest']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MASEffect"/>
+</append>
+<append xpath="items/item[@name='armorMilitaryGloves']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MASEffect"/>
+</append>
+<append xpath="items/item[@name='armorMilitaryLegs']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MASEffect"/>
+</append>
+<append xpath="items/item[@name='armorMilitaryBoots']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MASEffect"/>
+</append>
+
+<append xpath="items/item[@name='armorIronHelmet']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$IAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$IAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IASEffect"/>
+</append>
+<append xpath="items/item[@name='armorIronChest']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$IAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$IAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IASEffect"/>
+</append>
+<append xpath="items/item[@name='armorIronGloves']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$IAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$IAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IASEffect"/>
+</append>
+<append xpath="items/item[@name='armorIronLegs']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$IAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$IAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IASEffect"/>
+</append>
+<append xpath="items/item[@name='armorIronBoots']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$IAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$IAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IASEffect"/>
+</append>
+
+<append xpath="items/item[@name='armorLeatherHood']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$LAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$LAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="LASEffect"/>
+</append>
+<append xpath="items/item[@name='armorLeatherChest']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$LAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$LAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="LASEffect"/>
+</append>
+<append xpath="items/item[@name='armorLeatherGloves']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$LAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$LAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="LASEffect"/>
+</append>
+<append xpath="items/item[@name='armorLeatherPants']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$LAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$LAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="LASEffect"/>
+</append>
+<append xpath="items/item[@name='armorLeatherBoots']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$LAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$LAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="LASEffect"/>
+</append>
+<append xpath="items/item[@name='armorClothHat']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CLAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CLAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CLASEffect"/>
+</append>
+<append xpath="items/item[@name='armorClothJacket']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CLAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CLAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CLASEffect"/>
+</append>
+<append xpath="items/item[@name='armorClothGloves']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CLAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CLAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CLASEffect"/>
+</append>
+<append xpath="items/item[@name='armorClothPants']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CLAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CLAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CLASEffect"/>
+</append>
+<append xpath="items/item[@name='armorClothBoots']/effect_group">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CLAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CLAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CLASEffect"/>
+</append>
+
+<append xpath="items/item[@name='armorMiningHelmet']/effect_group">
+		<passive_effect name="BlockDamage" operation="perc_add" tier="1" value=".01,.05"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="2" value=".03,.07"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="3" value=".05,.09"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="4" value=".07,.11"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="5" value=".09,.13"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="6" value=".13,.15"/>
+		<passive_effect name="HarvestCount" operation="perc_add" value=".05" tags="oreWoodHarvest"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MNAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MNAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MNASEffect"/>
+</append>
+
+
+<append xpath="/items">
+
+<item name="Mining Vest">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mplastics"/>
+	<property name="CustomIcon" value="apparelHazmatJacket"/>
+	<property name="CustomIconTint" value="072BF1"/>
+	<property name="UnlockedBy" value="perkArtOfMiningLantern"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="Group" value="Clothing"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="1" value=".01,.05"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="2" value=".03,.07"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="3" value=".05,.09"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="4" value=".07,.11"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="5" value=".09,.13"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="6" value=".13,.15"/>
+		<passive_effect name="HarvestCount" operation="perc_add" value=".05" tags="oreWoodHarvest"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="6.1,8"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MNAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MNAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MNASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_chest"/>
+		<property name="Overlay0" value="armor_hazmat_chest"/>
+		<property name="Overlay0Tint" value="7,43,241"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="Mining Gloves">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mplastics"/>
+	<property name="CustomIcon" value="apparelHazmatGloves"/>
+	<property name="CustomIconTint" value="072BF1"/>
+	<property name="UnlockedBy" value="perkArtOfMiningLantern"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="Group" value="Clothing"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="1" value=".01,.05"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="2" value=".03,.07"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="3" value=".05,.09"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="4" value=".07,.11"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="5" value=".09,.13"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="6" value=".13,.15"/>
+		<passive_effect name="HarvestCount" operation="perc_add" value=".05" tags="oreWoodHarvest"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="6.1,8"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MNAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MNAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MNASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_hands"/>
+		<property name="Overlay0" value="armor_hazmat_gloves"/>
+		<property name="Overlay0Tint" value="7,43,241"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="Mining Legs">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mplastics"/>
+	<property name="CustomIcon" value="apparelHazmatPants"/>
+	<property name="CustomIconTint" value="072BF1"/>
+	<property name="UnlockedBy" value="perkArtOfMiningLantern"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="Group" value="Clothing"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="1" value=".01,.05"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="2" value=".03,.07"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="3" value=".05,.09"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="4" value=".07,.11"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="5" value=".09,.13"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="6" value=".13,.15"/>
+		<passive_effect name="HarvestCount" operation="perc_add" value=".05" tags="oreWoodHarvest"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="6.1,8"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MNAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MNAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MNASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_legs"/>
+		<property name="Overlay0" value="armor_hazmat_pants"/>
+		<property name="Overlay0Tint" value="7,43,241"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="Mining Boots">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mplastics"/>
+	<property name="CustomIcon" value="apparelHazmatBoots"/>
+	<property name="CustomIconTint" value="072BF1"/>
+	<property name="UnlockedBy" value="perkArtOfMiningLantern"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="Group" value="Clothing"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="1" value=".01,.05"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="2" value=".03,.07"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="3" value=".05,.09"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="4" value=".07,.11"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="5" value=".09,.13"/>
+		<passive_effect name="BlockDamage" operation="perc_add" tier="6" value=".13,.15"/>
+		<passive_effect name="HarvestCount" operation="perc_add" value=".05" tags="oreWoodHarvest"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="6.1,8"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$MNAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$MNAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="MNASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_feet"/>
+		<property name="Overlay0" value="armor_hazmat_boots"/>
+		<property name="Overlay0Tint" value="7,43,241"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
+
+<item name="Diamond Helmet Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/>
+	<property name="CustomIconTint" value="00FFFF"/>
+	<property name="Unlocks" value="Diamond Helmet"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Helmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Helmet Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Diamond Chest Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelChest"/>
+	<property name="CustomIconTint" value="00FFFF"/>
+	<property name="Unlocks" value="Diamond Chest"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Chest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Chest Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Diamond Gloves Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelGloves"/>
+	<property name="CustomIconTint" value="00FFFF"/>
+	<property name="Unlocks" value="Diamond Gloves"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Gloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Gloves Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Diamond Legs Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelLegs"/>
+	<property name="CustomIconTint" value="00FFFF"/>
+	<property name="Unlocks" value="Diamond Legs"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Legs" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Legs Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Diamond Boots Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelBoots"/>
+	<property name="CustomIconTint" value="00FFFF"/>
+	<property name="Unlocks" value="Diamond Boots"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Boots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Diamond Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="armorDiamondMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="head,armor,armorHead,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/>
+	<property name="DisplayType" value="armorHeavy"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="Weight" value="4"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="TintColor" value="0,255,255"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorSteelGroupDesc"/>
+	<property name="Group" value="Clothing"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="ShowQuality" value="true"/>
+</item>
+
+<item name="Diamond Helmet">
+	<property name="Extends" value="armorDiamondMaster"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/>
+	<property name="CustomIconTint" value="00FFFF"/>
+	<property name="EquipSlot" value="Head"/>
+	<property name="UnlockedBy" value="Diamond Helmet Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.1,12"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="head,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000,10000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$DAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$DAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="DASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="gear_swat_helmet"/>
+		<property name="Overlay0" value="gear_swat_helmet"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="ShowAltHair" value="true"/>
+		<property name="Overlay0Tint" value="0,255,255"/>
+	</property>
+</item>
+
+<item name="Diamond Chest">
+	<property name="Extends" value="Diamond Helmet"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelChest"/>
+	<property name="CustomIconTint" value="00FFFF"/>
+	<property name="EquipSlot" value="Chest"/>
+	<property name="UnlockedBy" value="Diamond Chest Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+		<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.1,12"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="head,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000,10000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$DAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$DAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="DASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_chest"/>
+		<property name="Overlay0" value="armor_iron_chest"/>
+		<property name="Overlay0Tint" value="0,255,255"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="Diamond Gloves">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelGloves"/><property name="CustomIconTint" value="00FFFF"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<property name="UnlockedBy" value="Diamond Gloves Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.1,12"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="upperbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000,10000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$DAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$DAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="DASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_gloves"/>
+		<property name="Overlay0" value="armor_iron_gloves"/>
+		<property name="Overlay0Tint" value="0,255,255"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="Diamond Legs">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelLegs"/><property name="CustomIconTint" value="00FFFF"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<property name="UnlockedBy" value="Diamond Legs Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.1,12"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="lowerbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000,10000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$DAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$DAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="DASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_pants"/>
+		<property name="Overlay0" value="armor_iron_pants"/>
+		<property name="Overlay0Tint" value="0,255,255"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="Diamond Boots">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelBoots"/><property name="CustomIconTint" value="00FFFF"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<property name="UnlockedBy" value="Diamond Boots Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.1,12"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="lowerbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000,10000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$DAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$DAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="DASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_boots"/>
+		<property name="Overlay0" value="armor_iron_boots"/>
+		<property name="Overlay0Tint" value="0,255,255"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
+
+<item name="Carbon Fiber Helmet Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryHelmet"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Carbon Fiber Helmet"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Helmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Helmet Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Carbon Fiber Vest Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryVest"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Carbon Fiber Vest"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Vest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Vest Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Carbon Fiber Gloves Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryGloves"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Carbon Fiber Gloves"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Gloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Gloves Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Carbon Fiber Legs Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryLegs"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Carbon Fiber Legs"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Legs" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Legs Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Carbon Fiber Boots Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Carbon Fiber Boots"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Boots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Carbon Fiber Stealth Boots Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Carbon Fiber Stealth Boots"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Stealth Boots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Carbon Fiber Stealth Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="armorCarbonFiberMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="armorMilitaryHelmet"/>
+	<property name="DisplayType" value="armorLight"/>
+	<property name="Material" value="Mdiamond"/> <property name="Weight" value="4"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorMilitaryGroupDesc"/>
+	<property name="Group" value="Clothing"/>
+	<property name="RepairExpMultiplier" value="12.8"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="ShowQuality" value="true"/>
+</item>
+
+<item name="Carbon Fiber Helmet">
+	<property name="Extends" value="armorCarbonFiberMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CustomIcon" value="armorMilitaryHelmet"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Tags" value="head,armor,armorHead,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Head"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<property name="UnlockedBy" value="Carbon Fiber Helmet Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.1,11"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="gear_kevlar_helmet"/>
+		<property name="Overlay0" value="gear_kevlar_helmet"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="ShowAltHair" value="true"/>
+	</property>
+</item>
+
+<item name="Carbon Fiber Vest">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CustomIcon" value="armorMilitaryVest"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="UnlockedBy" value="Carbon Fiber Vest Schematic"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.1,11"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_vest"/>
+		<property name="Overlay0" value="armor_kevlar_vest"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="Carbon Fiber Gloves">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CustomIcon" value="armorMilitaryGloves"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="UnlockedBy" value="Carbon Fiber Gloves Schematic"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.1,11"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_gloves"/>
+		<property name="Overlay0" value="armor_kevlar_gloves"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="Carbon Fiber Legs">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CustomIcon" value="armorMilitaryLegs"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="UnlockedBy" value="Carbon Fiber Legs Schematic"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.1,11"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_legarmor"/>
+		<property name="Overlay0" value="armor_kevlar_legarmor"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="Carbon Fiber Boots">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="UnlockedBy" value="Carbon Fiber Boots Schematic"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.1,11"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$CAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$CAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="CASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_boots"/>
+		<property name="Overlay0" value="armor_kevlar_boots"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
+<item name="Carbon Fiber Stealth Boots">
+	<property name="Extends" value="Carbon Fiber Boots"/>
+	<property name="Material" value="Mdiamond"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="UnlockedBy" value="perkUrbanCombatLanding,Carbon Fiber Stealth Boots Schematic"/>
+	<property name="DisplayType" value="armorLightStealth"/>
+	<property name="RepairTools" value="DiamondRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.1,11"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+	</effect_group>
+</item>
+
+
+<item name="Titanium Helmet Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryHelmet"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="Unlocks" value="Titanium Helmet"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Helmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Helmet Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Titanium Vest Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryVest"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="Unlocks" value="Titanium Vest"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Vest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Vest Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Titanium Gloves Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryGloves"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="Unlocks" value="Titanium Gloves"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Gloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Gloves Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Titanium Legs Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryLegs"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="Unlocks" value="Titanium Legs"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Legs" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Legs Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Titanium Boots Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="Unlocks" value="Titanium Boots"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Boots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Titanium Stealth Boots Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="Unlocks" value="Titanium Stealth Boots"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Stealth Boots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Titanium Stealth Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="armorTitaniumMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="armorMilitaryHelmet"/>
+	<property name="DisplayType" value="armorLight"/>
+	<property name="Material" value="Mobsidian"/> <property name="Weight" value="4"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorMilitaryGroupDesc"/>
+	<property name="Group" value="Clothing"/>
+	<property name="RepairExpMultiplier" value="12.8"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="ShowQuality" value="true"/>
+</item>
+
+<item name="Titanium Helmet">
+	<property name="Extends" value="armorCarbonFiberMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CustomIcon" value="armorMilitaryHelmet"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="UnlockedBy" value="Titanium Helmet Schematic"/>
+	<property name="Tags" value="head,armor,armorHead,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Head"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.1,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$TAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$TAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="TASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="gear_kevlar_helmet"/>
+		<property name="Overlay0" value="gear_kevlar_helmet"/>
+		<property name="Overlay0Tint" value="237,194,0"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="ShowAltHair" value="true"/>
+	</property>
+</item>
+
+<item name="Titanium Vest">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CustomIcon" value="armorMilitaryVest"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="UnlockedBy" value="Titanium Vest Schematic"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.1,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$TAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$TAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="TASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_vest"/>
+		<property name="Overlay0" value="armor_kevlar_vest"/>
+		<property name="Overlay0Tint" value="237,194,0"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="Titanium Gloves">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CustomIcon" value="armorMilitaryGloves"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="UnlockedBy" value="Titanium Gloves Schematic"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.1,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$TAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$TAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="TASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_gloves"/>
+		<property name="Overlay0" value="armor_kevlar_gloves"/>
+		<property name="Overlay0Tint" value="237,194,0"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="Titanium Legs">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CustomIcon" value="armorMilitaryLegs"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="UnlockedBy" value="Titanium Legs Schematic"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.1,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$TAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$TAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="TASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_legarmor"/>
+		<property name="Overlay0" value="armor_kevlar_legarmor"/>
+		<property name="Overlay0Tint" value="237,194,0"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="Titanium Boots">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="UnlockedBy" value="Titanium Boots Schematic"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.1,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$TAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$TAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="TASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_boots"/>
+		<property name="Overlay0" value="armor_kevlar_boots"/>
+		<property name="Overlay0Tint" value="237,194,0"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
+<item name="Titanium Stealth Boots">
+	<property name="Extends" value="Titanium Boots"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="EDC200"/>
+	<property name="UnlockedBy" value="perkUrbanCombatLanding,Titanium Stealth Boots Schematic"/>
+	<property name="DisplayType" value="armorLightStealth"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.1,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".126,.156" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+	</effect_group>
+</item>
+
+<item name="Elite Titanium Helmet">
+	<property name="Extends" value="armorCarbonFiberMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="armorMilitaryHelmet"/>
+	<property name="CustomIconTint" value="7106C4"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="Tags" value="head,armor,armorHead,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Head"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="12.1,15"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".326,.456" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$ETAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$ETAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="ETASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="gear_kevlar_helmet"/>
+		<property name="Overlay0" value="gear_kevlar_helmet"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="ShowAltHair" value="true"/>
+	</property>
+</item>
+
+<item name="Elite Titanium Vest">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="armorMilitaryVest"/>
+	<property name="CustomIconTint" value="7106C4"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="12.1,15"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".326,.456" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$ETAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$ETAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="ETASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_vest"/>
+		<property name="Overlay0" value="armor_kevlar_vest"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="Elite Titanium Gloves">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="armorMilitaryGloves"/>
+	<property name="CustomIconTint" value="7106C4"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="12.1,15"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".326,.456" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$ETAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$ETAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="ETASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_gloves"/>
+		<property name="Overlay0" value="armor_kevlar_gloves"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="Elite Titanium Legs">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="armorMilitaryLegs"/>
+	<property name="CustomIconTint" value="7106C4"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="12.1,15"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".326,.456" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$ETAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$ETAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="ETASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_legarmor"/>
+		<property name="Overlay0" value="armor_kevlar_legarmor"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="Elite Titanium Boots">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="7106C4"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="12.1,15"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="600,1000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.562"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".326,.456" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$ETAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$ETAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="ETASEffect"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_boots"/>
+		<property name="Overlay0" value="armor_kevlar_boots"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
+
+<item name="Obsidian Helmet Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Obsidian Helmet"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Helmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Helmet Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Obsidian Chest Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelChest"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Obsidian Chest"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Chest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Chest Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Obsidian Gloves Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelGloves"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Obsidian Gloves"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Gloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Gloves Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Obsidian Legs Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelLegs"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Obsidian Legs"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Legs" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Legs Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="Obsidian Boots Schematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelBoots"/>
+	<property name="CustomIconTint" value="353535"/>
+	<property name="Unlocks" value="Obsidian Boots"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Boots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Obsidian Boots Schematic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+	</effect_group>
+</item>
+
+<item name="armorObsidianMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/>
+	<property name="DisplayType" value="armorHeavy"/>
+	<property name="Material" value="Mobsidian"/><property name="Weight" value="4"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorSteelGroupDesc"/>
+	<property name="Group" value="Clothing"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="ShowQuality" value="true"/>
+</item>
+
+<item name="Obsidian Helmet">
+	<property name="Extends" value="armorObsidianMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/><property name="CustomIconTint" value="353535"/>
+	<property name="Tags" value="head,armor,armorHead,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Head"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<property name="UnlockedBy" value="Obsidian Helmet Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="11.1,14"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="head,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$OAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$OAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="OASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="gear_swat_helmet"/>
+		<property name="Overlay0" value="gear_swat_helmet"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="ShowAltHair" value="true"/>
+	</property>
+</item>
+
+<item name="Obsidian Chest">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelChest"/><property name="CustomIconTint" value="353535"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<property name="UnlockedBy" value="Obsidian Chest Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="11.1,14"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="upperbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$OAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$OAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="OASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_chest"/>
+		<property name="Overlay0" value="armor_iron_chest"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="Obsidian Gloves">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelGloves"/><property name="CustomIconTint" value="353535"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<property name="UnlockedBy" value="Obsidian Gloves Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="11.1,14"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="upperbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$OAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$OAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="OASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_gloves"/>
+		<property name="Overlay0" value="armor_iron_gloves"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="Obsidian Legs">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelLegs"/><property name="CustomIconTint" value="353535"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<property name="UnlockedBy" value="Obsidian Legs Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="11.1,14"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="lowerbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$OAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$OAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="OASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_pants"/>
+		<property name="Overlay0" value="armor_iron_pants"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="Obsidian Boots">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="Material" value="Mobsidian"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelBoots"/><property name="CustomIconTint" value="353535"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<property name="UnlockedBy" value="Obsidian Boots Schematic"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="5,10"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="7,15"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="13,25"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="20,40"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="11.1,14"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="lowerbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".135,.167" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$OAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$OAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="OASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_boots"/>
+		<property name="Overlay0" value="armor_iron_boots"/>
+		<property name="Overlay0Tint" value="09,09,09"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
+
+<item name="armorElite ObsidianMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/>
+	<property name="DisplayType" value="armorHeavy"/>
+	<property name="Material" value="MEliteParts"/><property name="Weight" value="4"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorSteelGroupDesc"/>
+	<property name="Group" value="Clothing"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="ShowQuality" value="true"/>
+</item>
+
+<item name="Elite Obsidian Helmet">
+	<property name="Extends" value="armorElite ObsidianMaster" param1="CustomIcon"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/><property name="CustomIconTint" value="7106C4"/>
+	<property name="Tags" value="head,armor,armorHead,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Head"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="13.1,16"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="head,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".235,.367" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$EOAS1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$EOAS1" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="EOASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="gear_swat_helmet"/>
+		<property name="Overlay0" value="gear_swat_helmet"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="ShowAltHair" value="true"/>
+	</property>
+</item>
+
+<item name="Elite Obsidian Chest">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelChest"/><property name="CustomIconTint" value="7106C4"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="13.1,16"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="upperbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".235,.367" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$EOAS2" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$EOAS2" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="EOASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_chest"/>
+		<property name="Overlay0" value="armor_iron_chest"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="Elite Obsidian Gloves">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelGloves"/><property name="CustomIconTint" value="7106C4"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="13.1,16"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="upperbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".235,.367" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$EOAS3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$EOAS3" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="EOASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_gloves"/>
+		<property name="Overlay0" value="armor_iron_gloves"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="Elite Obsidian Legs">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelLegs"/><property name="CustomIconTint" value="7106C4"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="13.1,16"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="lowerbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".235,.367" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$EOAS4" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$EOAS4" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="EOASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_pants"/>
+		<property name="Overlay0" value="armor_iron_pants"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="Elite Obsidian Boots">
+	<property name="Extends" value="armorDiamondMaster" param1="CustomIcon"/>
+	<property name="ItemTypeIcon" value="star"/><property name="Material" value="MEliteParts"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorSteelBoots"/><property name="CustomIconTint" value="7106C4"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,heavyarmor,canHaveCosmetic,heavyArmorPenalty,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="RepairTools" value="ObsidianRepairKit"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="-1,1" tier="1"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="0,2" tier="2"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="1,3" tier="3"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="2,4" tier="4"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="3,5" tier="5"/>
+		<passive_effect name="ModSlots" operation="perc_add" value="4,7" tier="6"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="1" value="10,20"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="2" value="15,30"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="3" value="20,40"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="4" value="25,50"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="5" value="30,60"/>
+	<passive_effect name="HealthMax" operation="base_add" tier="6" value="40,80"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="13.1,16"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-1" tags="lowerbody,heat,electrical"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000,12000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+
+		<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".235,.367" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/><passive_effect name="BuffResistance" operation="base_add" value=".04" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$EOAS5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$EOAS5" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="EOASEffect"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_boots"/>
+		<property name="Overlay0" value="armor_iron_boots"/>
+		<property name="Overlay0Tint" value="113,6,196"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
+</append>
+</configs>

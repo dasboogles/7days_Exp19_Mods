@@ -1,0 +1,12 @@
+<configs>
+
+
+<set xpath="/archetypes/archetype[@name='BaseFemale']/base_mesh_parts/part/texture[@name='female_torso']/@name">female_torso_nude</set>
+<set xpath="/archetypes/archetype[@name='BaseFemale']/base_mesh_parts/part/texture[@name='female_legs']/@name">female_legs_nude</set>
+<set xpath="/archetypes/archetype/base_mesh_parts/part[@mesh='unisex_gear_backpack01']/@mesh">unisex_base_back</set>
+
+<!-- <set xpath="/archetypes/archetype[@name='BaseMale']/base_mesh_parts/part[@mesh='unisex_gear_backpack01']/@mesh">unisex_base_back</set> -->
+<!-- <set xpath="/archetypes/archetype[@name='BaseMale']/base_mesh_parts/part/texture[@name='unisex_gear_backpack01']/@color">skin</set> -->
+
+
+</configs>

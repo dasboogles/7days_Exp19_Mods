@@ -1,0 +1,105 @@
+<config>
+<append xpath="/materials">
+
+<material id="MresourceSchem">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="schem"/>
+	<property name="Experience" value="1"/>
+</material>
+
+<material id="MEliteParts">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="Elite Item Parts"/>
+	<property name="Experience" value="6"/>
+</material>
+
+<material id="MrSteel">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="2.75"/>
+	<property name="MaxDamage" value="15000"/>
+	<property name="Experience" value="6"/>
+</material>
+
+<material id="MTitanium">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="400"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="3.55"/>
+	<property name="MaxDamage" value="20000"/>
+	<property name="Experience" value="7"/>
+</material>
+
+<material id="Msilver">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="silver"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="MaxDamage" value="200"/>
+	<property name="Experience" value="3"/>
+</material>
+
+<material id="Mgold">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="gold"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="MaxDamage" value="200"/>
+	<property name="Experience" value="4"/>
+</material>
+
+<material id="Mgolddust">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="golddust"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="MaxDamage" value="200"/>
+	<property name="Experience" value="4"/>
+</material>
+
+<material id="Mdiamond">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="diamond"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="MaxDamage" value="200"/>
+	<property name="Experience" value="5"/>
+</material>
+
+<material id="Mobsidian">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="diamond"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="MaxDamage" value="200"/>
+	<property name="Experience" value="6"/>
+</material>
+
+</append>
+</config>

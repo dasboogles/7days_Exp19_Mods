@@ -1,0 +1,212 @@
+<configs>
+	<append xpath="/windows">
+
+<!-- ##########################SERVER INFO################################## -->
+<window name="wikiserverinfo" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome To LiveHard PVE Server" height="55" effect="outline"/> 
+ 
+		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/RjsHhT5/39daysinfo.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################SERVER INFO ENDS################################## -->
+
+
+
+
+<!-- ##########################SERVER RULES################################## -->
+<window name="wikiserverrules" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="61" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="35" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server" height="40" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/fXKR86z/39days-rules.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################SERVER RULES ENDS################################## -->
+
+
+
+<!-- ##########################Donor Support################################## -->
+<window name="wikidonorsupport" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server" height="55" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/RjsHhT5/39daysinfo.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################Donor Support ENDS################################## -->
+
+
+
+
+<!-- ##########################Server Events################################## -->
+<window name="wikiserverevents" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server" height="55" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/h7k4CZB/39daysevent.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################Server Events ENDS################################## -->
+
+
+
+
+<!-- ##########################Gimmehell Arena################################## -->
+<window name="wikigimmehellarena" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server" height="55" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/RjsHhT5/39daysinfo.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################Gimmehell Arena ENDS################################## -->
+
+
+
+<!-- ##########################Server Mods################################## -->
+<window name="wikiservermods" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server" height="55" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/ZWdw7qX/39daysmods.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################Server Mods ENDS################################## -->
+
+
+
+<!-- ##########################Server Commands################################## -->
+<window name="wikiservercommands" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server" height="55" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/3sNBc0Y/39days-commands.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################Server Commands ENDS################################## -->
+
+
+
+<!-- ##########################Server Admins################################## -->
+<window name="wikiserveradmins" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server" height="55" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/RjsHhT5/39daysinfo.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################Server Admins ENDS################################## -->
+
+
+
+<!-- ##########################Server Map################################## -->
+<window name="wikiservermap" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server" height="55" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/RjsHhT5/39daysinfo.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################Server Map ENDS################################## -->
+
+<!-- ##########################Server Bosses################################## -->
+<window name="wikiserverbosses" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server" height="55" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/RjsHhT5/39daysinfo.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<window name="wikiserverbosses2" width="4300" height="4050" pos="-925,550" depth="5" anchor="CenterTop" panel="Center" backgroundcolor="[black]">	
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+		</panel>
+
+<label depth="6" name="TextContent" pos="-200,-8" font_size="42" color="[red]" justify="center" pivot="topleft" text="Welcome to LiveHard PVE Server!" height="55" effect="outline"/> 
+ 		<rect name="searchControls"  width="170" height="638" depth="100" pos="700,-130" >
+ 		 <rect name="info" width="1050" height="580" depth="1" pos="560, 30" >
+            <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="170,0" width="1050" height="630" color="255,174,0" type="sliced" fillcenter="false" />  
+
+  <texture width="1048" height="628" texture="@https://i.ibb.co/RjsHhT5/39daysinfo.jpg" depth="4" pos="170,0"/>
+          
+</rect>
+</rect>		
+</window>
+<!-- ##########################Server Bosses ENDS################################## -->
+
+
+</append>
+
+
+</configs>

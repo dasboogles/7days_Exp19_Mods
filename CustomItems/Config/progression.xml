@@ -1,0 +1,8 @@
+<configs>
+
+	<!-- <append xpath="/progression/perks/perk[@name='perkMachineGunner']/effect_group/passive_effect[@level='1,5']/@tags">,AWM Sniper Rifle,</append> -->
+	<append xpath="/progression/perks/perk[@name='perkArtOfMiningPallets']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags">,Stack of Crushed Sand (6000),Stack of Clay Soil (6000),Stack of Paper (6000),Stack of Brass (6000),Stack of Coin (30000),Stack of Concrete Mix (6000),Stack of Cement (6000)</append>
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='4,5']/@tags">,Medium First Aid Kit</append>
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='5']/@tags">,Large First Aid Kit</append>
+</configs>
+

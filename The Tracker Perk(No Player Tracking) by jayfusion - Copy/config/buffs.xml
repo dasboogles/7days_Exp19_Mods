@@ -1,0 +1,147 @@
+<configs>
+	
+	<set xpath="/buffs/buff[@name='buffAnimalTracker']">			
+		<duration value="0"/>
+		<update_rate value=".5"/>
+		<display_value value=".AnimalTrackerDelay"/>
+		<display_value_format value="time"/>
+
+
+
+
+<!-- <passive_effect name="AnimalTracking" operation="base_set" value="1" tags="chicken,deer,boar"> -->
+				<!-- <requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/> -->
+			<!-- </passive_effect> -->
+
+
+		<effect_group name="Startup">
+			<!-- set the time delay for animal tracking -->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="4">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="LT" value="2"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="3">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="2">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="2">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/></triggered_effect>
+			
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="add" value="-.5"/>
+		</effect_group>
+
+		<effect_group name="check conditions for a successful track">
+			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/>
+				<requirement name="HasTrackedEntity" tags="perkAT01"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/>
+				<requirement name="HasTrackedEntity" tags="perkAT02"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT03"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/>
+				<requirement name="HasTrackedEntity" tags="perkAT04"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			<!-- tracking successful, activate next buff -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffAnimalTrackerAcquired">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAnimalTracker">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
+			</triggered_effect>
+
+			<!-- abort -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAnimalTracker">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="Tracking not successful, shutdown">
+			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffAnimalTrackerNoneTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAnimalTracker"/>
+		</effect_group>	
+
+	</set>
+
+	<set xpath="/buffs/buff[@name='buffAnimalTracker']/@name_key">The Tracker</set>
+	<set xpath="/buffs/buff[@name='buffAnimalTracker']/@description_key">You are looking for tracks.</set>
+	
+	<set xpath="/buffs/buff[@name='buffAnimalTrackerAcquired']">			
+		<duration value="0"/>
+		<display_value value=".AnimalTrackerLoseTimer"/>
+		<display_value_format value="time"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAnimalTracker"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group name="check conditions for no trackable animals">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="1"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/>
+				<requirement name="HasTrackedEntity" tags="perkAT01" />
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/>
+				<requirement name="HasTrackedEntity" tags="perkAT02" />
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT03" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/>
+				<requirement name="HasTrackedEntity" tags="perkAT04" />
+			</triggered_effect>			
+		</effect_group>
+
+		<effect_group name="Track animals">
+			<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT01">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/></passive_effect>
+			<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT02">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/></passive_effect>
+			<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT03">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/></passive_effect>
+			<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT04">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/></passive_effect>			
+		</effect_group>
+
+		<effect_group name="Tracking time ran out or no targets">
+			<requirements compare_type="or">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerLoseTimer" operation="LTE" value="0"/>
+				<requirement name="CVarCompare" cvar=".AnimalTrackerTerminate" operation="Equals" value="1"/>
+			</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffPerkAnimalTrackerLostTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAnimalTrackerAcquired"/>
+		</effect_group>	
+
+	</set>
+
+	<set xpath="/buffs/buff[@name='buffAnimalTrackerAcquired']/@name_key">The Tracker</set>
+	<set xpath="/buffs/buff[@name='buffAnimalTrackerAcquired']/@description_key">You have found tracks.\nIf you walk or run you will eventually lose the trail.</set>
+
+</configs>

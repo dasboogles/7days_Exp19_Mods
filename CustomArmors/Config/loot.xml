@@ -1,0 +1,26 @@
+<config>
+<insertAfter xpath="/lootcontainers/lootgroup[@name='schematicsArmorRare']/item[@name='armorSteelSetSchematic']" >
+	<item name="Diamond Helmet Schematic"/>
+	<item name="Diamond Chest Schematic"/>
+	<item name="Diamond Gloves Schematic"/>
+	<item name="Diamond Legs Schematic"/>
+	<item name="Diamond Boots Schematic"/>
+	<item name="Obsidian Helmet Schematic"/>
+	<item name="Obsidian Chest Schematic"/>
+	<item name="Obsidian Gloves Schematic"/>
+	<item name="Obsidian Legs Schematic"/>
+	<item name="Obsidian Boots Schematic"/>
+	<item name="Carbon Fiber Helmet Schematic"/>
+	<item name="Carbon Fiber Vest Schematic"/>
+	<item name="Carbon Fiber Gloves Schematic"/>
+	<item name="Carbon Fiber Legs Schematic"/>
+	<item name="Carbon Fiber Boots Schematic"/>
+	<item name="Carbon Fiber Stealth Boots Schematic"/>
+	<item name="Titanium Helmet Schematic"/>
+	<item name="Titanium Vest Schematic"/>
+	<item name="Titanium Gloves Schematic"/>
+	<item name="Titanium Legs Schematic"/>
+	<item name="Titanium Boots Schematic"/>
+	<item name="Titanium Stealth Boots Schematic"/>
+</insertAfter>
+</config>

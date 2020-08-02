@@ -1,0 +1,116 @@
+<configs>
+	<append xpath="/blocks">
+
+<block name="Wiki - Server Info">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Server Rules">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Donor Support">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Server Events">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Gimmehell Arena">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Server Mods">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Server Commands">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Server Admins">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Server Map">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Server Bosses">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+<block name="Wiki - Server Bosses 2">
+	<property name="CustomIcon" value="decoComputerMonitorKeyboardMouse" />
+    <property name="Class" value="Campfire" />
+	<property name="Extends" value="decoEntityMetalMaster"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+</block>
+
+
+</append>
+</configs>

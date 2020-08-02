@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="CustomBiomes" />
+		<Description value="Add Aloevera, yucca plant into Pine Forest Biome" />
+		<Author value="nnamcomputer" />
+		<Version value="1.1" />
+	</ModInfo>
+</xml>

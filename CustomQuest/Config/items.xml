@@ -1,0 +1,156 @@
+<configs>
+
+<append xpath="/items">
+
+<!-- 30/4 event -->
+<item name="Victory Medal">
+	<property name="HoldType" value="45"/>
+	<property name="DescriptionKey" value="EventItemDesc"/>
+	<property name="CustomIcon" value="casinoCoin"/>
+	<property name="CustomIconTint" value="D714C2"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceScrapBrassSmall"/>
+	<property name="Weight" value="1"/>
+	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="10"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="Group" value="Resources"/>
+	<property name="CraftingIngredientTime" value=".2"/>
+</item>
+
+<item name="Exp Book (Small)">
+	<property name="Tags" value="food"/>
+	<property name="DescriptionKey" value="EventExpDesc"/>
+	<property name="CustomIcon" value="bookShotgunMessiahDamage"/>
+	<property name="CustomIconTint" value="73D714"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="6000"/>
+	<property name="EconomicValue" value="124"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+		<requirement name="PlayerLevel" operation="LTE" value="49"/>
+	</property>
+
+	<effect_group tiered="false">
+		
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="RandomExp" operation="set" value="randomint(30000,35000)"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="@RandomExp"/>
+		
+	</effect_group>
+</item>
+
+<item name="Exp Book (Medium)">
+	<property name="Tags" value="food"/>
+	<property name="DescriptionKey" value="EventExpDesc"/>
+	<property name="CustomIcon" value="bookShotgunMessiahDamage"/>
+	<property name="CustomIconTint" value="ABD714"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="6000"/>
+	<property name="EconomicValue" value="124"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+		<requirement name="PlayerLevel" operation="GT" value="49"/>
+		<requirement name="PlayerLevel" operation="LTE" value="99"/>
+	</property>
+
+	<effect_group tiered="false">
+		
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="RandomExp" operation="set" value="randomint(150000,175000)"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="@RandomExp"/>
+		
+	</effect_group>
+</item>
+
+<item name="Exp Book (Large)">
+	<property name="Tags" value="food"/>
+	<property name="DescriptionKey" value="EventExpDesc"/>
+	<property name="CustomIcon" value="bookShotgunMessiahDamage"/>
+	<property name="CustomIconTint" value="D7D114"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="6000"/>
+	<property name="EconomicValue" value="124"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+		<requirement name="PlayerLevel" operation="GT" value="99"/>
+	</property>
+
+	<effect_group tiered="false">
+		
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="RandomExp" operation="set" value="randomint(300000,350000)"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="@RandomExp"/>
+		
+	</effect_group>
+</item>
+
+<item name="SkillBook">
+	<property name="Extends" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="Skill book Desc"/>
+	<property name="CustomIcon" value="bookShotgunMessiahDamage"/>
+	<property name="CustomIconTint" value="06555F"/>
+	<property class="Action0">
+		<property name="UseAnimation" value="false"/>
+		<property name="QuestGiven" value="challenge_skillpoint"/>
+	</property>
+</item>
+
+<item name="Knowledge Book">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="bookFiremansAlmanacHeat"/>
+	<property name="CustomIconTint" value="06555F"/>
+	<property name="DescriptionKey" value="Knowledge Book Desc"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Unlocks" value="perkFiremansAlmanacHeat"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+	</property>
+	<effect_group tiered="false">
+		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBookLearn"/>
+	
+	</effect_group>
+</item>
+
+<item name="Schematics Book">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="bookFiremansAlmanacHeat"/>
+	<property name="CustomIconTint" value="BAFC2C"/>
+	<property name="DescriptionKey" value="Schematics Book Desc"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Unlocks" value="perkFiremansAlmanacHeat"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_skillbook"/>
+	</property>
+	<effect_group tiered="false">		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSchemLearn"/>
+	</effect_group>
+</item>
+
+</append></configs>

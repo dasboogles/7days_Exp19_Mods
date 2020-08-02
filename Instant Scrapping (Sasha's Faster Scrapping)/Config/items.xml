@@ -1,0 +1,97 @@
+<config>
+	
+	<append xpath="/items/item[@name='resourceYuccaFibers']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='resourceScrapBrass']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='resourceScrapLead']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='resourceCloth']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='resourcePaper']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='resourceClayLump']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='gunAk47Parts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='gunPistolParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='gunHuntingRifleParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='gunDoubleBarrelShotgunParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='gunBowWoodenParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='gunRocketLauncherParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='gunJunkTurretParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='meleeStunBatonParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='meleeToolKnifeMacheteParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='meleeClubBaseballBatParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='armorMilitarySetParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='armorSteelSetParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<append xpath="/items/item[@name='gunJunkTurretParts']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</append>
+	
+	<set xpath="/items/item[@name='resourceScrapIron']/property[@name='CraftingIngredientTime']/@value">0</set>
+	<set xpath="/items/item[@name='resourceRockSmall']/property[@name='CraftingIngredientTime']/@value">0</set>
+	<set xpath="/items/item[@name='resourceWood']/property[@name='CraftingIngredientTime']/@value">0</set>
+	<set xpath="/items/item[@name='resourceScrapPolymers']/property[@name='CraftingIngredientTime']/@value">0</set>
+	<set xpath="/items/item[@name='resourceLeather']/property[@name='CraftingIngredientTime']/@value">0</set>
+	<set xpath="/items/item[@name='resourceMilitaryFiber']/property[@name='CraftingIngredientTime']/@value">0</set>
+	<set xpath="/items/item[@name='resourceElectricParts']/property[@name='CraftingIngredientTime']/@value">0</set>
+	<set xpath="/items/item[@name='resourceElectronicParts']/property[@name='CraftingIngredientTime']/@value">0</set>
+	<set xpath="/items/item[@name='resourceMechanicalParts']/property[@name='CraftingIngredientTime']/@value">0</set>
+
+	<insertAfter  xpath="/items/item[@name='resourceBrokenGlass']/property[@name='EconomicBundleSize']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</insertAfter>
+	
+	<insertAfter  xpath="/items/item[@name='resourceSewingKit']/property[@name='EconomicValue']">
+		<property name="CraftingIngredientTime" value="0"/>
+	</insertAfter>
+	
+</config>

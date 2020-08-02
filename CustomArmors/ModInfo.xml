@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="CustomArmors" />
+		<Description value="Add more armor" />
+		<Author value="nnamcomputer" />
+		<Version value="1.0" />
+	</ModInfo>
+</xml>

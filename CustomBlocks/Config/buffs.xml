@@ -1,0 +1,155 @@
+<configs>
+<append xpath="/buffs" >
+
+	<buff name="buffHealHealthMachine1" name_key="buffHealHealthName" description_key="buffHealHealthDesc" icon="ui_game_symbol_add" icon_color="255,128,0">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<!-- <passive_effect name="HealthMaxModifierOT" operation="base_add" value="1"/> -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="maxHealthAmount" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealHealthMachine1">
+				<requirement name="CVarCompare" cvar="maxHealthAmount" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="maxHealthIncrease" operation="set" value="1"/>
+
+			<!--
+			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="maxHealthIncrease"/>
+			-->
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="CVarCompare" cvar="foodHealthAmount" operation="GTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value=".5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".5"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="CVarCompare" cvar="medicalHealthAmount" operation="GT" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalHealthAmount" operation="subtract" value="2"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealHealthMachine1">
+				<requirement name="CVarCompare" cvar="medicalHealthAmount" operation="LTE" value="0"/>
+				<requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="-.5"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="healthIncrease" operation="set" value="2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="foodHealthAmount" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medicalHealthAmount" operation="set" value="0"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="buffHealHealthMachine2" name_key="buffHealHealthName" description_key="buffHealHealthDesc" icon="ui_game_symbol_add" icon_color="255,128,0">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<!-- <passive_effect name="HealthMaxModifierOT" operation="base_add" value="2"/> -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="maxHealthAmount" operation="subtract" value="2"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealHealthMachine2">
+				<requirement name="CVarCompare" cvar="maxHealthAmount" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="maxHealthIncrease" operation="set" value="2"/>
+
+			<!--
+			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="maxHealthIncrease"/>
+			-->
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="CVarCompare" cvar="foodHealthAmount" operation="GTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value="1"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="CVarCompare" cvar="medicalHealthAmount" operation="GT" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalHealthAmount" operation="subtract" value="4"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealHealthMachine2">
+				<requirement name="CVarCompare" cvar="medicalHealthAmount" operation="LTE" value="0"/>
+				<requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="-.5"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="healthIncrease" operation="set" value="4"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="foodHealthAmount" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medicalHealthAmount" operation="set" value="0"/>
+		</effect_group>
+		
+	</buff>
+	
+	<buff name="buffjump" icon="ui_game_symbol_agility" icon_color="27, 171, 62" name_key="Jump Pad" description_key="" tooltip_key="" tags="pad">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfJump" action="PlaySound" sound="m136_fire" play_in_head="false"/>
+			<triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffjumppadspeed"/>
+		</effect_group>
+	</buff>
+	<buff name="buffjumppadspeed" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		<effect_group>
+			<passive_effect name="JumpStrength" operation="perc_add" value="6.2"/>
+			<passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
+			<triggered_effect trigger="onSelfFallImpact" action="RemoveBuff" buff="buffjumppadspeed"/>
+			<triggered_effect trigger="onSelfFallImpact" action="RemoveBuff" buff="buffjump"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffIdentifyDangerUpdate" hidden="true" remove_on_death="false">
+		<stack_type value="replace"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="@$IdentifyDanger" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="Identify Danger" operation="Equals" value="0"/> </triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="@$IdentifyDanger" operation="set" value=".25">
+				<requirement name="ProgressionLevel" progression_name="Identify Danger" operation="Equals" value="1"/> </triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="@$IdentifyDanger" operation="set" value=".5">
+				<requirement name="ProgressionLevel" progression_name="Identify Danger" operation="Equals" value="2"/> </triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="@$IdentifyDanger" operation="set" value=".75">
+				<requirement name="ProgressionLevel" progression_name="Identify Danger" operation="Equals" value="3"/> </triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="@$IdentifyDanger" operation="set" value="1">
+				<requirement name="ProgressionLevel" progression_name="Identify Danger" operation="Equals" value="4"/> </triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="@$IdentifyDanger" operation="set" value="1.25">
+				<requirement name="ProgressionLevel" progression_name="Identify Danger" operation="Equals" value="5"/> </triggered_effect>
+		
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="buffIdentifyDanger">
+				<requirement name="NotHasBuff" buff="buffIdentifyDanger"/>
+				<requirement name="CVarCompare" cvar="@$IdentifyDanger" operation="GT" value="0"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			</triggered_effect>
+			
+		</effect_group>
+	</buff>
+	
+	<buff name="buffIdentifyDanger" icon="ui_game_symbol_agility" icon_color="27, 171, 62" name_key="Identify Danger" description_key="" tooltip_key="" tags="Identify Danger">
+		<stack_type value="replace"/>
+		<duration value="10"/>
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="base_add" value=".25">
+				<requirement name="CVarCompare" cvar="@$IdentifyDanger" operation="Equals" value=".25"/>
+			</passive_effect>
+			<passive_effect name="RunSpeed" operation="base_add" value=".5">
+				<requirement name="CVarCompare" cvar="@$IdentifyDanger" operation="Equals" value=".5"/>
+			</passive_effect>
+			<passive_effect name="RunSpeed" operation="base_add" value=".75">
+				<requirement name="CVarCompare" cvar="@$IdentifyDanger" operation="Equals" value=".75"/>
+			</passive_effect>
+			<passive_effect name="RunSpeed" operation="base_add" value="1">
+				<requirement name="CVarCompare" cvar="@$IdentifyDanger" operation="Equals" value="1"/>
+			</passive_effect>
+			<passive_effect name="RunSpeed" operation="base_add" value="1.25">
+				<requirement name="CVarCompare" cvar="@$IdentifyDanger" operation="Equals" value="1.25"/>
+			</passive_effect>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffIdentifyDanger"/>
+			
+		</effect_group>
+	</buff>
+	
+</append>
+</configs>

@@ -1,0 +1,30 @@
+<configs>
+
+	<append xpath="/ui_display_info/item_display">
+
+		<item_display_info display_type="foodwaterHeatResist" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="FoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="foodwaterColdResist" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="dHypothermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="FoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="drinkMoonshine" display_group="groupConsumables">
+			<display_entry name="dPhysicalDamageResist" title_key="statPhysicalDamageResist"/>
+			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="staminaAmount" title_key="statStaminaAmount" display_type="Percent"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+		</item_display_info>		
+		
+	</append>	
+		
+</configs>		
